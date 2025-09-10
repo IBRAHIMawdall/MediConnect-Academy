@@ -158,4 +158,211 @@ export const courses: Course[] = [
       },
     ],
   },
+  {
+    id: 'mental-health-first-aid',
+    title: 'Mental Health First Aid',
+    description: 'Learn to identify, understand, and respond to signs of mental illnesses.',
+    longDescription: 'This course teaches you how to assist someone experiencing a mental health or substance use-related crisis. You will learn risk factors and warning signs for mental health and addiction concerns, strategies for how to help someone in both crisis and non-crisis situations, and where to turn for help.',
+    imageId: 'mental-health',
+    modules: [
+      {
+        title: 'Module 1: Understanding Mental Health',
+        lessons: [
+          { title: 'Common Mental Health Challenges', content: 'Depression, anxiety, and substance use disorders.' },
+          { title: 'The ALGEE Action Plan', content: 'A framework for providing support.' },
+        ],
+      },
+      {
+        title: 'Module 2: Crisis Intervention',
+        lessons: [
+          { title: 'Responding to Panic Attacks', content: 'Techniques for de-escalation.' },
+          { title: 'Suicide Prevention', content: 'Recognizing warning signs and getting help.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'nutrition-and-health',
+    title: 'Nutrition and Health',
+    description: 'Explore the link between diet and health with evidence-based nutrition science.',
+    longDescription: 'This course provides a comprehensive overview of nutrition science, covering macronutrients, micronutrients, dietary guidelines, and the role of nutrition in preventing chronic diseases. It is designed for healthcare professionals and anyone interested in improving their health through diet.',
+    imageId: 'nutrition-health',
+    modules: [
+      {
+        title: 'Module 1: Macronutrients',
+        lessons: [
+          { title: 'Carbohydrates, Proteins, and Fats', content: 'Understanding their roles in the body.' },
+          { title: 'Dietary Fiber', content: 'The importance of fiber for digestive health.' },
+        ],
+      },
+      {
+        title: 'Module 2: Micronutrients and Disease Prevention',
+        lessons: [
+          { title: 'Vitamins and Minerals', content: 'Essential nutrients for optimal health.' },
+          { title: 'Nutrition and Chronic Disease', content: 'The role of diet in preventing heart disease, diabetes, and cancer.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'genomics-in-medicine',
+    title: 'Genomics in Medicine',
+    description: 'Understand the role of genetics in health and disease.',
+    longDescription: 'This course introduces the principles of genomics and its applications in clinical practice. You will learn about genetic testing, pharmacogenomics, and the ethical, legal, and social implications of genomic medicine.',
+    imageId: 'genomics-medicine',
+    modules: [
+      {
+        title: 'Module 1: Fundamentals of Genomics',
+        lessons: [
+          { title: 'DNA, Genes, and Chromosomes', content: 'The building blocks of life.' },
+          { title: 'Genetic Variation', content: 'How our genes make us unique.' },
+        ],
+      },
+      {
+        title: 'Module 2: Clinical Applications',
+        lessons: [
+          { title: 'Genetic Testing and Counseling', content: 'Interpreting and communicating genetic information.' },
+          { title: 'The Future of Genomic Medicine', content: 'Personalized medicine and beyond.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'data-science-for-healthcare',
+    title: 'Data Science for Healthcare',
+    description: 'Leverage data to improve patient outcomes and healthcare delivery.',
+    longDescription: 'This course provides an introduction to data science and its applications in healthcare. You will learn about data analysis, machine learning, and how to use data to drive improvements in clinical care, research, and operations.',
+    imageId: 'data-science-healthcare',
+    modules: [
+      {
+        title: 'Module 1: Healthcare Data',
+        lessons: [
+          { title: 'Sources of Healthcare Data', content: 'EHRs, claims data, and patient-generated data.' },
+          { title: 'Data Wrangling and Cleaning', content: 'Preparing data for analysis.' },
+        ],
+      },
+      {
+        title: 'Module 2: Machine Learning in Healthcare',
+        lessons: [
+          { title: 'Predictive Modeling', content: 'Forecasting disease risk and patient outcomes.' },
+          { title: 'Natural Language Processing', content: 'Extracting insights from clinical notes.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'global-health-challenges',
+    title: 'Global Health Challenges',
+    description: 'Examine the major health issues facing the world today.',
+    longDescription: 'This course provides an overview of the most pressing global health challenges, including infectious diseases, maternal and child health, and the impact of climate change on health. You will learn about the social, economic, and political determinants of health and explore strategies for improving health equity worldwide.',
+    imageId: 'global-health',
+    modules: [
+      {
+        title: 'Module 1: Infectious Diseases',
+        lessons: [
+          { title: 'Pandemic Preparedness', content: 'Lessons learned from COVID-19.' },
+          { title: 'The Big Three', content: 'HIV/AIDS, tuberculosis, and malaria.' },
+        ],
+      },
+      {
+        title: 'Module 2: Health Systems and Policy',
+        lessons: [
+          { title: 'Universal Health Coverage', content: 'A global movement.' },
+          { title: 'The Role of Non-Governmental Organizations', content: 'Partners in global health.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'clinical-research-design',
+    title: 'Clinical Research Design',
+    description: 'Learn how to design and conduct high-quality clinical research.',
+    longDescription: 'This course covers the principles of clinical research design, including randomized controlled trials, observational studies, and systematic reviews. You will learn how to develop a research question, select a study design, and write a research protocol.',
+    imageId: 'clinical-research',
+    modules: [
+      {
+        title: 'Module 1: Study Design',
+        lessons: [
+          { title: 'Randomized Controlled Trials', content: 'The gold standard in clinical research.' },
+          { title: 'Observational Studies', content: 'Cohort, case-control, and cross-sectional studies.' },
+        ],
+      },
+      {
+        title: 'Module 2: Protocol Development',
+        lessons: [
+          { title: 'Developing a Research Question', content: 'The foundation of any research project.' },
+          { title: 'Writing a Research Protocol', content: 'A roadmap for your study.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'patient-safety-and-quality-improvement',
+    title: 'Patient Safety and Quality Improvement',
+    description: 'Learn to lead initiatives that improve patient safety and healthcare quality.',
+    longDescription: 'This course provides a framework for understanding and improving patient safety and healthcare quality. You will learn about quality improvement methodologies, root cause analysis, and how to create a culture of safety in your organization.',
+    imageId: 'patient-safety',
+    modules: [
+      {
+        title: 'Module 1: Principles of Patient Safety',
+        lessons: [
+          { title: 'The Swiss Cheese Model', content: 'Understanding how errors occur.' },
+          { title: 'Human Factors Engineering', content: 'Designing safer systems.' },
+        ],
+      },
+      {
+        title: 'Module 2: Quality Improvement Tools',
+        lessons: [
+          { title: 'Plan-Do-Study-Act (PDSA) Cycles', content: 'A simple yet powerful tool for improvement.' },
+          { title: 'Root Cause Analysis', content: 'Investigating and learning from adverse events.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'healthcare-management',
+    title: 'Healthcare Management',
+    description: 'Develop the skills to lead and manage in the complex healthcare environment.',
+    longDescription: 'This course provides an overview of healthcare management, including healthcare finance, operations, and strategic planning. You will learn about the challenges and opportunities facing healthcare leaders today and develop the skills to lead your organization to success.',
+    imageId: 'healthcare-management',
+    modules: [
+      {
+        title: 'Module 1: Healthcare Finance',
+        lessons: [
+          { title: 'Budgeting and Financial Planning', content: 'The basics of healthcare finance.' },
+          { title: 'Revenue Cycle Management', content: 'Getting paid for the care you provide.' },
+        ],
+      },
+      {
+        title: 'Module 2: Healthcare Operations',
+        lessons: [
+          { title: 'Process Improvement', content: 'Lean and Six Sigma in healthcare.' },
+          { title: 'Supply Chain Management', content: 'Getting the right supplies at the right time.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'diagnostic-imaging-fundamentals',
+    title: 'Diagnostic Imaging Fundamentals',
+    description: 'An introduction to the principles and applications of diagnostic imaging.',
+    longDescription: 'This course provides a comprehensive introduction to the field of diagnostic imaging, including X-ray, CT, MRI, and ultrasound. You will learn about the physical principles of each modality, their clinical applications, and how to interpret common imaging studies.',
+    imageId: 'diagnostic-imaging',
+    modules: [
+      {
+        title: 'Module 1: X-ray and CT',
+        lessons: [
+          { title: 'The Physics of X-rays', content: 'How X-rays are produced and interact with matter.' },
+          { title: 'Interpreting Chest X-rays', content: 'A systematic approach.' },
+        ],
+      },
+      {
+        title: 'Module 2: MRI and Ultrasound',
+        lessons: [
+          { title: 'The Principles of MRI', content: 'From protons to pictures.' },
+          { title: 'Introduction to Ultrasound', content: 'The power of sound waves in medicine.' },
+        ],
+      },
+    ],
+  }
 ];

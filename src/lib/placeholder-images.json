@@ -1,3 +1,4 @@
+
 {
   "placeholderImages": [
     {
@@ -35,6 +36,60 @@
       "description": "An image showing a telehealth consultation.",
       "imageUrl": "https://picsum.photos/seed/106/600/400",
       "imageHint": "video call"
+    },
+    {
+      "id": "mental-health",
+      "description": "An abstract image representing mental health.",
+      "imageUrl": "https://picsum.photos/seed/107/600/400",
+      "imageHint": "brain abstract"
+    },
+    {
+      "id": "nutrition-health",
+      "description": "An image of healthy food.",
+      "imageUrl": "https://picsum.photos/seed/108/600/400",
+      "imageHint": "food vegetables"
+    },
+    {
+      "id": "genomics-medicine",
+      "description": "An image representing DNA and genomics.",
+      "imageUrl": "https://picsum.photos/seed/109/600/400",
+      "imageHint": "dna science"
+    },
+    {
+      "id": "data-science-healthcare",
+      "description": "An image representing data and charts.",
+      "imageUrl": "https://picsum.photos/seed/110/600/400",
+      "imageHint": "data chart"
+    },
+    {
+      "id": "global-health",
+      "description": "An image of the globe with a focus on health.",
+      "imageUrl": "https://picsum.photos/seed/111/600/400",
+      "imageHint": "world health"
+    },
+    {
+      "id": "clinical-research",
+      "description": "An image of a researcher in a lab.",
+      "imageUrl": "https://picsum.photos/seed/112/600/400",
+      "imageHint": "lab research"
+    },
+    {
+      "id": "patient-safety",
+      "description": "An image representing patient safety concepts.",
+      "imageUrl": "https://picsum.photos/seed/113/600/400",
+      "imageHint": "safety shield"
+    },
+    {
+      "id": "healthcare-management",
+      "description": "An image representing management and leadership.",
+      "imageUrl": "https://picsum.photos/seed/114/600/400",
+      "imageHint": "business meeting"
+    },
+    {
+      "id": "diagnostic-imaging",
+      "description": "An image of a brain scan.",
+      "imageUrl": "https://picsum.photos/seed/115/600/400",
+      "imageHint": "mri brain"
     }
   ]
 }
