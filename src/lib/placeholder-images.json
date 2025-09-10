@@ -1,3 +1,40 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "adv-cardiology",
+      "description": "An image representing advanced cardiology concepts.",
+      "imageUrl": "https://picsum.photos/seed/101/600/400",
+      "imageHint": "heart medical"
+    },
+    {
+      "id": "pediatric-care",
+      "description": "An image showing a child being cared for by a healthcare professional.",
+      "imageUrl": "https://picsum.photos/seed/102/600/400",
+      "imageHint": "child doctor"
+    },
+    {
+      "id": "surgical-tech",
+      "description": "An image of a surgical technologist in an operating room.",
+      "imageUrl": "https://picsum.photos/seed/103/600/400",
+      "imageHint": "surgery operating"
+    },
+    {
+      "id": "pharma-innov",
+      "description": "An image representing innovation in pharmacology.",
+      "imageUrl": "https://picsum.photos/seed/104/600/400",
+      "imageHint": "lab science"
+    },
+    {
+      "id": "medical-ethics",
+      "description": "An abstract image representing medical ethics and law.",
+      "imageUrl": "https://picsum.photos/seed/105/600/400",
+      "imageHint": "law books"
+    },
+    {
+      "id": "telehealth-practice",
+      "description": "An image showing a telehealth consultation.",
+      "imageUrl": "https://picsum.photos/seed/106/600/400",
+      "imageHint": "video call"
+    }
+  ]
 }
