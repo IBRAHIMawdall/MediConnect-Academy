@@ -11,7 +11,7 @@ import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Progress } from '@/components/ui/progress';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Award } from 'lucide-react';
+import { Award, Youtube } from 'lucide-react';
 import type { Course } from '@/lib/data';
 import { useToast } from '@/hooks/use-toast';
 
@@ -67,25 +67,38 @@ export function CourseModules({ course }: CourseModulesProps) {
               <AccordionContent>
                 <div className="space-y-4 pl-4">
                   {module.lessons.map((lesson, lessonIndex) => (
-                    <div
-                      key={lessonIndex}
-                      className="flex items-start gap-3 p-3 rounded-md transition-colors hover:bg-muted/50"
-                    >
-                      <Checkbox
-                        id={`lesson-${moduleIndex}-${lessonIndex}`}
-                        checked={completedLessons.has(lesson.title)}
-                        onCheckedChange={() => handleLessonToggle(lesson.title)}
-                        className="mt-1"
-                      />
-                      <div className="grid gap-1.5 leading-snug">
-                        <label
-                          htmlFor={`lesson-${moduleIndex}-${lessonIndex}`}
-                          className="text-sm font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
+                    <div key={lessonIndex}>
+                        <div
+                        className="flex items-start gap-3 p-3 rounded-md transition-colors hover:bg-muted/50"
                         >
-                          {lesson.title}
-                        </label>
-                        <p className="text-sm text-muted-foreground">{lesson.content}</p>
-                      </div>
+                        <Checkbox
+                            id={`lesson-${moduleIndex}-${lessonIndex}`}
+                            checked={completedLessons.has(lesson.title)}
+                            onCheckedChange={() => handleLessonToggle(lesson.title)}
+                            className="mt-1"
+                        />
+                        <div className="grid gap-1.5 leading-snug">
+                            <label
+                            htmlFor={`lesson-${moduleIndex}-${lessonIndex}`}
+                            className="text-sm font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer flex items-center gap-2"
+                            >
+                            {lesson.title}
+                            {lesson.videoUrl && <Youtube className="h-4 w-4 text-red-500" />}
+                            </label>
+                            <p className="text-sm text-muted-foreground">{lesson.content}</p>
+                        </div>
+                        </div>
+                        {lesson.videoUrl && (
+                            <div className="aspect-video rounded-md overflow-hidden ml-10 mt-2">
+                                <iframe
+                                    className="w-full h-full"
+                                    src={lesson.videoUrl}
+                                    title={lesson.title}
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                        )}
                     </div>
                   ))}
                 </div>

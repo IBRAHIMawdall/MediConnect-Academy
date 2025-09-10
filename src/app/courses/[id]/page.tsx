@@ -4,6 +4,7 @@ import { courses } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { PageHeader } from '@/components/layout/page-header';
 import { CourseModules } from '@/components/courses/course-modules';
+import { Badge } from '@/components/ui/badge';
 
 export default function CourseDetailPage({ params }: { params: { id: string } }) {
   const course = courses.find((c) => c.id === params.id);
@@ -20,6 +21,11 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
         title={course.title}
         description="Dive into your learning module by module."
       />
+      <div className="flex flex-wrap gap-2">
+        {course.categories.map((category) => (
+            <Badge key={category} variant="default">{category}</Badge>
+        ))}
+      </div>
       <div className="grid gap-8 md:grid-cols-3">
         <div className="md:col-span-2">
             <CourseModules course={course} />

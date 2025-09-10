@@ -150,6 +150,36 @@
       "description": "An image of a first aid kit in a wilderness setting.",
       "imageUrl": "https://picsum.photos/seed/125/600/400",
       "imageHint": "mountain firstaid"
+    },
+    {
+      "id": "blood-biology",
+      "description": "An abstract image representing blood cells.",
+      "imageUrl": "https://picsum.photos/seed/126/600/400",
+      "imageHint": "blood cells"
+    },
+    {
+      "id": "surgery-simulation",
+      "description": "An image of a virtual surgery simulation.",
+      "imageUrl": "https://picsum.photos/seed/127/600/400",
+      "imageHint": "virtual surgery"
+    },
+    {
+      "id": "neuro-pathways",
+      "description": "An abstract image of neural pathways.",
+      "imageUrl": "https://picsum.photos/seed/128/600/400",
+      "imageHint": "neural network"
+    },
+    {
+      "id": "usmle-prep",
+      "description": "An image of a student studying for an exam.",
+      "imageUrl": "https://picsum.photos/seed/129/600/400",
+      "imageHint": "study exam"
+    },
+    {
+      "id": "mcat-prep",
+      "description": "An image with MCAT branding.",
+      "imageUrl": "https://picsum.photos/seed/130/600/400",
+      "imageHint": "mcat study"
     }
   ]
 }

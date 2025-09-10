@@ -11,6 +11,7 @@ import {
 } from '@/components/ui/card';
 import type { Course } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Badge } from '@/components/ui/badge';
 
 interface CourseCardProps {
   course: Course;
@@ -35,6 +36,11 @@ export function CourseCard({ course }: CourseCardProps) {
         </div>
       </CardHeader>
       <CardContent className="flex-grow p-4">
+        <div className="flex flex-wrap gap-1 mb-2">
+            {course.categories.map(category => (
+                <Badge key={category} variant="secondary">{category}</Badge>
+            ))}
+        </div>
         <CardTitle className="text-lg font-semibold mb-2">{course.title}</CardTitle>
         <CardDescription>{course.description}</CardDescription>
       </CardContent>

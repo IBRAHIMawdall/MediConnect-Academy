@@ -91,6 +91,7 @@ export function PersonalizedLearningForm() {
                       </FormControl>
                       <SelectContent>
                         <SelectItem value="Nurse">Nurse</SelectItem>
+                        <SelectItem value="Pharmacist">Pharmacist</SelectItem>
                         <SelectItem value="Doctor">Doctor</SelectItem>
                         <SelectItem value="Administrator">Administrator</SelectItem>
                         <SelectItem value="Medical Student">Medical Student</SelectItem>

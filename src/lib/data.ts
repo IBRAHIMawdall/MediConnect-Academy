@@ -3,12 +3,44 @@ import { PlaceHolderImages } from './placeholder-images';
 export type Lesson = {
   title: string;
   content: string;
+  videoUrl?: string;
 };
 
 export type Module = {
   title: string;
   lessons: Lesson[];
 };
+
+export type CourseCategory =
+  | 'Cardiology'
+  | 'Pediatrics'
+  | 'Surgery'
+  | 'Pharmacology'
+  | 'Ethics'
+  | 'Digital Health'
+  | 'Mental Health'
+  | 'Nutrition'
+  | 'Genomics'
+  | 'Data Science'
+  | 'Global Health'
+  | 'Research'
+  | 'Patient Safety'
+  | 'Management'
+  | 'Radiology'
+  | 'AI in Healthcare'
+  | 'Public Health'
+  | 'Medical Billing'
+  | 'Leadership'
+  | 'Sports Medicine'
+  | 'Dermatology'
+  | 'Geriatrics'
+  | 'Infectious Disease'
+  | 'Palliative Care'
+  | 'Wilderness Medicine'
+  | 'Biology'
+  | 'Neuroscience'
+  | 'Exam Prep';
+
 
 export type Course = {
   id: string;
@@ -17,6 +49,7 @@ export type Course = {
   longDescription: string;
   imageId: string;
   modules: Module[];
+  categories: CourseCategory[];
 };
 
 export const courses: Course[] = [
@@ -30,8 +63,8 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Interventional Cardiology',
         lessons: [
-          { title: 'Complex Coronary Interventions', content: 'Detailed walkthrough of advanced techniques.' },
-          { title: 'Structural Heart Disease', content: 'Focus on TAVR and MitraClip procedures.' },
+          { title: 'Complex Coronary Interventions', content: 'Detailed walkthrough of advanced techniques.', videoUrl: 'https://www.youtube.com/embed/s_hWz2aAfas' },
+          { title: 'Structural Heart Disease', content: 'Focus on TAVR and MitraClip procedures.', videoUrl: 'https://www.youtube.com/embed/s_hWz2aAfas' },
         ],
       },
       {
@@ -42,6 +75,7 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['Cardiology'],
   },
   {
     id: 'pediatric-emergency-care',
@@ -53,7 +87,7 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Pediatric Assessment',
         lessons: [
-          { title: 'The Pediatric Assessment Triangle', content: 'A systematic approach to initial assessment.' },
+          { title: 'The Pediatric Assessment Triangle', content: 'A systematic approach to initial assessment.', videoUrl: 'https://www.youtube.com/embed/s_hWz2aAfas' },
           { title: 'Developmental Considerations', content: 'Understanding age-specific differences.' },
         ],
       },
@@ -65,6 +99,7 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['Pediatrics'],
   },
   {
     id: 'surgical-techniques-101',
@@ -76,7 +111,7 @@ export const courses: Course[] = [
       {
         title: 'Module 1: The Operating Room Environment',
         lessons: [
-          { title: 'Aseptic Technique', content: 'The foundation of safe surgery.' },
+          { title: 'Aseptic Technique', content: 'The foundation of safe surgery.', videoUrl: 'https://www.youtube.com/embed/s_hWz2aAfas' },
           { title: 'Surgical Instruments', content: 'Identification and proper handling.' },
         ],
       },
@@ -88,6 +123,7 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['Surgery'],
   },
   {
     id: 'pharmacology-innovations',
@@ -111,6 +147,7 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['Pharmacology', 'Genomics'],
   },
   {
     id: 'medical-ethics-and-law',
@@ -134,6 +171,7 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['Ethics'],
   },
   {
     id: 'telehealth-best-practices',
@@ -157,6 +195,7 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['Digital Health'],
   },
   {
     id: 'mental-health-first-aid',
@@ -180,6 +219,7 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['Mental Health'],
   },
   {
     id: 'nutrition-and-health',
@@ -203,6 +243,92 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['Nutrition'],
+  },
+    {
+    id: 'visualizing-blood-biology',
+    title: 'Visualizing Blood Biology',
+    description: 'An immersive visual guide to hematology.',
+    longDescription: 'Explore the components of blood and their functions through high-quality animations and visualizations. This course covers everything from blood cell formation to complex hematological disorders.',
+    imageId: 'blood-biology',
+    modules: [
+      {
+        title: 'Module 1: The Cellular Components',
+        lessons: [
+          { title: 'Erythrocytes (Red Blood Cells)', content: 'Oxygen transport and related disorders.', videoUrl: 'https://www.youtube.com/embed/s_hWz2aAfas' },
+          { title: 'Leukocytes (White Blood Cells)', content: 'The immune response in action.', videoUrl: 'https://www.youtube.com/embed/s_hWz2aAfas' },
+        ],
+      },
+    ],
+    categories: ['Biology', 'Hematology'],
+  },
+  {
+    id: 'surgical-operations-simulation',
+    title: 'Surgical Operations Simulation',
+    description: 'Experience common surgical procedures through realistic simulations.',
+    longDescription: 'This course provides a virtual operating room experience. Watch and learn from detailed 3D animations of common surgical procedures, from appendectomies to coronary artery bypass grafts.',
+    imageId: 'surgery-simulation',
+    modules: [
+      {
+        title: 'Module 1: Abdominal Surgeries',
+        lessons: [
+          { title: 'Laparoscopic Appendectomy', content: 'A minimally invasive approach.', videoUrl: 'https://www.youtube.com/embed/s_hWz2aAfas' },
+          { title: 'Cholecystectomy (Gallbladder Removal)', content: 'Step-by-step procedure.', videoUrl: 'https://www.youtube.com/embed/s_hWz2aAfas' },
+        ],
+      },
+    ],
+    categories: ['Surgery'],
+  },
+  {
+    id: 'neurochemical-pathways',
+    title: 'Neurochemical Pathways',
+    description: 'Visualize the complex world of brain chemistry.',
+    longDescription: 'Journey through the brain\'s intricate signaling pathways. This course uses advanced visualizations to explain the roles of neurotransmitters like dopamine, serotonin, and acetylcholine in behavior and disease.',
+    imageId: 'neuro-pathways',
+    modules: [
+      {
+        title: 'Module 1: Key Neurotransmitters',
+        lessons: [
+          { title: 'The Dopamine System', content: 'Reward, motivation, and addiction.', videoUrl: 'https://www.youtube.com/embed/s_hWz2aAfas' },
+          { title: 'The Serotonin System', content: 'Mood, sleep, and appetite.', videoUrl: 'https://www.youtube.com/embed/s_hWz2aAfas' },
+        ],
+      },
+    ],
+    categories: ['Neuroscience', 'Biology'],
+  },
+  {
+    id: 'usmle-step-1-prep',
+    title: 'USMLE Step 1 Prep Course',
+    description: 'A comprehensive review for the USMLE Step 1 exam.',
+    longDescription: 'Maximize your score with this intensive review course. Covering all the high-yield topics in basic sciences, this course includes video lectures, practice questions, and simulated exams.',
+    imageId: 'usmle-prep',
+    modules: [
+        {
+        title: 'Module 1: Biochemistry and Genetics',
+        lessons: [
+            { title: 'Metabolism Pathways', content: 'Key concepts and clinical correlations.' },
+            { title: 'Molecular Biology', content: 'DNA replication, transcription, and translation.' },
+        ],
+        },
+    ],
+    categories: ['Exam Prep'],
+  },
+  {
+    id: 'mcat-biology-biochem-prep',
+    title: 'MCAT Biology & Biochem Prep',
+    description: 'Master the Biology and Biochemistry sections of the MCAT.',
+    longDescription: 'This course focuses on the foundational concepts in biology and biochemistry essential for the MCAT. Includes detailed video explanations and hundreds of practice problems.',
+    imageId: 'mcat-prep',
+    modules: [
+        {
+        title: 'Module 1: The Cell',
+        lessons: [
+            { title: 'Eukaryotic and Prokaryotic Cells', content: 'Structures and functions.' },
+            { title: 'Enzymes and Metabolism', content: 'Kinetics and regulation.' },
+        ],
+        },
+    ],
+    categories: ['Exam Prep'],
   },
   {
     id: 'genomics-in-medicine',
@@ -226,6 +352,7 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['Genomics'],
   },
   {
     id: 'data-science-for-healthcare',
@@ -249,6 +376,7 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['Data Science', 'AI in Healthcare'],
   },
   {
     id: 'global-health-challenges',
@@ -272,6 +400,7 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['Global Health', 'Public Health'],
   },
   {
     id: 'clinical-research-design',
@@ -295,6 +424,7 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['Research'],
   },
   {
     id: 'patient-safety-and-quality-improvement',
@@ -318,6 +448,7 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['Patient Safety', 'Management'],
   },
   {
     id: 'healthcare-management',
@@ -341,6 +472,7 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['Management', 'Leadership'],
   },
   {
     id: 'diagnostic-imaging-fundamentals',
@@ -364,6 +496,7 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['Radiology'],
   },
   {
     id: 'ai-in-healthcare',
@@ -387,6 +520,7 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['AI in Healthcare', 'Data Science'],
   },
   {
     id: 'public-health-principles',
@@ -410,6 +544,7 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['Public Health'],
   },
   {
     id: 'medical-billing-coding',
@@ -433,6 +568,7 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['Medical Billing'],
   },
   {
     id: 'healthcare-leadership',
@@ -456,6 +592,7 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['Leadership'],
   },
   {
     id: 'sports-medicine-essentials',
@@ -479,6 +616,7 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['Sports Medicine'],
   },
   {
     id: 'dermatology-for-primary-care',
@@ -502,6 +640,7 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['Dermatology'],
   },
   {
     id: 'geriatric-medicine-principles',
@@ -525,6 +664,7 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['Geriatrics'],
   },
   {
     id: 'infectious-disease-control',
@@ -548,6 +688,7 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['Infectious Disease'],
   },
   {
     id: 'palliative-care-essentials',
@@ -571,6 +712,7 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['Palliative Care'],
   },
   {
     id: 'wilderness-medicine',
@@ -594,5 +736,6 @@ export const courses: Course[] = [
         ],
       },
     ],
+    categories: ['Wilderness Medicine'],
   }
 ];
