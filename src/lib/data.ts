@@ -364,5 +364,235 @@ export const courses: Course[] = [
         ],
       },
     ],
+  },
+  {
+    id: 'ai-in-healthcare',
+    title: 'AI in Healthcare',
+    description: 'Discover how AI is revolutionizing diagnostics, treatment, and research.',
+    longDescription: 'This course explores the transformative impact of artificial intelligence in healthcare. Learn about machine learning models for medical imaging, natural language processing for clinical notes, and the ethical considerations of using AI in medicine.',
+    imageId: 'ai-healthcare',
+    modules: [
+      {
+        title: 'Module 1: Machine Learning for Medical Imaging',
+        lessons: [
+          { title: 'Convolutional Neural Networks (CNNs)', content: 'Understanding the architecture for image analysis.' },
+          { title: 'Case Study: AI in Radiology', content: 'Detecting diseases from scans.' },
+        ],
+      },
+      {
+        title: 'Module 2: AI and Clinical Data',
+        lessons: [
+          { title: 'Predictive Analytics for Patient Outcomes', content: 'Forecasting disease progression.' },
+          { title: 'Ethical and Privacy Challenges', content: 'Navigating the complexities of AI in healthcare.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'public-health-principles',
+    title: 'Public Health Principles',
+    description: 'Understand the core concepts of public health and epidemiology.',
+    longDescription: 'This course provides a foundational understanding of public health principles, including epidemiology, biostatistics, and health policy. Explore how public health initiatives protect and improve the health of entire populations.',
+    imageId: 'public-health',
+    modules: [
+      {
+        title: 'Module 1: Introduction to Epidemiology',
+        lessons: [
+          { title: 'Measuring Disease Frequency', content: 'Incidence and prevalence.' },
+          { title: 'Study Designs in Epidemiology', content: 'From cross-sectional to cohort studies.' },
+        ],
+      },
+      {
+        title: 'Module 2: Health Policy and Management',
+        lessons: [
+          { title: 'The Role of Government in Public Health', content: 'Policy and regulation.' },
+          { title: 'Community Health Programs', content: 'Planning and evaluation.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'medical-billing-coding',
+    title: 'Medical Billing and Coding',
+    description: 'Master the coding systems used for medical billing and insurance claims.',
+    longDescription: 'Learn the essential skills of medical billing and coding. This course covers ICD-10, CPT, and HCPCS coding systems, ensuring you can accurately document medical services and navigate the complexities of healthcare reimbursement.',
+    imageId: 'medical-billing',
+    modules: [
+      {
+        title: 'Module 1: ICD-10-CM Coding',
+        lessons: [
+          { title: 'Introduction to ICD-10', content: 'Structure and conventions.' },
+          { title: 'Coding for Diseases and Conditions', content: 'Applying codes from clinical documentation.' },
+        ],
+      },
+      {
+        title: 'Module 2: CPT and HCPCS Coding',
+        lessons: [
+          { title: 'Procedural Coding with CPT', content: 'From office visits to surgical procedures.' },
+          { title: 'Supplies and Services with HCPCS', content: 'DME, drugs, and other services.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'healthcare-leadership',
+    title: 'Healthcare Leadership',
+    description: 'Develop essential leadership skills to manage and inspire healthcare teams.',
+    longDescription: 'This course is designed for aspiring and current healthcare leaders. Topics include strategic planning, financial management, quality improvement, and leading teams in a dynamic healthcare environment. Enhance your ability to drive positive change.',
+    imageId: 'healthcare-leadership',
+    modules: [
+      {
+        title: 'Module 1: Strategic Leadership',
+        lessons: [
+          { title: 'Vision and Mission', content: 'Setting the direction for your organization.' },
+          { title: 'Change Management', content: 'Leading teams through transition.' },
+        ],
+      },
+      {
+        title: 'Module 2: Operational Excellence',
+        lessons: [
+          { title: 'Healthcare Finance for Leaders', content: 'Understanding the numbers.' },
+          { title: 'Building and Leading High-Performing Teams', content: 'Fostering collaboration and motivation.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'sports-medicine-essentials',
+    title: 'Sports Medicine Essentials',
+    description: 'Learn to diagnose, treat, and prevent common sports-related injuries.',
+    longDescription: 'This course provides a comprehensive overview of sports medicine, from sideline assessment to rehabilitation. Ideal for physicians, physical therapists, and athletic trainers, it covers the most common injuries and evidence-based treatment strategies.',
+    imageId: 'sports-medicine',
+    modules: [
+      {
+        title: 'Module 1: Injury Assessment and Diagnosis',
+        lessons: [
+          { title: 'On-Field Assessment', content: 'Quick and effective evaluation techniques.' },
+          { title: 'Common Upper and Lower Extremity Injuries', content: 'Sprains, strains, and fractures.' },
+        ],
+      },
+      {
+        title: 'Module 2: Treatment and Rehabilitation',
+        lessons: [
+          { title: 'Principles of Rehabilitation', content: 'Restoring function and preventing re-injury.' },
+          { title: 'Concussion Management', content: 'The latest protocols for return-to-play.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'dermatology-for-primary-care',
+    title: 'Dermatology for Primary Care',
+    description: 'Confidently diagnose and manage common skin conditions in a primary care setting.',
+    longDescription: 'This course is designed to equip primary care providers with the knowledge to recognize and treat a wide range of common dermatological conditions. Learn to differentiate benign lesions from malignancies and know when to refer.',
+    imageId: 'dermatology-pc',
+    modules: [
+      {
+        title: 'Module 1: Common Rashes and Lesions',
+        lessons: [
+          { title: 'Eczema, Psoriasis, and Acne', content: 'Diagnosis and first-line treatments.' },
+          { title: 'Identifying Skin Cancers', content: 'Melanoma, Basal Cell, and Squamous Cell Carcinoma.' },
+        ],
+      },
+      {
+        title: 'Module 2: Procedures and Biopsies',
+        lessons: [
+          { title: 'Cryotherapy and Skin Tag Removal', content: 'Simple office procedures.' },
+          { title: 'When and How to Perform a Skin Biopsy', content: 'Shave, punch, and excisional techniques.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'geriatric-medicine-principles',
+    title: 'Geriatric Medicine Principles',
+    description: 'Master the complexities of providing medical care to older adults.',
+    longDescription: 'This course focuses on the unique aspects of caring for the elderly, including managing multiple chronic conditions, polypharmacy, and common geriatric syndromes like falls and delirium. Learn to promote healthy aging and improve quality of life.',
+    imageId: 'geriatric-medicine',
+    modules: [
+      {
+        title: 'Module 1: The Aging Process',
+        lessons: [
+          { title: 'Physiological Changes of Aging', content: 'How systems change over time.' },
+          { title: 'Comprehensive Geriatric Assessment', content: 'A multi-dimensional approach to care.' },
+        ],
+      },
+      {
+        title: 'Module 2: Common Geriatric Syndromes',
+        lessons: [
+          { title: 'Managing Polypharmacy', content: 'Deprescribing and medication review.' },
+          { title: 'Cognitive Impairment and Dementia', content: 'Diagnosis, management, and support.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'infectious-disease-control',
+    title: 'Infectious Disease Control',
+    description: 'Learn the principles of infection prevention and antimicrobial stewardship.',
+    longDescription: 'This course covers the essentials of infection control in healthcare settings. Topics include standard and transmission-based precautions, outbreak investigation, and the critical importance of antimicrobial stewardship to combat resistance.',
+    imageId: 'infectious-disease',
+    modules: [
+      {
+        title: 'Module 1: Infection Prevention',
+        lessons: [
+          { title: 'Hand Hygiene and Personal Protective Equipment', content: 'The cornerstones of infection control.' },
+          { title: 'Environmental Disinfection', content: 'Creating a safe patient environment.' },
+        ],
+      },
+      {
+        title: 'Module 2: Antimicrobial Stewardship',
+        lessons: [
+          { title: 'The Threat of Antibiotic Resistance', content: 'A global health crisis.' },
+          { title: 'Promoting Prudent Antibiotic Use', content: 'Strategies for healthcare providers.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'palliative-care-essentials',
+    title: 'Palliative Care Essentials',
+    description: 'Improve quality of life for patients with serious illnesses through palliative care.',
+    longDescription: 'Learn the principles of palliative care, focusing on symptom management, communication, and support for patients and families facing serious illness. This course is for all healthcare professionals who wish to improve the patient experience.',
+    imageId: 'palliative-care',
+    modules: [
+      {
+        title: 'Module 1: Principles of Palliative Care',
+        lessons: [
+          { title: 'What is Palliative Care?', content: 'Clarifying misconceptions.' },
+          { title: 'Pain and Symptom Management', content: 'A holistic approach.' },
+        ],
+      },
+      {
+        title: 'Module 2: Communication and Support',
+        lessons: [
+          { title: 'Difficult Conversations', content: 'Discussing goals of care and prognosis.' },
+          { title: 'Supporting Families and Caregivers', content: 'Providing resources and emotional support.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'wilderness-medicine',
+    title: 'Wilderness Medicine',
+    description: 'Learn to provide medical care in remote and resource-limited environments.',
+    longDescription: 'This course prepares you to handle medical emergencies in the backcountry. From treating fractures with improvised splints to managing altitude sickness, you will gain the skills and confidence to provide care when help is far away.',
+    imageId: 'wilderness-medicine',
+    modules: [
+      {
+        title: 'Module 1: Environmental Emergencies',
+        lessons: [
+          { title: 'Hypothermia and Frostbite', content: 'Prevention and treatment.' },
+          { title: 'Altitude Sickness', content: 'Acclimatization and management.' },
+        ],
+      },
+      {
+        title: 'Module 2: Trauma and Improvisation',
+        lessons: [
+          { title: 'Improvised Splinting', content: 'Stabilizing injuries with what you have.' },
+          { title: 'Wound Management in the Field', content: 'Cleaning and closing wounds.' },
+        ],
+      },
+    ],
   }
 ];

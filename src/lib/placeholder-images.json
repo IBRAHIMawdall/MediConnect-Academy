@@ -90,6 +90,66 @@
       "description": "An image of a brain scan.",
       "imageUrl": "https://picsum.photos/seed/115/600/400",
       "imageHint": "mri brain"
+    },
+    {
+      "id": "ai-healthcare",
+      "description": "An image showing an abstract representation of AI in a medical context.",
+      "imageUrl": "https://picsum.photos/seed/116/600/400",
+      "imageHint": "ai medical"
+    },
+    {
+      "id": "public-health",
+      "description": "An image showing a community health event.",
+      "imageUrl": "https://picsum.photos/seed/117/600/400",
+      "imageHint": "community health"
+    },
+    {
+      "id": "medical-billing",
+      "description": "An image of medical billing forms and a calculator.",
+      "imageUrl": "https://picsum.photos/seed/118/600/400",
+      "imageHint": "finance calculator"
+    },
+    {
+      "id": "healthcare-leadership",
+      "description": "An image of a person leading a team meeting in a healthcare setting.",
+      "imageUrl": "https://picsum.photos/seed/119/600/400",
+      "imageHint": "team leadership"
+    },
+    {
+      "id": "sports-medicine",
+      "description": "An image of an athlete receiving treatment for an injury.",
+      "imageUrl": "https://picsum.photos/seed/120/600/400",
+      "imageHint": "athlete injury"
+    },
+    {
+      "id": "dermatology-pc",
+      "description": "An image showing a close-up of a skin examination.",
+      "imageUrl": "https://picsum.photos/seed/121/600/400",
+      "imageHint": "skin dermatology"
+    },
+    {
+      "id": "geriatric-medicine",
+      "description": "An image of a healthcare provider caring for an elderly patient.",
+      "imageUrl": "https://picsum.photos/seed/122/600/400",
+      "imageHint": "elderly care"
+    },
+    {
+      "id": "infectious-disease",
+      "description": "An image of a scientist working with samples in a lab.",
+      "imageUrl": "https://picsum.photos/seed/123/600/400",
+      "imageHint": "lab microscope"
+    },
+    {
+      "id": "palliative-care",
+      "description": "An image of a healthcare provider offering comfort to a patient.",
+      "imageUrl": "https://picsum.photos/seed/124/600/400",
+      "imageHint": "comfort hand"
+    },
+    {
+      "id": "wilderness-medicine",
+      "description": "An image of a first aid kit in a wilderness setting.",
+      "imageUrl": "https://picsum.photos/seed/125/600/400",
+      "imageHint": "mountain firstaid"
     }
   ]
 }
