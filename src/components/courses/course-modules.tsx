@@ -11,9 +11,12 @@ import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Progress } from '@/components/ui/progress';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Award, Youtube } from 'lucide-react';
+import { Award, Youtube, Loader2 } from 'lucide-react';
 import type { Course } from '@/lib/data';
 import { useToast } from '@/hooks/use-toast';
+import { generateCertificate } from '@/ai/flows/generate-certificate';
+import { useUser } from '@/hooks/use-user';
+
 
 interface CourseModulesProps {
   course: Course;
@@ -21,6 +24,8 @@ interface CourseModulesProps {
 
 export function CourseModules({ course }: CourseModulesProps) {
   const { toast } = useToast();
+  const { user } = useUser();
+  const [isGenerating, setIsGenerating] = useState(false);
   const totalLessons = useMemo(
     () => course.modules.reduce((acc, module) => acc + module.lessons.length, 0),
     [course.modules]
@@ -42,11 +47,42 @@ export function CourseModules({ course }: CourseModulesProps) {
 
   const progress = totalLessons > 0 ? (completedLessons.size / totalLessons) * 100 : 0;
   
-  const handleDownloadCertificate = () => {
+  const handleDownloadCertificate = async () => {
+    if (progress < 100) return;
+    setIsGenerating(true);
     toast({
-      title: "Certificate Downloading",
-      description: "Your certificate for completing the course is being prepared.",
+      title: "Generating Certificate",
+      description: "Your certificate for completing the course is being prepared...",
     });
+
+    try {
+      const { pdfDataUri } = await generateCertificate({
+        userName: user.name,
+        courseName: course.title,
+      });
+      
+      const link = document.createElement('a');
+      link.href = pdfDataUri;
+      link.download = `${course.title.replace(/ /g, '_')}_Certificate.pdf`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      toast({
+        title: "Download Started",
+        description: "Your certificate is downloading.",
+      });
+
+    } catch (error) {
+      console.error("Certificate generation failed", error);
+      toast({
+        variant: "destructive",
+        title: "Generation Failed",
+        description: "We couldn't generate your certificate at this time. Please try again later.",
+      });
+    } finally {
+        setIsGenerating(false);
+    }
   };
 
   return (
@@ -109,10 +145,14 @@ export function CourseModules({ course }: CourseModulesProps) {
         <div className="mt-6">
             <Button 
                 className="w-full" 
-                disabled={progress < 100}
+                disabled={progress < 100 || isGenerating}
                 onClick={handleDownloadCertificate}
             >
-                <Award className="mr-2 h-4 w-4" />
+                {isGenerating ? (
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                ) : (
+                    <Award className="mr-2 h-4 w-4" />
+                )}
                 Download Certificate
             </Button>
             {progress < 100 && (
