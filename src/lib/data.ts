@@ -39,7 +39,8 @@ export type CourseCategory =
   | 'Wilderness Medicine'
   | 'Biology'
   | 'Neuroscience'
-  | 'Exam Prep';
+  | 'Exam Prep'
+  | 'Hematology';
 
 
 export type Course = {
