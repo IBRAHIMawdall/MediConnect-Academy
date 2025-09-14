@@ -26,15 +26,21 @@ const findRelevantContent = ai.defineTool(
         ),
     },
     async ({ query, apiKey }) => {
-        const key = apiKey || process.env.NCBI_API_KEY;
+        const key = process.env.NCBI_API_KEY || apiKey;
+        
         if (!key) {
             console.warn(
-                `\n[MediConnectAI] NCBI_API_KEY is not set. \n` +
+                `\n[MediConnectAI] NCBI_API_KEY is not set. Neither a server-side environment variable nor a client-side key was provided. \n` +
                 `The application will work, but you may experience rate limiting from the PubMed API.\n` +
-                `To fix this, you can provide a key through the UI or set it in your .env file.\n`
+                `To fix this, you can provide a key through the UI or set it in your .env file for a permanent solution.\n`
             );
+        } else if (apiKey && process.env.NCBI_API_KEY) {
+             console.log('[MediConnectAI] Using server-side NCBI_API_KEY.');
+        } else if (apiKey) {
+            console.log('[MediConnectAI] Using client-side API key from UI.');
         }
-        
+
+
         const baseUrl = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/';
 
         try {
