@@ -156,7 +156,7 @@ export default function ResearchPage() {
                 <LinkIcon className="mr-2 text-primary" />
                 Sources
               </CardTitle>
-            </Header>
+            </CardHeader>
             <CardContent className="space-y-4">
               {result.sources.map((source, index) => (
                 <div key={index} className="p-4 border rounded-lg hover:bg-muted/50">
