@@ -111,15 +111,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Interventional Cardiology',
         lessons: [
-          { title: 'Complex Coronary Interventions', content: 'This lesson provides a detailed walkthrough of advanced techniques for percutaneous coronary intervention (PCI), including strategies for treating bifurcated lesions, chronic total occlusions (CTOs), and heavily calcified vessels. Includes case studies and procedural videos.', videoUrl: 'https://www.youtube.com/embed/f-ldPgEfAHI' },
-          { title: 'Structural Heart Disease', content: 'Explore the latest in transcatheter therapies for structural heart disease. This lesson focuses on the procedural steps for Transcatheter Aortic Valve Replacement (TAVR) and MitraClip implantation, patient selection criteria, and management of potential complications.', videoUrl: 'https://www.youtube.com/embed/f-ldPgEfAHI' },
+          { title: 'Complex Coronary Interventions', content: 'Complex coronary interventions refer to percutaneous coronary intervention (PCI) procedures that involve challenging anatomical features or high-risk patient characteristics. These procedures are performed on patients with extensive coronary artery disease (CAD) that may be difficult to treat with standard stenting techniques. Challenges can include multivessel disease, severe calcification, lesions in the left main coronary artery, bifurcated vessels (where an artery splits), or chronic total occlusions (CTOs), where an artery is completely blocked for an extended period. These interventions require advanced skills, specialized equipment (such as rotational atherectomy devices to drill through calcium), and a heart team approach to ensure optimal outcomes and patient safety.', videoUrl: 'https://www.youtube.com/embed/P921Y6onN3g' },
+          { title: 'Structural Heart Disease', content: 'Structural heart disease involves abnormalities of the heart\'s valves, walls, or chambers. Historically, these conditions required open-heart surgery. However, minimally invasive transcatheter therapies have revolutionized treatment. Procedures like Transcatheter Aortic Valve Replacement (TAVR) for aortic stenosis and transcatheter edge-to-edge repair (TEER) with devices like the MitraClip for mitral regurgitation are now common. These techniques involve guiding catheters through blood vessels to repair or replace the damaged structure, offering faster recovery, lower risk for high-risk surgical patients, and a new paradigm for managing heart disease.', videoUrl: 'https://www.youtube.com/embed/P921Y6onN3g' },
         ],
       },
       {
         title: 'Module 2: Electrophysiology',
         lessons: [
-          { title: 'Arrhythmia Management', content: 'A review of the latest guidelines for managing common arrhythmias such as atrial fibrillation and ventricular tachycardia. This lesson covers pharmacologic therapies, ablation strategies, and risk stratification.' },
-          { title: 'Device Implantation', content: 'Learn the principles and techniques for implanting cardiac devices, including pacemakers, implantable cardioverter-defibrillators (ICDs), and cardiac resynchronization therapy (CRT) devices. Includes troubleshooting and follow-up management.' },
+          { title: 'Arrhythmia Management', content: 'Arrhythmia management focuses on diagnosing and treating irregular heart rhythms. This field involves a deep understanding of the heart\'s electrical system. Treatment strategies range from antiarrhythmic medications to more invasive procedures. Catheter ablation is a key technique where radiofrequency energy or cryotherapy is used to destroy the small area of heart tissue causing the arrhythmia. For conditions like atrial fibrillation, this can be curative. Management also includes stroke risk stratification and anticoagulation to prevent blood clots.' },
+          { title: 'Device Implantation', content: 'Cardiac device implantation is a critical part of electrophysiology. Pacemakers are implanted to treat bradycardia (slow heart rates), while implantable cardioverter-defibrillators (ICDs) are used to prevent sudden cardiac death from life-threatening arrhythmias like ventricular tachycardia. Cardiac resynchronization therapy (CRT) uses a special type of pacemaker to coordinate the contraction of the left and right ventricles, improving heart function in patients with heart failure. Proper implantation, programming, and long-term follow-up are essential for patient safety and device efficacy.' },
         ],
       },
     ],
@@ -136,7 +136,7 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Pediatric Assessment',
         lessons: [
-          { title: 'The Pediatric Assessment Triangle', content: 'Learn to use the Pediatric Assessment Triangle (PAT) for rapid, systematic initial assessment of a child\'s appearance, work of breathing, and circulation. This framework helps to quickly identify the type and severity of physiologic abnormality.', videoUrl: 'https://www.youtube.com/embed/f-ldPgEfAHI' },
+          { title: 'The Pediatric Assessment Triangle', content: 'Learn to use the Pediatric Assessment Triangle (PAT) for rapid, systematic initial assessment of a child\'s appearance, work of breathing, and circulation. This framework helps to quickly identify the type and severity of physiologic abnormality.', videoUrl: 'https://www.youtube.com/embed/P921Y6onN3g' },
           { title: 'Developmental Considerations', content: 'This lesson covers key age-specific differences in anatomy, physiology, and psychology that impact emergency care, from neonates to adolescents. Understand how to adapt your assessment and treatment for different developmental stages.' },
         ],
       },
@@ -161,7 +161,7 @@ export const courses: Course[] = [
       {
         title: 'Module 1: The Operating Room Environment',
         lessons: [
-          { title: 'Aseptic Technique', content: 'This lesson covers the core principles of maintaining a sterile field, including surgical scrubbing, gowning, and gloving. Understand the "why" behind the rules to ensure patient safety and prevent surgical site infections.', videoUrl: 'https://www.youtube.com/embed/f-ldPgEfAHI' },
+          { title: 'Aseptic Technique', content: 'This lesson covers the core principles of maintaining a sterile field, including surgical scrubbing, gowning, and gloving. Understand the "why" behind the rules to ensure patient safety and prevent surgical site infections.', videoUrl: 'https://www.youtube.com/embed/P921Y6onN3g' },
           { title: 'Surgical Instruments', content: 'Learn to identify and properly handle basic surgical instruments. This lesson includes a visual guide to common clamps, forceps, scalpels, and retractors, explaining their specific functions and appropriate use.' },
         ],
       },
@@ -311,8 +311,8 @@ export const courses: Course[] = [
       {
         title: 'Module 1: The Cellular Components',
         lessons: [
-          { title: 'Erythrocytes (Red Blood Cells)', content: 'This lesson visualizes the lifecycle of a red blood cell, from its creation in the bone marrow to its role in oxygen transport. It also covers common disorders like anemia and polycythemia.', videoUrl: 'https://www.youtube.com/embed/f-ldPgEfAHI' },
-          { title: 'Leukocytes (White Blood Cells)', content: 'Watch the immune system in action. This lesson provides an animated overview of the different types of white blood cells (neutrophils, lymphocytes, etc.) and their specific roles in fighting infection.', videoUrl: 'https://www.youtube.com/embed/f-ldPgEfAHI' },
+          { title: 'Erythrocytes (Red Blood Cells)', content: 'This lesson visualizes the lifecycle of a red blood cell, from its creation in the bone marrow to its role in oxygen transport. It also covers common disorders like anemia and polycythemia.', videoUrl: 'https://www.youtube.com/embed/P921Y6onN3g' },
+          { title: 'Leukocytes (White Blood Cells)', content: 'Watch the immune system in action. This lesson provides an animated overview of the different types of white blood cells (neutrophils, lymphocytes, etc.) and their specific roles in fighting infection.', videoUrl: 'https://www.youtube.com/embed/P921Y6onN3g' },
         ],
       },
     ],
@@ -329,8 +329,8 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Abdominal Surgeries',
         lessons: [
-          { title: 'Laparoscopic Appendectomy', content: 'A step-by-step 3D simulation of a minimally invasive appendectomy. This lesson covers patient positioning, port placement, identification of anatomy, and the technique for transecting the appendix.', videoUrl: 'https://www.youtube.com/embed/f-ldPgEfAHI' },
-          { title: 'Cholecystectomy (Gallbladder Removal)', content: 'This lesson provides a detailed animation of a laparoscopic cholecystectomy, including dissection of the critical view of safety, clipping of the cystic duct and artery, and removal of the gallbladder.', videoUrl: 'https://www.youtube.com/embed/f-ldPgEfAHI' },
+          { title: 'Laparoscopic Appendectomy', content: 'A step-by-step 3D simulation of a minimally invasive appendectomy. This lesson covers patient positioning, port placement, identification of anatomy, and the technique for transecting the appendix.', videoUrl: 'https://www.youtube.com/embed/P921Y6onN3g' },
+          { title: 'Cholecystectomy (Gallbladder Removal)', content: 'This lesson provides a detailed animation of a laparoscopic cholecystectomy, including dissection of the critical view of safety, clipping of the cystic duct and artery, and removal of the gallbladder.', videoUrl: 'https://www.youtube.com/embed/P921Y6onN3g' },
         ],
       },
     ],
@@ -347,8 +347,8 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Key Neurotransmitters',
         lessons: [
-          { title: 'The Dopamine System', content: 'This animated lesson traces the major dopaminergic pathways in the brain. Explore dopamine\'s role in reward, motivation, motor control, and its dysfunction in conditions like Parkinson\'s disease and addiction.', videoUrl: 'https://www.youtube.com/embed/f-ldPgEfAHI' },
-          { title: 'The Serotonin System', content: 'Visualize the synthesis, release, and reuptake of serotonin. This lesson explains its wide-ranging effects on mood, sleep, appetite, and cognition, and illustrates the mechanism of action for SSRI antidepressants.', videoUrl: 'https://www.youtube.com/embed/f-ldPgEfAHI' },
+          { title: 'The Dopamine System', content: 'This animated lesson traces the major dopaminergic pathways in the brain. Explore dopamine\'s role in reward, motivation, motor control, and its dysfunction in conditions like Parkinson\'s disease and addiction.', videoUrl: 'https://www.youtube.com/embed/P921Y6onN3g' },
+          { title: 'The Serotonin System', content: 'Visualize the synthesis, release, and reuptake of serotonin. This lesson explains its wide-ranging effects on mood, sleep, appetite, and cognition, and illustrates the mechanism of action for SSRI antidepressants.', videoUrl: 'https://www.youtube.com/embed/P921Y6onN3g' },
         ],
       },
     ],
@@ -877,4 +877,3 @@ export const courses: Course[] = [
     
 
     
-
