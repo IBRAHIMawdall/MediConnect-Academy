@@ -1,3 +1,4 @@
+
 import { PlaceHolderImages } from './placeholder-images';
 
 export type Lesson = {
@@ -11,36 +12,81 @@ export type Module = {
   lessons: Lesson[];
 };
 
-export type CourseCategory =
+export type CourseCategory = 'Clinical Medicine' | 'Basic Sciences' | 'Healthcare Management' | 'Professional Development' | 'Medical Exams';
+export type SubCategory =
   | 'Cardiology'
   | 'Pediatrics'
   | 'Surgery'
-  | 'Pharmacology'
-  | 'Ethics'
-  | 'Digital Health'
-  | 'Mental Health'
-  | 'Nutrition'
-  | 'Genomics'
-  | 'Data Science'
-  | 'Global Health'
-  | 'Research'
-  | 'Patient Safety'
-  | 'Management'
   | 'Radiology'
-  | 'AI in Healthcare'
-  | 'Public Health'
-  | 'Medical Billing'
-  | 'Leadership'
-  | 'Sports Medicine'
   | 'Dermatology'
   | 'Geriatrics'
   | 'Infectious Disease'
   | 'Palliative Care'
+  | 'Sports Medicine'
   | 'Wilderness Medicine'
   | 'Biology'
+  | 'Pharmacology'
+  | 'Genomics'
   | 'Neuroscience'
-  | 'Exam Prep'
-  | 'Hematology';
+  | 'Hematology'
+  | 'Data Science'
+  | 'Patient Safety'
+  | 'Management'
+  | 'Medical Billing'
+  | 'Leadership'
+  | 'Public Health'
+  | 'Global Health'
+  | 'Ethics'
+  | 'Digital Health'
+  | 'AI in Healthcare'
+  | 'Soft Skills'
+  | 'Business'
+  | 'Research'
+  | 'USMLE'
+  | 'MCAT';
+
+export const categories: Record<CourseCategory, SubCategory[]> = {
+  'Clinical Medicine': [
+    'Cardiology',
+    'Pediatrics',
+    'Surgery',
+    'Radiology',
+    'Dermatology',
+    'Geriatrics',
+    'Infectious Disease',
+    'Palliative Care',
+    'Sports Medicine',
+    'Wilderness Medicine',
+  ],
+  'Basic Sciences': [
+    'Biology',
+    'Pharmacology',
+    'Genomics',
+    'Neuroscience',
+    'Hematology',
+  ],
+  'Healthcare Management': [
+    'Data Science',
+    'Patient Safety',
+    'Management',
+    'Medical Billing',
+    'Leadership',
+    'Public Health',
+    'Global Health',
+  ],
+  'Professional Development': [
+    'Ethics',
+    'Digital Health',
+    'AI in Healthcare',
+    'Soft Skills',
+    'Business',
+    'Research',
+  ],
+  'Medical Exams': [
+    'USMLE',
+    'MCAT'
+  ],
+};
 
 
 export type Course = {
@@ -50,7 +96,8 @@ export type Course = {
   longDescription: string;
   imageId: string;
   modules: Module[];
-  categories: CourseCategory[];
+  category: CourseCategory;
+  subCategory: SubCategory;
 };
 
 export const courses: Course[] = [
@@ -76,7 +123,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Cardiology'],
+    category: 'Clinical Medicine',
+    subCategory: 'Cardiology',
   },
   {
     id: 'pediatric-emergency-care',
@@ -100,7 +148,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Pediatrics'],
+    category: 'Clinical Medicine',
+    subCategory: 'Pediatrics',
   },
   {
     id: 'surgical-techniques-101',
@@ -124,7 +173,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Surgery'],
+    category: 'Clinical Medicine',
+    subCategory: 'Surgery',
   },
   {
     id: 'pharmacology-innovations',
@@ -148,7 +198,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Pharmacology', 'Genomics'],
+    category: 'Basic Sciences',
+    subCategory: 'Pharmacology',
   },
   {
     id: 'medical-ethics-and-law',
@@ -172,7 +223,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Ethics'],
+    category: 'Professional Development',
+    subCategory: 'Ethics',
   },
   {
     id: 'telehealth-best-practices',
@@ -196,7 +248,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Digital Health'],
+    category: 'Professional Development',
+    subCategory: 'Digital Health',
   },
   {
     id: 'mental-health-first-aid',
@@ -220,7 +273,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Mental Health'],
+    category: 'Professional Development',
+    subCategory: 'Soft Skills',
   },
   {
     id: 'nutrition-and-health',
@@ -244,7 +298,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Nutrition'],
+    category: 'Basic Sciences',
+    subCategory: 'Biology',
   },
     {
     id: 'visualizing-blood-biology',
@@ -261,7 +316,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Biology', 'Hematology'],
+    category: 'Basic Sciences',
+    subCategory: 'Hematology',
   },
   {
     id: 'surgical-operations-simulation',
@@ -278,7 +334,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Surgery'],
+    category: 'Clinical Medicine',
+    subCategory: 'Surgery',
   },
   {
     id: 'neurochemical-pathways',
@@ -295,7 +352,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Neuroscience', 'Biology'],
+    category: 'Basic Sciences',
+    subCategory: 'Neuroscience',
   },
   {
     id: 'usmle-step-1-prep',
@@ -312,7 +370,8 @@ export const courses: Course[] = [
         ],
         },
     ],
-    categories: ['Exam Prep'],
+    category: 'Medical Exams',
+    subCategory: 'USMLE',
   },
   {
     id: 'mcat-biology-biochem-prep',
@@ -329,7 +388,8 @@ export const courses: Course[] = [
         ],
         },
     ],
-    categories: ['Exam Prep'],
+    category: 'Medical Exams',
+    subCategory: 'MCAT',
   },
   {
     id: 'genomics-in-medicine',
@@ -353,7 +413,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Genomics'],
+    category: 'Basic Sciences',
+    subCategory: 'Genomics',
   },
   {
     id: 'data-science-for-healthcare',
@@ -377,7 +438,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Data Science', 'AI in Healthcare'],
+    category: 'Healthcare Management',
+    subCategory: 'Data Science',
   },
   {
     id: 'global-health-challenges',
@@ -401,7 +463,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Global Health', 'Public Health'],
+    category: 'Healthcare Management',
+    subCategory: 'Global Health',
   },
   {
     id: 'clinical-research-design',
@@ -425,7 +488,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Research'],
+    category: 'Professional Development',
+    subCategory: 'Research',
   },
   {
     id: 'patient-safety-and-quality-improvement',
@@ -449,7 +513,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Patient Safety', 'Management'],
+    category: 'Healthcare Management',
+    subCategory: 'Patient Safety',
   },
   {
     id: 'healthcare-management',
@@ -473,7 +538,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Management', 'Leadership'],
+    category: 'Healthcare Management',
+    subCategory: 'Management',
   },
   {
     id: 'diagnostic-imaging-fundamentals',
@@ -497,7 +563,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Radiology'],
+    category: 'Clinical Medicine',
+    subCategory: 'Radiology',
   },
   {
     id: 'ai-in-healthcare',
@@ -521,7 +588,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['AI in Healthcare', 'Data Science'],
+    category: 'Professional Development',
+    subCategory: 'AI in Healthcare',
   },
   {
     id: 'public-health-principles',
@@ -545,7 +613,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Public Health'],
+    category: 'Healthcare Management',
+    subCategory: 'Public Health',
   },
   {
     id: 'medical-billing-coding',
@@ -569,7 +638,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Medical Billing'],
+    category: 'Healthcare Management',
+    subCategory: 'Medical Billing',
   },
   {
     id: 'healthcare-leadership',
@@ -593,7 +663,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Leadership'],
+    category: 'Healthcare Management',
+    subCategory: 'Leadership',
   },
   {
     id: 'sports-medicine-essentials',
@@ -617,7 +688,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Sports Medicine'],
+    category: 'Clinical Medicine',
+    subCategory: 'Sports Medicine',
   },
   {
     id: 'dermatology-for-primary-care',
@@ -641,7 +713,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Dermatology'],
+    category: 'Clinical Medicine',
+    subCategory: 'Dermatology',
   },
   {
     id: 'geriatric-medicine-principles',
@@ -665,7 +738,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Geriatrics'],
+    category: 'Clinical Medicine',
+    subCategory: 'Geriatrics',
   },
   {
     id: 'infectious-disease-control',
@@ -689,7 +763,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Infectious Disease'],
+    category: 'Clinical Medicine',
+    subCategory: 'Infectious Disease',
   },
   {
     id: 'palliative-care-essentials',
@@ -713,7 +788,8 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Palliative Care'],
+    category: 'Clinical Medicine',
+    subCategory: 'Palliative Care',
   },
   {
     id: 'wilderness-medicine',
@@ -737,6 +813,63 @@ export const courses: Course[] = [
         ],
       },
     ],
-    categories: ['Wilderness Medicine'],
-  }
+    category: 'Clinical Medicine',
+    subCategory: 'Wilderness Medicine',
+  },
+  {
+    id: 'intro-to-hematology',
+    title: 'Introduction to Hematology',
+    description: 'Understand the essentials of blood disorders and their treatment.',
+    longDescription: 'This course provides a foundational understanding of hematology, covering common disorders of red cells, white cells, and platelets. It is ideal for students and professionals new to the field.',
+    imageId: 'intro-hematology',
+    modules: [
+      {
+        title: 'Module 1: Red Blood Cell Disorders',
+        lessons: [
+          { title: 'Anemia: A Comprehensive Overview', content: 'Types, diagnosis, and management.' },
+          { title: 'Sickle Cell Disease', content: 'Pathophysiology and modern treatments.' },
+        ],
+      },
+    ],
+    category: 'Basic Sciences',
+    subCategory: 'Hematology',
+  },
+  {
+    id: 'effective-communication-healthcare',
+    title: 'Effective Communication in Healthcare',
+    description: 'Master the art of patient-centered communication.',
+    longDescription: 'This course focuses on the soft skills crucial for healthcare professionals. Learn techniques for empathetic listening, breaking bad news, and collaborative decision-making to improve patient relationships and outcomes.',
+    imageId: 'comm-healthcare',
+    modules: [
+      {
+        title: 'Module 1: Patient-Centered Communication',
+        lessons: [
+          { title: 'Active Listening Techniques', content: 'Building rapport and trust.' },
+          { title: 'Shared Decision-Making', content: 'Collaborating with patients on their care plan.' },
+        ],
+      },
+    ],
+    category: 'Professional Development',
+    subCategory: 'Soft Skills',
+  },
+  {
+    id: 'healthcare-finance-101',
+    title: 'Healthcare Finance 101',
+    description: 'An introduction to the business side of medicine.',
+    longDescription: 'Understand the fundamentals of healthcare finance, including budgeting, revenue cycles, and financial analysis. This course is designed for clinicians and administrators who want to make better financial decisions for their practice or department.',
+    imageId: 'finance-101',
+    modules: [
+      {
+        title: 'Module 1: The Healthcare Revenue Cycle',
+        lessons: [
+          { title: 'From Patient Visit to Payment', content: 'Understanding the key steps.' },
+          { title: 'Common Billing and Coding Errors', content: 'How to avoid them.' },
+        ],
+      },
+    ],
+    category: 'Professional Development',
+    subCategory: 'Business',
+  },
 ];
+
+    

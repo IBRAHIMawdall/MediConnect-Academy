@@ -21,7 +21,7 @@ export function CourseCard({ course }: CourseCardProps) {
   const placeholder = PlaceHolderImages.find((p) => p.id === course.imageId);
 
   return (
-    <Card className="flex flex-col h-full overflow-hidden transition-all duration-300 hover:shadow-[0_0_20px_4px_rgba(135,81,255,0.2)] hover:-translate-y-1 bg-secondary/30 border-secondary">
+    <Card className="flex flex-col h-full overflow-hidden transition-all duration-300 hover:shadow-[0_0_20px_4px_rgba(135,81,255,0.2)] hover:-translate-y-1 bg-card border">
       <Link href={`/courses/${course.id}`} className="flex flex-col h-full">
         <CardHeader className="p-0">
           <div className="relative w-full h-40">
@@ -34,13 +34,11 @@ export function CourseCard({ course }: CourseCardProps) {
                 data-ai-hint={placeholder.imageHint}
               />
             )}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             <div className="absolute bottom-2 left-2 flex flex-wrap gap-1">
-              {course.categories.map(category => (
-                  <Badge key={category} variant="default" className="bg-white/10 backdrop-blur-sm text-white border-none text-xs">
-                      {category}
-                  </Badge>
-              ))}
+                <Badge variant="secondary" className="text-xs">
+                    {course.subCategory}
+                </Badge>
             </div>
           </div>
         </CardHeader>

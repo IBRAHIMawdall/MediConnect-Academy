@@ -186,6 +186,24 @@
       "description": "A timeline of medical large language models.",
       "imageUrl": "https://storage.googleapis.com/studiopaper-dev.appspot.com/projects/e526b779-6617-4712-a7d1-05397de30089/gallery/b265886d-0648-424a-a9e9-72a3e0f46c64.png",
       "imageHint": "timeline chart"
+    },
+    {
+      "id": "intro-hematology",
+      "description": "An abstract image representing blood cells for hematology.",
+      "imageUrl": "https://picsum.photos/seed/hematology/600/400",
+      "imageHint": "blood microscope"
+    },
+    {
+      "id": "comm-healthcare",
+      "description": "An image of two people in a collaborative discussion.",
+      "imageUrl": "https://picsum.photos/seed/communication/600/400",
+      "imageHint": "team discussion"
+    },
+    {
+      "id": "finance-101",
+      "description": "An image representing financial concepts like charts and graphs.",
+      "imageUrl": "https://picsum.photos/seed/finance/600/400",
+      "imageHint": "finance chart"
     }
   ]
 }

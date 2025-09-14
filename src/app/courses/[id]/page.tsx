@@ -22,9 +22,8 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
         description="Dive into your learning module by module."
       />
       <div className="flex flex-wrap gap-2">
-        {course.categories.map((category) => (
-            <Badge key={category} variant="default">{category}</Badge>
-        ))}
+          <Badge variant="default">{course.category}</Badge>
+          <Badge variant="secondary">{course.subCategory}</Badge>
       </div>
       <div className="grid gap-8 md:grid-cols-3">
         <div className="md:col-span-2">
