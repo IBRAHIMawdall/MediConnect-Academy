@@ -7,6 +7,7 @@ import { courses } from '@/lib/data';
 import { PageHeader } from '@/components/layout/page-header';
 import { UserNav } from '@/components/layout/user-nav';
 import { useEffect, useState } from 'react';
+import { FeaturedCourses } from '@/components/courses/featured-courses';
 
 export default function DashboardPage() {
   const enrolledCourses = courses.slice(0, 2); 
@@ -36,6 +37,9 @@ export default function DashboardPage() {
             ))}
           </div>
         </div>
+
+        <FeaturedCourses />
+
         <div>
           <h2 className="text-2xl font-bold tracking-tight mb-4">
             Personalized Learning Path
