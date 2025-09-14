@@ -1,4 +1,5 @@
 
+
 import { PlaceHolderImages } from './placeholder-images';
 
 export type Lesson = {
@@ -576,8 +577,8 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Machine Learning for Medical Imaging',
         lessons: [
-          { title: 'Convolutional Neural Networks (CNNs)', content: 'This lesson explains the architecture of Convolutional Neural Networks (CNNs), the primary type of deep learning model used for image analysis. Understand how they learn to identify features in medical scans.' },
-          { title: 'Case Study: AI in Radiology', content: 'Explore a real-world example of how AI is used in radiology to detect diseases like cancer from X-rays, CT scans, or MRIs. Discuss the benefits and challenges of integrating these tools into clinical workflows.' },
+          { title: 'Convolutional Neural Networks (CNNs)', content: 'Dive into the core of AI image analysis. This lesson demystifies CNNs, explaining their layered architecture—from convolutional layers that detect simple features like edges, to deeper layers that recognize complex patterns like tissue anomalies. You will learn how these networks are trained on vast datasets of medical images to achieve, and sometimes exceed, human-level accuracy in tasks like identifying cancerous nodules in a lung CT scan. We will cover key concepts like feature maps, pooling, and activation functions in a clear, accessible manner.' },
+          { title: 'Case Study: AI in Radiology', content: 'This lesson moves from theory to practice, exploring a real-world application of AI in a radiology workflow. We will analyze a case where an AI model is used to assist radiologists in detecting early signs of diabetic retinopathy from retinal fundus images. You will learn how the AI tool integrates into the clinical setting, its impact on diagnostic speed and accuracy, and the critical importance of human oversight. We will also discuss the regulatory hurdles (like FDA approval) and the validation process required to deploy such tools safely.' },
         ],
       },
       {
@@ -877,3 +878,4 @@ export const courses: Course[] = [
     
 
     
+
