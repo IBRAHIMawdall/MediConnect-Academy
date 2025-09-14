@@ -28,12 +28,15 @@ const findRelevantContent = ai.defineTool(
         console.log(`Searching PubMed for: ${query}`);
         
         // In a production app, you'd want to get an NCBI API key for higher rate limits.
-        // const apiKey = process.env.NCBI_API_KEY;
+        const apiKey = process.env.NCBI_API_KEY;
         const baseUrl = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/';
 
         try {
             // Step 1: Search for article IDs
-            const searchUrl = `${baseUrl}esearch.fcgi?db=pubmed&term=${encodeURIComponent(query)}&retmode=json&retmax=5`;
+            let searchUrl = `${baseUrl}esearch.fcgi?db=pubmed&term=${encodeURIComponent(query)}&retmode=json&retmax=5`;
+            if (apiKey) {
+                searchUrl += `&api_key=${apiKey}`;
+            }
             const searchResponse = await fetch(searchUrl);
             if (!searchResponse.ok) {
                 throw new Error(`NCBI esearch failed with status: ${searchResponse.status}`);
@@ -47,7 +50,10 @@ const findRelevantContent = ai.defineTool(
 
             // Step 2: Fetch summaries for those IDs
             const idList = ids.join(',');
-            const summaryUrl = `${baseUrl}esummary.fcgi?db=pubmed&id=${idList}&retmode=json`;
+            let summaryUrl = `${baseUrl}esummary.fcgi?db=pubmed&id=${idList}&retmode=json`;
+            if (apiKey) {
+                summaryUrl += `&api_key=${apiKey}`;
+            }
             const summaryResponse = await fetch(summaryUrl);
             if (!summaryResponse.ok) {
                 throw new Error(`NCBI esummary failed with status: ${summaryResponse.status}`);
