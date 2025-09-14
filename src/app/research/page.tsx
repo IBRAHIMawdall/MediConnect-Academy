@@ -1,6 +1,7 @@
+
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -16,8 +17,8 @@ import {
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { PageHeader } from '@/components/layout/page-header';
-import { researchAssistant, type ResearchAssistantInput, type ResearchAssistantOutput } from '@/ai/flows/research-assistant-flow';
-import { Loader2, Sparkles, FileText, Link as LinkIcon, KeyRound } from 'lucide-react';
+import { researchAssistant, type ResearchAssistantOutput } from '@/ai/flows/research-assistant-flow';
+import { Loader2, Sparkles, FileText, Link as LinkIcon } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
 import { ApiKeyInput } from './api-key-input';
@@ -32,6 +33,11 @@ export default function ResearchPage() {
   const [result, setResult] = useState<ResearchAssistantOutput | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [apiKey, setApiKey] = useLocalStorage('ncbi-api-key', '');
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -54,16 +60,21 @@ export default function ResearchPage() {
       setLoading(false);
     }
   }
+  
+  const renderContent = () => {
+    if (!hasMounted) {
+      return (
+        <div className="mt-8 text-center text-muted-foreground">
+          <Loader2 className="mx-auto animate-spin h-8 w-8" />
+        </div>
+      );
+    }
 
-  return (
-    <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
-      <PageHeader
-        title="AI Research Assistant"
-        description="Ask a question and let the AI find and summarize relevant information for you."
-      />
-      {!apiKey ? (
-        <ApiKeyInput onKeySubmit={setApiKey} />
-      ) : (
+    if (!apiKey) {
+      return <ApiKeyInput onKeySubmit={setApiKey} />;
+    }
+
+    return (
         <Card>
           <CardHeader>
             <CardTitle>Research Query</CardTitle>
@@ -103,7 +114,18 @@ export default function ResearchPage() {
             </Form>
           </CardContent>
         </Card>
-      )}
+    );
+  };
+
+
+  return (
+    <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
+      <PageHeader
+        title="AI Research Assistant"
+        description="Ask a question and let the AI find and summarize relevant information for you."
+      />
+      
+      {renderContent()}
 
       {loading && (
         <div className="mt-8 text-center text-muted-foreground">
@@ -134,7 +156,7 @@ export default function ResearchPage() {
                 <LinkIcon className="mr-2 text-primary" />
                 Sources
               </CardTitle>
-            </CardHeader>
+            </Header>
             <CardContent className="space-y-4">
               {result.sources.map((source, index) => (
                 <div key={index} className="p-4 border rounded-lg hover:bg-muted/50">

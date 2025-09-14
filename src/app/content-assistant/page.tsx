@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -33,6 +33,11 @@ export default function ContentAssistantPage() {
   const [result, setResult] = useState<ResearchAssistantOutput | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [apiKey, setApiKey] = useLocalStorage('ncbi-api-key', '');
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -56,15 +61,20 @@ export default function ContentAssistantPage() {
     }
   }
 
-  return (
-    <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
-      <PageHeader
-        title="AI Content Assistant"
-        description="Find articles, videos, and summaries to build your course content."
-      />
-      {!apiKey ? (
-        <ApiKeyInput onKeySubmit={setApiKey} />
-      ) : (
+  const renderContent = () => {
+    if (!hasMounted) {
+        return (
+            <div className="mt-8 text-center text-muted-foreground">
+                <Loader2 className="mx-auto animate-spin h-8 w-8" />
+            </div>
+        );
+    }
+
+    if (!apiKey) {
+        return <ApiKeyInput onKeySubmit={setApiKey} />;
+    }
+
+    return (
         <Card>
           <CardHeader>
             <CardTitle>Content Topic</CardTitle>
@@ -104,7 +114,16 @@ export default function ContentAssistantPage() {
             </Form>
           </CardContent>
         </Card>
-      )}
+    )
+  }
+
+  return (
+    <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
+      <PageHeader
+        title="AI Content Assistant"
+        description="Find articles, videos, and summaries to build your course content."
+      />
+      {renderContent()}
 
       {loading && (
         <div className="mt-8 text-center text-muted-foreground">
