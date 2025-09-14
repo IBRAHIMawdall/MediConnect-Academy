@@ -111,8 +111,8 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Interventional Cardiology',
         lessons: [
-          { title: 'Complex Coronary Interventions', content: 'Detailed walkthrough of advanced techniques.', videoUrl: 'https://www.youtube.com/embed/s_hWz2aAfas' },
-          { title: 'Structural Heart Disease', content: 'Focus on TAVR and MitraClip procedures.', videoUrl: 'https://www.youtube.com/embed/s_hWz2aAfas' },
+          { title: 'Complex Coronary Interventions', content: 'Detailed walkthrough of advanced techniques.', videoUrl: 'https://www.youtube.com/embed/NqS-194LpY4' },
+          { title: 'Structural Heart Disease', content: 'Focus on TAVR and MitraClip procedures.', videoUrl: 'https://www.youtube.com/embed/NqS-194LpY4' },
         ],
       },
       {
@@ -136,7 +136,7 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Pediatric Assessment',
         lessons: [
-          { title: 'The Pediatric Assessment Triangle', content: 'A systematic approach to initial assessment.', videoUrl: 'https://www.youtube.com/embed/s_hWz2aAfas' },
+          { title: 'The Pediatric Assessment Triangle', content: 'A systematic approach to initial assessment.', videoUrl: 'https://www.youtube.com/embed/NqS-194LpY4' },
           { title: 'Developmental Considerations', content: 'Understanding age-specific differences.' },
         ],
       },
@@ -161,7 +161,7 @@ export const courses: Course[] = [
       {
         title: 'Module 1: The Operating Room Environment',
         lessons: [
-          { title: 'Aseptic Technique', content: 'The foundation of safe surgery.', videoUrl: 'https://www.youtube.com/embed/s_hWz2aAfas' },
+          { title: 'Aseptic Technique', content: 'The foundation of safe surgery.', videoUrl: 'https://www.youtube.com/embed/NqS-194LpY4' },
           { title: 'Surgical Instruments', content: 'Identification and proper handling.' },
         ],
       },
@@ -311,8 +311,8 @@ export const courses: Course[] = [
       {
         title: 'Module 1: The Cellular Components',
         lessons: [
-          { title: 'Erythrocytes (Red Blood Cells)', content: 'Oxygen transport and related disorders.', videoUrl: 'https://www.youtube.com/embed/s_hWz2aAfas' },
-          { title: 'Leukocytes (White Blood Cells)', content: 'The immune response in action.', videoUrl: 'https://www.youtube.com/embed/s_hWz2aAfas' },
+          { title: 'Erythrocytes (Red Blood Cells)', content: 'Oxygen transport and related disorders.', videoUrl: 'https://www.youtube.com/embed/NqS-194LpY4' },
+          { title: 'Leukocytes (White Blood Cells)', content: 'The immune response in action.', videoUrl: 'https://www.youtube.com/embed/NqS-194LpY4' },
         ],
       },
     ],
@@ -329,8 +329,8 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Abdominal Surgeries',
         lessons: [
-          { title: 'Laparoscopic Appendectomy', content: 'A minimally invasive approach.', videoUrl: 'https://www.youtube.com/embed/s_hWz2aAfas' },
-          { title: 'Cholecystectomy (Gallbladder Removal)', content: 'Step-by-step procedure.', videoUrl: 'https://www.youtube.com/embed/s_hWz2aAfas' },
+          { title: 'Laparoscopic Appendectomy', content: 'A minimally invasive approach.', videoUrl: 'https://www.youtube.com/embed/NqS-194LpY4' },
+          { title: 'Cholecystectomy (Gallbladder Removal)', content: 'Step-by-step procedure.', videoUrl: 'https://www.youtube.com/embed/NqS-194LpY4' },
         ],
       },
     ],
@@ -347,8 +347,8 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Key Neurotransmitters',
         lessons: [
-          { title: 'The Dopamine System', content: 'Reward, motivation, and addiction.', videoUrl: 'https://www.youtube.com/embed/s_hWz2aAfas' },
-          { title: 'The Serotonin System', content: 'Mood, sleep, and appetite.', videoUrl: 'https://www.youtube.com/embed/s_hWz2aAfas' },
+          { title: 'The Dopamine System', content: 'Reward, motivation, and addiction.', videoUrl: 'https://www.youtube.com/embed/NqS-194LpY4' },
+          { title: 'The Serotonin System', content: 'Mood, sleep, and appetite.', videoUrl: 'https://www.youtube.com/embed/NqS-194LpY4' },
         ],
       },
     ],
@@ -871,5 +871,7 @@ export const courses: Course[] = [
     subCategory: 'Business',
   },
 ];
+
+    
 
     
