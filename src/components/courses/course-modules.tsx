@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import {
   Accordion,
   AccordionContent,
@@ -16,6 +16,7 @@ import type { Course } from '@/lib/data';
 import { useToast } from '@/hooks/use-toast';
 import { generateCertificate } from '@/ai/flows/generate-certificate';
 import { useUser } from '@/hooks/use-user';
+import { useProgress } from '@/hooks/use-progress';
 
 
 interface CourseModulesProps {
@@ -26,26 +27,21 @@ export function CourseModules({ course }: CourseModulesProps) {
   const { toast } = useToast();
   const { user } = useUser();
   const [isGenerating, setIsGenerating] = useState(false);
+  
   const totalLessons = useMemo(
     () => course.modules.reduce((acc, module) => acc + module.lessons.length, 0),
     [course.modules]
   );
+  
+  const [hasMounted, setHasMounted] = useState(false);
+  const { completedLessons, toggleLesson } = useProgress(course.id);
+  
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
-  const [completedLessons, setCompletedLessons] = useState<Set<string>>(new Set());
 
-  const handleLessonToggle = (lessonTitle: string) => {
-    setCompletedLessons((prev) => {
-      const newSet = new Set(prev);
-      if (newSet.has(lessonTitle)) {
-        newSet.delete(lessonTitle);
-      } else {
-        newSet.add(lessonTitle);
-      }
-      return newSet;
-    });
-  };
-
-  const progress = totalLessons > 0 ? (completedLessons.size / totalLessons) * 100 : 0;
+  const progress = totalLessons > 0 && hasMounted ? (completedLessons.size / totalLessons) * 100 : 0;
   
   const handleDownloadCertificate = async () => {
     if (progress < 100) return;
@@ -84,6 +80,22 @@ export function CourseModules({ course }: CourseModulesProps) {
         setIsGenerating(false);
     }
   };
+  
+  if (!hasMounted) {
+    return (
+      <Card>
+        <CardHeader>
+            <CardTitle>Course Content & Progress</CardTitle>
+            <CardDescription>Loading your progress...</CardDescription>
+        </CardHeader>
+        <CardContent>
+            <div className="flex items-center justify-center p-8">
+                <Loader2 className="animate-spin h-8 w-8 text-muted-foreground" />
+            </div>
+        </CardContent>
+      </Card>
+    )
+  }
 
   return (
     <Card>
@@ -108,14 +120,14 @@ export function CourseModules({ course }: CourseModulesProps) {
                         className="flex items-start gap-3 p-3 rounded-md transition-colors hover:bg-muted/50"
                         >
                         <Checkbox
-                            id={`lesson-${moduleIndex}-${lessonIndex}`}
+                            id={`lesson-${lesson.title}`}
                             checked={completedLessons.has(lesson.title)}
-                            onCheckedChange={() => handleLessonToggle(lesson.title)}
+                            onCheckedChange={() => toggleLesson(lesson.title)}
                             className="mt-1"
                         />
                         <div className="grid gap-1.5 leading-snug">
                             <label
-                            htmlFor={`lesson-${moduleIndex}-${lessonIndex}`}
+                            htmlFor={`lesson-${lesson.title}`}
                             className="text-sm font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer flex items-center gap-2"
                             >
                             {lesson.title}

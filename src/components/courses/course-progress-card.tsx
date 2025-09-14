@@ -10,6 +10,7 @@ import {
 } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import type { Course } from '@/lib/data';
+import { useEffect, useState } from 'react';
 
 interface CourseProgressCardProps {
   course: Course;
@@ -17,6 +18,14 @@ interface CourseProgressCardProps {
 }
 
 export function CourseProgressCard({ course, progress }: CourseProgressCardProps) {
+    const [displayProgress, setDisplayProgress] = useState(0);
+
+    useEffect(() => {
+        // Animate the progress bar
+        const timer = setTimeout(() => setDisplayProgress(progress), 500);
+        return () => clearTimeout(timer);
+    }, [progress]);
+
   return (
     <Card>
       <CardHeader>
@@ -25,8 +34,8 @@ export function CourseProgressCard({ course, progress }: CourseProgressCardProps
       </CardHeader>
       <CardContent>
         <div className="flex items-center gap-4">
-          <span className="text-sm font-medium text-muted-foreground">{progress}%</span>
-          <Progress value={progress} className="w-full" />
+          <span className="text-sm font-medium text-muted-foreground">{Math.round(progress)}%</span>
+          <Progress value={displayProgress} className="w-full" />
         </div>
       </CardContent>
       <CardFooter>
