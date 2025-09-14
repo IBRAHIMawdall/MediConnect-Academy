@@ -139,7 +139,10 @@ const researchAssistantPrompt = ai.definePrompt({
 export async function researchAssistant(
   input: ResearchAssistantInput
 ): Promise<ResearchAssistantOutput> {
-  const { output } = await researchAssistantPrompt(input);
+  const { output } = await researchAssistantPrompt({
+    query: input.query,
+    findRelevantContent: { apiKey: input.apiKey }
+  });
   if (!output) {
       throw new Error("Failed to get a response from the research assistant.");
   }
