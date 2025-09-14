@@ -2,12 +2,11 @@
 
 import { useState, useMemo } from 'react';
 import { Input } from '@/components/ui/input';
-import { courses, categories, Course, CourseCategory, SubCategory } from '@/lib/data';
+import { courses, categories, CourseCategory, SubCategory } from '@/lib/data';
 import { CourseCard } from '@/components/courses/course-card';
 import { PageHeader } from '@/components/layout/page-header';
 import { Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 type Filter = { type: 'main'; id: CourseCategory } | { type: 'sub'; id: SubCategory } | { type: 'all' };
