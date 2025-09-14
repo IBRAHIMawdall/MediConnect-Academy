@@ -111,15 +111,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Interventional Cardiology',
         lessons: [
-          { title: 'Complex Coronary Interventions', content: 'Detailed walkthrough of advanced techniques.', videoUrl: 'https://www.youtube.com/embed/NqS-194LpY4' },
-          { title: 'Structural Heart Disease', content: 'Focus on TAVR and MitraClip procedures.', videoUrl: 'https://www.youtube.com/embed/NqS-194LpY4' },
+          { title: 'Complex Coronary Interventions', content: 'This lesson provides a detailed walkthrough of advanced techniques for percutaneous coronary intervention (PCI), including strategies for treating bifurcated lesions, chronic total occlusions (CTOs), and heavily calcified vessels. Includes case studies and procedural videos.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
+          { title: 'Structural Heart Disease', content: 'Explore the latest in transcatheter therapies for structural heart disease. This lesson focuses on the procedural steps for Transcatheter Aortic Valve Replacement (TAVR) and MitraClip implantation, patient selection criteria, and management of potential complications.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
         ],
       },
       {
         title: 'Module 2: Electrophysiology',
         lessons: [
-          { title: 'Arrhythmia Management', content: 'Latest guidelines and treatments.' },
-          { title: 'Device Implantation', content: 'Pacemakers, ICDs, and CRT devices.' },
+          { title: 'Arrhythmia Management', content: 'A review of the latest guidelines for managing common arrhythmias such as atrial fibrillation and ventricular tachycardia. This lesson covers pharmacologic therapies, ablation strategies, and risk stratification.' },
+          { title: 'Device Implantation', content: 'Learn the principles and techniques for implanting cardiac devices, including pacemakers, implantable cardioverter-defibrillators (ICDs), and cardiac resynchronization therapy (CRT) devices. Includes troubleshooting and follow-up management.' },
         ],
       },
     ],
@@ -136,15 +136,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Pediatric Assessment',
         lessons: [
-          { title: 'The Pediatric Assessment Triangle', content: 'A systematic approach to initial assessment.', videoUrl: 'https://www.youtube.com/embed/NqS-194LpY4' },
-          { title: 'Developmental Considerations', content: 'Understanding age-specific differences.' },
+          { title: 'The Pediatric Assessment Triangle', content: 'Learn to use the Pediatric Assessment Triangle (PAT) for rapid, systematic initial assessment of a child\'s appearance, work of breathing, and circulation. This framework helps to quickly identify the type and severity of physiologic abnormality.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
+          { title: 'Developmental Considerations', content: 'This lesson covers key age-specific differences in anatomy, physiology, and psychology that impact emergency care, from neonates to adolescents. Understand how to adapt your assessment and treatment for different developmental stages.' },
         ],
       },
       {
         title: 'Module 2: Common Pediatric Emergencies',
         lessons: [
-          { title: 'Respiratory Distress', content: 'From croup to asthma exacerbations.' },
-          { title: 'Febrile Seizures', content: 'Diagnosis and management.' },
+          { title: 'Respiratory Distress', content: 'A deep dive into the most common pediatric respiratory emergencies, including diagnosis and management of croup, bronchiolitis, asthma exacerbations, and foreign body aspiration.' },
+          { title: 'Febrile Seizures', content: 'Understand the difference between simple and complex febrile seizures, the diagnostic workup, and evidence-based management strategies. This lesson also covers parental education and reassurance.' },
         ],
       },
     ],
@@ -161,15 +161,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: The Operating Room Environment',
         lessons: [
-          { title: 'Aseptic Technique', content: 'The foundation of safe surgery.', videoUrl: 'https://www.youtube.com/embed/NqS-194LpY4' },
-          { title: 'Surgical Instruments', content: 'Identification and proper handling.' },
+          { title: 'Aseptic Technique', content: 'This lesson covers the core principles of maintaining a sterile field, including surgical scrubbing, gowning, and gloving. Understand the "why" behind the rules to ensure patient safety and prevent surgical site infections.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
+          { title: 'Surgical Instruments', content: 'Learn to identify and properly handle basic surgical instruments. This lesson includes a visual guide to common clamps, forceps, scalpels, and retractors, explaining their specific functions and appropriate use.' },
         ],
       },
       {
         title: 'Module 2: Basic Surgical Skills',
         lessons: [
-          { title: 'Suturing and Knot Tying', content: 'Step-by-step video tutorials and practice exercises.' },
-          { title: 'Basic Incision and Drainage', content: 'A common and important procedure.' },
+          { title: 'Suturing and Knot Tying', content: 'Master the foundational skills of wound closure. This lesson provides step-by-step video tutorials on various suturing techniques (e.g., simple interrupted, running sutures) and secure knot tying.' },
+          { title: 'Basic Incision and Drainage', content: 'A practical guide to performing an incision and drainage (I&D) for an abscess, a common and important procedure in many specialties. Learn the steps, necessary equipment, and post-procedure care.' },
         ],
       },
     ],
@@ -186,15 +186,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Gene and Cell Therapies',
         lessons: [
-          { title: 'Introduction to Gene Editing', content: 'CRISPR and beyond.' },
-          { title: 'CAR-T Cell Therapy', content: 'A revolution in cancer treatment.' },
+          { title: 'Introduction to Gene Editing', content: 'Explore the mechanisms and potential of gene editing technologies like CRISPR-Cas9. This lesson explains how these tools work and discusses their therapeutic applications for genetic diseases.' },
+          { title: 'CAR-T Cell Therapy', content: 'Discover the revolutionary approach of Chimeric Antigen Receptor (CAR)-T cell therapy in oncology. Learn how patient T-cells are engineered to fight cancer and review the clinical successes and challenges.' },
         ],
       },
       {
         title: 'Module 2: Personalized Medicine',
         lessons: [
-          { title: 'Pharmacogenomics', content: 'Tailoring drugs to individual genetic profiles.' },
-          { title: 'Targeted Drug Therapies', content: 'Maximizing efficacy and minimizing side effects.' },
+          { title: 'Pharmacogenomics', content: 'Understand how an individual\'s genetic makeup affects their response to drugs. This lesson covers key examples of pharmacogenomic testing in clinical practice to optimize drug selection and dosage.' },
+          { title: 'Targeted Drug Therapies', content: 'Learn about the development of drugs that target specific molecules involved in cancer and other diseases. This approach maximizes efficacy while minimizing the side effects associated with traditional chemotherapy.' },
         ],
       },
     ],
@@ -211,15 +211,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Foundations of Medical Ethics',
         lessons: [
-          { title: 'The Four Principles', content: 'Autonomy, Beneficence, Non-maleficence, and Justice.' },
-          { title: 'Informed Consent', content: 'Legal and ethical requirements.' },
+          { title: 'The Four Principles', content: 'A deep dive into the four pillars of medical ethics: Autonomy, Beneficence, Non-maleficence, and Justice. This lesson uses case studies to illustrate how these principles apply in clinical scenarios.' },
+          { title: 'Informed Consent', content: 'This lesson covers the legal and ethical requirements for obtaining informed consent. Learn about capacity assessment, the elements of disclosure, and how to navigate complex consent situations.' },
         ],
       },
       {
         title: 'Module 2: Contemporary Issues',
         lessons: [
-          { title: 'End-of-Life Decision Making', content: 'Navigating advance directives and palliative care.' },
-          { title: 'HIPAA and Patient Privacy', content: 'Understanding the legal landscape.' },
+          { title: 'End-of-Life Decision Making', content: 'Explore the sensitive topic of end-of-life care, including navigating advance directives, discussing goals of care, and the role of palliative and hospice care in ensuring patient dignity.' },
+          { title: 'HIPAA and Patient Privacy', content: 'Understand the legal landscape of patient privacy under the Health Insurance Portability and Accountability Act (HIPAA). This lesson covers common pitfalls and best practices for protecting patient information in the digital age.' },
         ],
       },
     ],
@@ -236,15 +236,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Setting Up Your Virtual Practice',
         lessons: [
-          { title: 'Technology and Platforms', content: 'Choosing the right tools for your practice.' },
-          { title: 'Regulatory and Billing Considerations', content: 'Staying compliant and getting paid.' },
+          { title: 'Technology and Platforms', content: 'This lesson provides a guide to choosing the right HIPAA-compliant telehealth platforms and a checklist for the necessary hardware and software to ensure a smooth virtual visit experience for both patient and provider.' },
+          { title: 'Regulatory and Billing Considerations', content: 'Navigate the complex web of telehealth regulations, including state licensing laws and reimbursement policies. Learn how to stay compliant and properly code for virtual visits to ensure you get paid.' },
         ],
       },
       {
         title: 'Module 2: The Virtual Consultation',
         lessons: [
-          { title: 'Effective Communication', content: 'Building rapport through a screen.' },
-          { title: 'Remote Physical Examination', content: 'Techniques and limitations.' },
+          { title: 'Effective Communication', content: 'Master the art of "webside manner." This lesson focuses on techniques for building rapport, conveying empathy, and ensuring clear communication through a screen to maintain a strong patient-provider relationship.' },
+          { title: 'Remote Physical Examination', content: 'Learn and practice guided techniques for performing a remote physical exam. This lesson covers what can and cannot be assessed virtually and how to instruct patients to assist in their own examination.' },
         ],
       },
     ],
@@ -261,15 +261,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Understanding Mental Health',
         lessons: [
-          { title: 'Common Mental Health Challenges', content: 'Depression, anxiety, and substance use disorders.' },
-          { title: 'The ALGEE Action Plan', content: 'A framework for providing support.' },
+          { title: 'Common Mental Health Challenges', content: 'This lesson provides an overview of the signs and symptoms of common mental health issues, including depression, anxiety disorders, psychosis, and substance use disorders.' },
+          { title: 'The ALGEE Action Plan', content: 'Learn the ALGEE action plan: Assess for risk of suicide or harm, Listen nonjudgmentally, Give reassurance and information, Encourage appropriate professional help, and Encourage self-help and other support strategies.' },
         ],
       },
       {
         title: 'Module 2: Crisis Intervention',
         lessons: [
-          { title: 'Responding to Panic Attacks', content: 'Techniques for de-escalation.' },
-          { title: 'Suicide Prevention', content: 'Recognizing warning signs and getting help.' },
+          { title: 'Responding to Panic Attacks', content: 'Learn practical techniques for de-escalating a panic attack, helping the individual regain control of their breathing, and providing a calming presence.' },
+          { title: 'Suicide Prevention', content: 'This critical lesson covers how to recognize the warning signs of suicide and how to apply the ALGEE action steps to connect someone to professional help and potentially save a life.' },
         ],
       },
     ],
@@ -286,15 +286,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Macronutrients',
         lessons: [
-          { title: 'Carbohydrates, Proteins, and Fats', content: 'Understanding their roles in the body.' },
-          { title: 'Dietary Fiber', content: 'The importance of fiber for digestive health.' },
+          { title: 'Carbohydrates, Proteins, and Fats', content: 'A detailed look at the three macronutrients, their chemical structures, metabolic functions, and dietary sources. Learn how to calculate energy needs and balance macronutrient intake for optimal health.' },
+          { title: 'Dietary Fiber', content: 'This lesson explores the different types of dietary fiber (soluble and insoluble), their roles in digestive health, and their impact on cholesterol levels and blood sugar control. Includes recommendations for daily intake.' },
         ],
       },
       {
         title: 'Module 2: Micronutrients and Disease Prevention',
         lessons: [
-          { title: 'Vitamins and Minerals', content: 'Essential nutrients for optimal health.' },
-          { title: 'Nutrition and Chronic Disease', content: 'The role of diet in preventing heart disease, diabetes, and cancer.' },
+          { title: 'Vitamins and Minerals', content: 'An overview of essential vitamins and minerals, their functions in the body, and the signs of deficiency and toxicity. Learn which food sources are rich in these crucial micronutrients.' },
+          { title: 'Nutrition and Chronic Disease', content: 'Explore the evidence-based link between dietary patterns and the prevention of chronic diseases like heart disease, type 2 diabetes, and certain cancers. Learn about anti-inflammatory diets and key nutrients.' },
         ],
       },
     ],
@@ -311,8 +311,8 @@ export const courses: Course[] = [
       {
         title: 'Module 1: The Cellular Components',
         lessons: [
-          { title: 'Erythrocytes (Red Blood Cells)', content: 'Oxygen transport and related disorders.', videoUrl: 'https://www.youtube.com/embed/NqS-194LpY4' },
-          { title: 'Leukocytes (White Blood Cells)', content: 'The immune response in action.', videoUrl: 'https://www.youtube.com/embed/NqS-194LpY4' },
+          { title: 'Erythrocytes (Red Blood Cells)', content: 'This lesson visualizes the lifecycle of a red blood cell, from its creation in the bone marrow to its role in oxygen transport. It also covers common disorders like anemia and polycythemia.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
+          { title: 'Leukocytes (White Blood Cells)', content: 'Watch the immune system in action. This lesson provides an animated overview of the different types of white blood cells (neutrophils, lymphocytes, etc.) and their specific roles in fighting infection.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
         ],
       },
     ],
@@ -329,8 +329,8 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Abdominal Surgeries',
         lessons: [
-          { title: 'Laparoscopic Appendectomy', content: 'A minimally invasive approach.', videoUrl: 'https://www.youtube.com/embed/NqS-194LpY4' },
-          { title: 'Cholecystectomy (Gallbladder Removal)', content: 'Step-by-step procedure.', videoUrl: 'https://www.youtube.com/embed/NqS-194LpY4' },
+          { title: 'Laparoscopic Appendectomy', content: 'A step-by-step 3D simulation of a minimally invasive appendectomy. This lesson covers patient positioning, port placement, identification of anatomy, and the technique for transecting the appendix.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
+          { title: 'Cholecystectomy (Gallbladder Removal)', content: 'This lesson provides a detailed animation of a laparoscopic cholecystectomy, including dissection of the critical view of safety, clipping of the cystic duct and artery, and removal of the gallbladder.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
         ],
       },
     ],
@@ -347,8 +347,8 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Key Neurotransmitters',
         lessons: [
-          { title: 'The Dopamine System', content: 'Reward, motivation, and addiction.', videoUrl: 'https://www.youtube.com/embed/NqS-194LpY4' },
-          { title: 'The Serotonin System', content: 'Mood, sleep, and appetite.', videoUrl: 'https://www.youtube.com/embed/NqS-194LpY4' },
+          { title: 'The Dopamine System', content: 'This animated lesson traces the major dopaminergic pathways in the brain. Explore dopamine\'s role in reward, motivation, motor control, and its dysfunction in conditions like Parkinson\'s disease and addiction.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
+          { title: 'The Serotonin System', content: 'Visualize the synthesis, release, and reuptake of serotonin. This lesson explains its wide-ranging effects on mood, sleep, appetite, and cognition, and illustrates the mechanism of action for SSRI antidepressants.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
         ],
       },
     ],
@@ -365,8 +365,8 @@ export const courses: Course[] = [
         {
         title: 'Module 1: Biochemistry and Genetics',
         lessons: [
-            { title: 'Metabolism Pathways', content: 'Key concepts and clinical correlations.' },
-            { title: 'Molecular Biology', content: 'DNA replication, transcription, and translation.' },
+            { title: 'Metabolism Pathways', content: 'A high-yield review of glycolysis, Krebs cycle, electron transport chain, and gluconeogenesis. This lesson focuses on key regulatory enzymes and clinical correlations, such as inborn errors of metabolism.' },
+            { title: 'Molecular Biology', content: 'This lesson covers the core concepts of DNA replication, transcription, and translation, emphasizing the mechanisms and enzymes that are frequently tested on the USMLE Step 1 exam.' },
         ],
         },
     ],
@@ -383,8 +383,8 @@ export const courses: Course[] = [
         {
         title: 'Module 1: The Cell',
         lessons: [
-            { title: 'Eukaryotic and Prokaryotic Cells', content: 'Structures and functions.' },
-            { title: 'Enzymes and Metabolism', content: 'Kinetics and regulation.' },
+            { title: 'Eukaryotic and Prokaryotic Cells', content: 'A comparative review of cell structures and their functions, focusing on organelles, the cytoskeleton, and differences that are key for the MCAT.' },
+            { title: 'Enzymes and Metabolism', content: 'Master enzyme kinetics, including Michaelis-Menten and Lineweaver-Burk plots. This lesson also covers metabolic regulation, including feedback inhibition and allosteric regulation, crucial for MCAT success.' },
         ],
         },
     ],
@@ -401,15 +401,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Fundamentals of Genomics',
         lessons: [
-          { title: 'DNA, Genes, and Chromosomes', content: 'The building blocks of life.' },
-          { title: 'Genetic Variation', content: 'How our genes make us unique.' },
+          { title: 'DNA, Genes, and Chromosomes', content: 'This lesson reviews the fundamental building blocks of life, from the structure of DNA to the organization of genes within chromosomes. It sets the stage for understanding how genetic information is stored and expressed.' },
+          { title: 'Genetic Variation', content: 'Explore the different types of genetic variation, including single nucleotide polymorphisms (SNPs) and copy number variations (CNVs), and learn how they contribute to human diversity and disease susceptibility.' },
         ],
       },
       {
         title: 'Module 2: Clinical Applications',
         lessons: [
-          { title: 'Genetic Testing and Counseling', content: 'Interpreting and communicating genetic information.' },
-          { title: 'The Future of Genomic Medicine', content: 'Personalized medicine and beyond.' },
+          { title: 'Genetic Testing and Counseling', content: 'Learn about the different types of genetic tests available and their clinical utility. This lesson also covers the essential role of genetic counseling in interpreting and communicating complex genetic information to patients.' },
+          { title: 'The Future of Genomic Medicine', content: 'A look ahead at the exciting future of genomic medicine, including the promise of personalized medicine, gene therapy, and the challenges of integrating large-scale genomic data into routine clinical care.' },
         ],
       },
     ],
@@ -426,15 +426,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Healthcare Data',
         lessons: [
-          { title: 'Sources of Healthcare Data', content: 'EHRs, claims data, and patient-generated data.' },
-          { title: 'Data Wrangling and Cleaning', content: 'Preparing data for analysis.' },
+          { title: 'Sources of Healthcare Data', content: 'An overview of the diverse sources of healthcare data, including electronic health records (EHRs), administrative claims data, patient-generated data from wearables, and clinical trial data.' },
+          { title: 'Data Wrangling and Cleaning', content: 'Learn the essential, real-world skills of preparing messy healthcare data for analysis. This lesson covers techniques for handling missing values, standardizing formats, and transforming data into a usable state.' },
         ],
       },
       {
         title: 'Module 2: Machine Learning in Healthcare',
         lessons: [
-          { title: 'Predictive Modeling', content: 'Forecasting disease risk and patient outcomes.' },
-          { title: 'Natural Language Processing', content: 'Extracting insights from clinical notes.' },
+          { title: 'Predictive Modeling', content: 'This lesson introduces common machine learning models used to forecast disease risk, predict patient outcomes, and identify candidates for clinical trials. Includes hands-on examples using Python.' },
+          { title: 'Natural Language Processing', content: 'Discover how Natural Language Processing (NLP) is used to extract valuable insights from unstructured clinical notes, such as identifying patient symptoms, diagnoses, and adverse drug events from free text.' },
         ],
       },
     ],
@@ -451,15 +451,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Infectious Diseases',
         lessons: [
-          { title: 'Pandemic Preparedness', content: 'Lessons learned from COVID-19.' },
-          { title: 'The Big Three', content: 'HIV/AIDS, tuberculosis, and malaria.' },
+          { title: 'Pandemic Preparedness', content: 'Drawing lessons from the COVID-19 pandemic, this module examines the principles of pandemic preparedness and response, including surveillance, contact tracing, and vaccine distribution strategies.' },
+          { title: 'The Big Three', content: 'A deep dive into the ongoing global efforts to combat three of the most significant infectious diseases: HIV/AIDS, tuberculosis, and malaria. Learn about prevention, treatment, and control strategies.' },
         ],
       },
       {
         title: 'Module 2: Health Systems and Policy',
         lessons: [
-          { title: 'Universal Health Coverage', content: 'A global movement.' },
-          { title: 'The Role of Non-Governmental Organizations', content: 'Partners in global health.' },
+          { title: 'Universal Health Coverage', content: 'Explore the global movement towards Universal Health Coverage (UHC), its different models, and the challenges of providing equitable access to quality healthcare for all.' },
+          { title: 'The Role of Non-Governmental Organizations', content: 'Learn about the crucial role that Non-Governmental Organizations (NGOs) play in delivering healthcare services, advocating for policy change, and responding to humanitarian crises in global health.' },
         ],
       },
     ],
@@ -476,15 +476,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Study Design',
         lessons: [
-          { title: 'Randomized Controlled Trials', content: 'The gold standard in clinical research.' },
-          { title: 'Observational Studies', content: 'Cohort, case-control, and cross-sectional studies.' },
+          { title: 'Randomized Controlled Trials', content: 'Understand the "gold standard" of clinical research. This lesson covers the principles of randomization, blinding, and control groups to minimize bias and produce reliable evidence.' },
+          { title: 'Observational Studies', content: 'Learn about different types of observational study designs, including cohort, case-control, and cross-sectional studies. Understand their strengths, weaknesses, and appropriate applications.' },
         ],
       },
       {
         title: 'Module 2: Protocol Development',
         lessons: [
-          { title: 'Developing a Research Question', content: 'The foundation of any research project.' },
-          { title: 'Writing a Research Protocol', content: 'A roadmap for your study.' },
+          { title: 'Developing a Research Question', content: 'Master the process of formulating a clear, focused, and answerable research question using frameworks like PICO (Population, Intervention, Comparison, Outcome). This is the essential first step of any research project.' },
+          { title: 'Writing a Research Protocol', content: 'Learn to create a comprehensive roadmap for your study. This lesson details all the essential components of a research protocol, from background and objectives to methodology, statistical analysis plan, and ethical considerations.' },
         ],
       },
     ],
@@ -501,15 +501,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Principles of Patient Safety',
         lessons: [
-          { title: 'The Swiss Cheese Model', content: 'Understanding how errors occur.' },
-          { title: 'Human Factors Engineering', content: 'Designing safer systems.' },
+          { title: 'The Swiss Cheese Model', content: 'This lesson introduces James Reason\'s Swiss Cheese Model to help you understand how errors occur in complex systems. Learn how latent failures and active failures align to cause adverse events.' },
+          { title: 'Human Factors Engineering', content: 'Explore how to design safer healthcare systems by considering human capabilities and limitations. This lesson covers topics like usability, standardization, and forcing functions to reduce the likelihood of error.' },
         ],
       },
       {
         title: 'Module 2: Quality Improvement Tools',
         lessons: [
-          { title: 'Plan-Do-Study-Act (PDSA) Cycles', content: 'A simple yet powerful tool for improvement.' },
-          { title: 'Root Cause Analysis', content: 'Investigating and learning from adverse events.' },
+          { title: 'Plan-Do-Study-Act (PDSA) Cycles', content: 'Learn this simple yet powerful iterative four-stage model for testing changes in a real-world setting. This is a fundamental tool for quality improvement in healthcare.' },
+          { title: 'Root Cause Analysis', content: 'Master the process of conducting a Root Cause Analysis (RCA). This lesson teaches you how to investigate adverse events to identify underlying system-level vulnerabilities, not just individual mistakes, to prevent recurrence.' },
         ],
       },
     ],
@@ -526,15 +526,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Healthcare Finance',
         lessons: [
-          { title: 'Budgeting and Financial Planning', content: 'The basics of healthcare finance.' },
-          { title: 'Revenue Cycle Management', content: 'Getting paid for the care you provide.' },
+          { title: 'Budgeting and Financial Planning', content: 'This lesson covers the basics of healthcare finance, including how to develop and manage a departmental budget, understand financial statements, and make data-driven financial decisions.' },
+          { title: 'Revenue Cycle Management', content: 'Get an overview of the entire healthcare revenue cycle, from patient registration and insurance verification to claims submission and denial management. Learn key strategies to optimize reimbursement.' },
         ],
       },
       {
         title: 'Module 2: Healthcare Operations',
         lessons: [
-          { title: 'Process Improvement', content: 'Lean and Six Sigma in healthcare.' },
-          { title: 'Supply Chain Management', content: 'Getting the right supplies at the right time.' },
+          { title: 'Process Improvement', content: 'Learn how to apply methodologies like Lean and Six Sigma to improve efficiency, reduce waste, and enhance patient flow in a healthcare setting. Includes case studies from real-world hospital improvements.' },
+          { title: 'Supply Chain Management', content: 'Understand the principles of effective supply chain management in healthcare. This lesson covers inventory control, procurement, and strategies to ensure the right supplies and equipment are available at the right time, without excess cost.' },
         ],
       },
     ],
@@ -551,15 +551,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: X-ray and CT',
         lessons: [
-          { title: 'The Physics of X-rays', content: 'How X-rays are produced and interact with matter.' },
-          { title: 'Interpreting Chest X-rays', content: 'A systematic approach.' },
+          { title: 'The Physics of X-rays', content: 'This lesson explains how X-rays are produced and how they interact with matter to create an image. Understand the concepts of attenuation, density, and how they relate to the images you see.' },
+          { title: 'Interpreting Chest X-rays', content: 'Learn a systematic ABCDE approach (Airway, Breathing, Cardiac, Diaphragm, Everything else) to interpreting chest X-rays. This lesson covers normal anatomy and common pathologies like pneumonia and pneumothorax.' },
         ],
       },
       {
         title: 'Module 2: MRI and Ultrasound',
         lessons: [
-          { title: 'The Principles of MRI', content: 'From protons to pictures.' },
-          { title: 'Introduction to Ultrasound', content: 'The power of sound waves in medicine.' },
+          { title: 'The Principles of MRI', content: 'A simplified explanation of the complex physics behind Magnetic Resonance Imaging. Learn about T1 and T2 weighting, and understand why MRI provides superior soft tissue contrast compared to other modalities.' },
+          { title: 'Introduction to Ultrasound', content: 'Discover the power of sound waves in medicine. This lesson covers the basic principles of ultrasound, including how images are generated, common terminology (e.g., hyperechoic), and its applications in various specialties.' },
         ],
       },
     ],
@@ -576,15 +576,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Machine Learning for Medical Imaging',
         lessons: [
-          { title: 'Convolutional Neural Networks (CNNs)', content: 'Understanding the architecture for image analysis.' },
-          { title: 'Case Study: AI in Radiology', content: 'Detecting diseases from scans.' },
+          { title: 'Convolutional Neural Networks (CNNs)', content: 'This lesson explains the architecture of Convolutional Neural Networks (CNNs), the primary type of deep learning model used for image analysis. Understand how they learn to identify features in medical scans.' },
+          { title: 'Case Study: AI in Radiology', content: 'Explore a real-world example of how AI is used in radiology to detect diseases like cancer from X-rays, CT scans, or MRIs. Discuss the benefits and challenges of integrating these tools into clinical workflows.' },
         ],
       },
       {
         title: 'Module 2: AI and Clinical Data',
         lessons: [
-          { title: 'Predictive Analytics for Patient Outcomes', content: 'Forecasting disease progression.' },
-          { title: 'Ethical and Privacy Challenges', content: 'Navigating the complexities of AI in healthcare.' },
+          { title: 'Predictive Analytics for Patient Outcomes', content: 'Learn how machine learning models can analyze electronic health record (EHR) data to forecast disease progression, predict patient readmission risk, and identify individuals who may benefit from early intervention.' },
+          { title: 'Ethical and Privacy Challenges', content: 'A critical discussion on the ethical and privacy complexities of using AI in healthcare. This lesson covers topics like algorithmic bias, data privacy, and the need for transparency and accountability in AI models.' },
         ],
       },
     ],
@@ -601,15 +601,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Introduction to Epidemiology',
         lessons: [
-          { title: 'Measuring Disease Frequency', content: 'Incidence and prevalence.' },
-          { title: 'Study Designs in Epidemiology', content: 'From cross-sectional to cohort studies.' },
+          { title: 'Measuring Disease Frequency', content: 'Learn the fundamental measures used in epidemiology to describe the frequency of disease in a population, including incidence, prevalence, and mortality rates.' },
+          { title: 'Study Designs in Epidemiology', content: 'An overview of the major study designs used in epidemiological research, from simple cross-sectional studies to more complex cohort and case-control studies. Understand the strengths and weaknesses of each.' },
         ],
       },
       {
         title: 'Module 2: Health Policy and Management',
         lessons: [
-          { title: 'The Role of Government in Public Health', content: 'Policy and regulation.' },
-          { title: 'Community Health Programs', content: 'Planning and evaluation.' },
+          { title: 'The Role of Government in Public Health', content: 'Explore the essential functions of public health at the local, state, and federal levels, including disease surveillance, health promotion, and policy development and regulation.' },
+          { title: 'Community Health Programs', content: 'Learn the principles of planning, implementing, and evaluating community health programs. This lesson covers needs assessment, setting objectives, and measuring program effectiveness.' },
         ],
       },
     ],
@@ -626,15 +626,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: ICD-10-CM Coding',
         lessons: [
-          { title: 'Introduction to ICD-10', content: 'Structure and conventions.' },
-          { title: 'Coding for Diseases and Conditions', content: 'Applying codes from clinical documentation.' },
+          { title: 'Introduction to ICD-10', content: 'This lesson provides an overview of the structure and conventions of the ICD-10-CM (International Classification of Diseases, 10th Revision, Clinical Modification) coding system used for diagnosis coding.' },
+          { title: 'Coding for Diseases and Conditions', content: 'Learn how to apply ICD-10-CM codes by translating clinical documentation into standardized codes. Includes practice exercises for common diseases and conditions.' },
         ],
       },
       {
         title: 'Module 2: CPT and HCPCS Coding',
         lessons: [
-          { title: 'Procedural Coding with CPT', content: 'From office visits to surgical procedures.' },
-          { title: 'Supplies and Services with HCPCS', content: 'DME, drugs, and other services.' },
+          { title: 'Procedural Coding with CPT', content: 'Master the Current Procedural Terminology (CPT) coding system used to report medical, surgical, and diagnostic procedures and services. This lesson covers coding for office visits, surgical procedures, and more.' },
+          { title: 'Supplies and Services with HCPCS', content: 'Learn about the Healthcare Common Procedure Coding System (HCPCS), which is used to report services, procedures, and supplies not covered by CPT codes, such as durable medical equipment (DME), drugs, and ambulance services.' },
         ],
       },
     ],
@@ -651,15 +651,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Strategic Leadership',
         lessons: [
-          { title: 'Vision and Mission', content: 'Setting the direction for your organization.' },
-          { title: 'Change Management', content: 'Leading teams through transition.' },
+          { title: 'Vision and Mission', content: 'Learn how to develop a compelling vision and mission for your organization or department. This lesson covers how to align your team around a shared purpose and set a clear strategic direction.' },
+          { title: 'Change Management', content: 'Healthcare is constantly changing. This lesson provides practical models and strategies for leading teams effectively through organizational transition, overcoming resistance, and fostering resilience.' },
         ],
       },
       {
         title: 'Module 2: Operational Excellence',
         lessons: [
-          { title: 'Healthcare Finance for Leaders', content: 'Understanding the numbers.' },
-          { title: 'Building and Leading High-Performing Teams', content: 'Fostering collaboration and motivation.' },
+          { title: 'Healthcare Finance for Leaders', content: 'This lesson provides a non-financial manager\'s guide to healthcare finance. Understand key financial statements, budgeting principles, and how to make fiscally responsible decisions.' },
+          { title: 'Building and Leading High-Performing Teams', content: 'Discover the key elements of building and leading high-performing teams in healthcare. This lesson covers topics like fostering psychological safety, effective communication, and performance management.' },
         ],
       },
     ],
@@ -676,15 +676,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Injury Assessment and Diagnosis',
         lessons: [
-          { title: 'On-Field Assessment', content: 'Quick and effective evaluation techniques.' },
-          { title: 'Common Upper and Lower Extremity Injuries', content: 'Sprains, strains, and fractures.' },
+          { title: 'On-Field Assessment', content: 'Learn quick and effective evaluation techniques for assessing an injured athlete on the field. This lesson covers the primary and secondary survey to rule out life-threatening conditions and assess for common injuries.' },
+          { title: 'Common Upper and Lower Extremity Injuries', content: 'This lesson provides a review of the diagnosis and initial management of common sports injuries, such as ankle sprains, ACL tears, shoulder dislocations, and rotator cuff strains.' },
         ],
       },
       {
         title: 'Module 2: Treatment and Rehabilitation',
         lessons: [
-          { title: 'Principles of Rehabilitation', content: 'Restoring function and preventing re-injury.' },
-          { title: 'Concussion Management', content: 'The latest protocols for return-to-play.' },
+          { title: 'Principles of Rehabilitation', content: 'Understand the phased approach to rehabilitation after a sports injury. This lesson covers the principles of restoring range of motion, strength, and proprioception to ensure a safe return to play.' },
+          { title: 'Concussion Management', content: 'A review of the latest protocols for concussion management, including sideline assessment tools like SCAT5, and the graduated return-to-play and return-to-learn guidelines.' },
         ],
       },
     ],
@@ -701,15 +701,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Common Rashes and Lesions',
         lessons: [
-          { title: 'Eczema, Psoriasis, and Acne', content: 'Diagnosis and first-line treatments.' },
-          { title: 'Identifying Skin Cancers', content: 'Melanoma, Basal Cell, and Squamous Cell Carcinoma.' },
+          { title: 'Eczema, Psoriasis, and Acne', content: 'This lesson covers the diagnosis and first-line management of three of the most common conditions seen in dermatology: atopic dermatitis (eczema), psoriasis, and acne vulgaris. Includes treatment algorithms and patient education tips.' },
+          { title: 'Identifying Skin Cancers', content: 'Learn the ABCDEs of melanoma and how to recognize the clinical features of basal cell carcinoma and squamous cell carcinoma. This crucial lesson helps you know when to be suspicious and when to refer for biopsy.' },
         ],
       },
       {
         title: 'Module 2: Procedures and Biopsies',
         lessons: [
-          { title: 'Cryotherapy and Skin Tag Removal', content: 'Simple office procedures.' },
-          { title: 'When and How to Perform a Skin Biopsy', content: 'Shave, punch, and excisional techniques.' },
+          { title: 'Cryotherapy and Skin Tag Removal', content: 'A practical guide to simple office procedures, including the use of liquid nitrogen for cryotherapy of warts and actinic keratoses, and simple techniques for skin tag removal.' },
+          { title: 'When and How to Perform a Skin Biopsy', content: 'This lesson provides guidance on when a skin biopsy is indicated and demonstrates the techniques for shave, punch, and excisional biopsies. Understand which technique is appropriate for different types of lesions.' },
         ],
       },
     ],
@@ -726,15 +726,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: The Aging Process',
         lessons: [
-          { title: 'Physiological Changes of Aging', content: 'How systems change over time.' },
-          { title: 'Comprehensive Geriatric Assessment', content: 'A multi-dimensional approach to care.' },
+          { title: 'Physiological Changes of Aging', content: 'This lesson provides an overview of the normal physiological changes that occur with aging across various organ systems. Understanding these changes is key to distinguishing them from signs of disease.' },
+          { title: 'Comprehensive Geriatric Assessment', content: 'Learn how to perform a multi-dimensional Comprehensive Geriatric Assessment (CGA), which evaluates not just medical conditions, but also functional status, cognitive health, and psychosocial well-being.' },
         ],
       },
       {
         title: 'Module 2: Common Geriatric Syndromes',
         lessons: [
-          { title: 'Managing Polypharmacy', content: 'Deprescribing and medication review.' },
-          { title: 'Cognitive Impairment and Dementia', content: 'Diagnosis, management, and support.' },
+          { title: 'Managing Polypharmacy', content: 'A critical lesson on the risks of polypharmacy in older adults. Learn strategies for medication review, identifying potentially inappropriate medications using the Beers Criteria, and the principles of deprescribing.' },
+          { title: 'Cognitive Impairment and Dementia', content: 'This lesson covers the approach to diagnosing cognitive impairment and dementia, including the use of screening tools like the Mini-Cog. It also discusses management strategies and providing support for patients and their caregivers.' },
         ],
       },
     ],
@@ -751,15 +751,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Infection Prevention',
         lessons: [
-          { title: 'Hand Hygiene and Personal Protective Equipment', content: 'The cornerstones of infection control.' },
-          { title: 'Environmental Disinfection', content: 'Creating a safe patient environment.' },
+          { title: 'Hand Hygiene and Personal Protective Equipment', content: 'This lesson reinforces the cornerstones of infection control, reviewing the WHO\'s "5 Moments for Hand Hygiene" and the proper use, donning, and doffing of Personal Protective Equipment (PPE).' },
+          { title: 'Environmental Disinfection', content: 'Learn about the importance of cleaning and disinfecting the patient environment to reduce the transmission of healthcare-associated infections (HAIs). This includes routine cleaning and terminal cleaning protocols.' },
         ],
       },
       {
         title: 'Module 2: Antimicrobial Stewardship',
         lessons: [
-          { title: 'The Threat of Antibiotic Resistance', content: 'A global health crisis.' },
-          { title: 'Promoting Prudent Antibiotic Use', content: 'Strategies for healthcare providers.' },
+          { title: 'The Threat of Antibiotic Resistance', content: 'This lesson provides an overview of the global health crisis of antibiotic resistance, explaining the mechanisms of resistance and the impact on patient outcomes and healthcare costs.' },
+          { title: 'Promoting Prudent Antibiotic Use', content: 'Learn practical strategies for antimicrobial stewardship, including "antibiotic time-outs," formulary restriction, and prospective audit and feedback, to promote the appropriate use of antibiotics in your practice.' },
         ],
       },
     ],
@@ -776,15 +776,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Principles of Palliative Care',
         lessons: [
-          { title: 'What is Palliative Care?', content: 'Clarifying misconceptions.' },
-          { title: 'Pain and Symptom Management', content: 'A holistic approach.' },
+          { title: 'What is Palliative Care?', content: 'This lesson clarifies common misconceptions, explaining that palliative care is appropriate at any age and at any stage of a serious illness, and it can be provided along with curative treatment.' },
+          { title: 'Pain and Symptom Management', content: 'Learn a holistic approach to managing common symptoms in serious illness, including pain, dyspnea, nausea, and anxiety. This lesson covers both pharmacological and non-pharmacological interventions to improve patient comfort.' },
         ],
       },
       {
         title: 'Module 2: Communication and Support',
         lessons: [
-          { title: 'Difficult Conversations', content: 'Discussing goals of care and prognosis.' },
-          { title: 'Supporting Families and Caregivers', content: 'Providing resources and emotional support.' },
+          { title: 'Difficult Conversations', content: 'This lesson provides frameworks and practical tips for having difficult conversations about prognosis, goals of care, and advance care planning. Learn how to navigate these sensitive discussions with empathy and clarity.' },
+          { title: 'Supporting Families and Caregivers', content: 'Palliative care extends beyond the patient. Learn to assess and address the needs of families and caregivers, providing them with emotional support and connecting them with necessary resources.' },
         ],
       },
     ],
@@ -801,15 +801,15 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Environmental Emergencies',
         lessons: [
-          { title: 'Hypothermia and Frostbite', content: 'Prevention and treatment.' },
-          { title: 'Altitude Sickness', content: 'Acclimatization and management.' },
+          { title: 'Hypothermia and Frostbite', content: 'Learn to recognize and treat cold-related emergencies. This lesson covers the stages of hypothermia, rewarming techniques, and the field management of frostbite.' },
+          { title: 'Altitude Sickness', content: 'This lesson provides a guide to preventing and treating altitude-related illnesses, including Acute Mountain Sickness (AMS), High-Altitude Cerebral Edema (HACE), and High-Altitude Pulmonary Edema (HAPE).' },
         ],
       },
       {
         title: 'Module 2: Trauma and Improvisation',
         lessons: [
-          { title: 'Improvised Splinting', content: 'Stabilizing injuries with what you have.' },
-          { title: 'Wound Management in the Field', content: 'Cleaning and closing wounds.' },
+          { title: 'Improvised Splinting', content: 'Master the art of stabilizing fractures and dislocations using materials available in the wilderness, such as trekking poles, sleeping pads, and branches.' },
+          { title: 'Wound Management in the Field', content: 'Learn best practices for cleaning, irrigating, and closing wounds in a resource-limited setting to prevent infection and promote healing.' },
         ],
       },
     ],
@@ -826,8 +826,8 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Red Blood Cell Disorders',
         lessons: [
-          { title: 'Anemia: A Comprehensive Overview', content: 'Types, diagnosis, and management.' },
-          { title: 'Sickle Cell Disease', content: 'Pathophysiology and modern treatments.' },
+          { title: 'Anemia: A Comprehensive Overview', content: 'This lesson covers the approach to diagnosing anemia, including classifying it by MCV (microcytic, normocytic, macrocytic) and discussing the workup for common causes like iron deficiency and vitamin B12 deficiency.' },
+          { title: 'Sickle Cell Disease', content: 'An overview of the pathophysiology, clinical manifestations, and modern management of sickle cell disease, including hydroxyurea, new targeted therapies, and the management of acute pain crises.' },
         ],
       },
     ],
@@ -844,8 +844,8 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Patient-Centered Communication',
         lessons: [
-          { title: 'Active Listening Techniques', content: 'Building rapport and trust.' },
-          { title: 'Shared Decision-Making', content: 'Collaborating with patients on their care plan.' },
+          { title: 'Active Listening Techniques', content: 'This lesson goes beyond just hearing words. Learn techniques for active listening, such as reflecting and summarizing, to build rapport, ensure understanding, and make patients feel heard.' },
+          { title: 'Shared Decision-Making', content: 'Move from a paternalistic model to a collaborative one. This lesson teaches you how to engage patients in shared decision-making, presenting options and helping them make choices that align with their values and preferences.' },
         ],
       },
     ],
@@ -862,8 +862,8 @@ export const courses: Course[] = [
       {
         title: 'Module 1: The Healthcare Revenue Cycle',
         lessons: [
-          { title: 'From Patient Visit to Payment', content: 'Understanding the key steps.' },
-          { title: 'Common Billing and Coding Errors', content: 'How to avoid them.' },
+          { title: 'From Patient Visit to Payment', content: 'This lesson provides a comprehensive overview of the healthcare revenue cycle, breaking down each step from patient registration and scheduling to final payment and collections.' },
+          { title: 'Common Billing and Coding Errors', content: 'Learn to identify and avoid common billing and coding errors that lead to claim denials and lost revenue. This lesson covers issues like upcoding, downcoding, and lack of medical necessity.' },
         ],
       },
     ],
@@ -871,6 +871,8 @@ export const courses: Course[] = [
     subCategory: 'Business',
   },
 ];
+
+    
 
     
 
