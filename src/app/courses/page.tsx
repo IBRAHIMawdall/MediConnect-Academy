@@ -25,19 +25,18 @@ export default function CoursesPage() {
   }, [searchTerm, selectedCategory]);
 
   const coursesByCategory = useMemo(() => {
-    if (selectedCategory !== 'All') {
-        const singleCategoryCourses = filteredCourses.filter(course => course.categories.includes(selectedCategory));
-        return { [selectedCategory]: singleCategoryCourses };
-    }
-
     const grouped: { [key in CourseCategory]?: Course[] } = {};
     filteredCourses.forEach(course => {
-        // Add course to each category it belongs to
-        course.categories.forEach(category => {
-            if (!grouped[category]) {
-                grouped[category] = [];
+        const categories = selectedCategory === 'All' ? course.categories : [selectedCategory];
+        categories.forEach(category => {
+            if (course.categories.includes(category)) {
+                if (!grouped[category]) {
+                    grouped[category] = [];
+                }
+                if (!grouped[category]!.find(c => c.id === course.id)) {
+                    grouped[category]!.push(course);
+                }
             }
-            grouped[category]!.push(course);
         });
     });
     return grouped;
