@@ -1,3 +1,4 @@
+
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { courses } from '@/lib/data';
@@ -5,6 +6,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { PageHeader } from '@/components/layout/page-header';
 import { CourseModules } from '@/components/courses/course-modules';
 import { Badge } from '@/components/ui/badge';
+import { CourseReviews } from '@/components/courses/course-reviews';
 
 export default function CourseDetailPage({ params }: { params: { id: string } }) {
   const course = courses.find((c) => c.id === params.id);
@@ -26,8 +28,9 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
           <Badge variant="secondary">{course.subCategory}</Badge>
       </div>
       <div className="grid gap-8 md:grid-cols-3">
-        <div className="md:col-span-2">
+        <div className="md:col-span-2 space-y-8">
             <CourseModules course={course} />
+            <CourseReviews courseId={course.id} />
         </div>
         <div className="md:col-span-1 space-y-6">
           <div className="relative w-full h-64 rounded-lg overflow-hidden shadow-lg">
