@@ -9,30 +9,10 @@
 import { ai } from '@/ai/genkit';
 import { z } from 'genkit';
 
-// Mock search results
-const mockSearchResults = [
-    {
-        title: 'Recent Advances in Interventional Cardiology - PubMed',
-        url: 'https://pubmed.ncbi.nlm.nih.gov/34008902/',
-        snippet: 'This review covers the latest techniques in interventional cardiology, including complex coronary interventions and structural heart disease treatments...',
-    },
-    {
-        title: 'Pediatric Emergency Medicine: A Review - NEJM',
-        url: 'https://www.nejm.org/doi/full/10.1056/NEJMra1807212',
-        snippet: 'A comprehensive overview of common pediatric emergencies, from respiratory distress to febrile seizures, and the latest evidence-based management strategies.',
-    },
-     {
-        title: 'Open-source Surgical Simulation with Suture-less',
-        url: 'https://www.sutureless.org/',
-        snippet: 'Suture-less is an open-source platform for surgical simulation, providing realistic training modules for various procedures.',
-    }
-];
-
-
 const findRelevantContent = ai.defineTool(
     {
         name: 'findRelevantContent',
-        description: 'Searches the internet for open-source articles and videos relevant to a medical topic. Use this to find content for courses or answer specific questions.',
+        description: 'Searches PubMed for open-source articles and videos relevant to a medical topic. Use this to find content for courses or answer specific questions.',
         inputSchema: z.object({
             query: z.string().describe('The topic to search for.'),
         }),
@@ -45,10 +25,59 @@ const findRelevantContent = ai.defineTool(
         ),
     },
     async ({ query }) => {
-        console.log(`Searching for content related to: ${query}`);
-        // In a real application, this would call a search API (e.g., Google Search, PubMed API).
-        // For this demo, we return mock data.
-        return mockSearchResults.filter(r => r.title.toLowerCase().includes(query.toLowerCase()) || r.snippet.toLowerCase().includes(query.toLowerCase()));
+        console.log(`Searching PubMed for: ${query}`);
+        
+        // In a production app, you'd want to get an NCBI API key for higher rate limits.
+        // const apiKey = process.env.NCBI_API_KEY;
+        const baseUrl = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/';
+
+        try {
+            // Step 1: Search for article IDs
+            const searchUrl = `${baseUrl}esearch.fcgi?db=pubmed&term=${encodeURIComponent(query)}&retmode=json&retmax=5`;
+            const searchResponse = await fetch(searchUrl);
+            if (!searchResponse.ok) {
+                throw new Error(`NCBI esearch failed with status: ${searchResponse.status}`);
+            }
+            const searchData = await searchResponse.json();
+            const ids = searchData.esearchresult?.idlist;
+
+            if (!ids || ids.length === 0) {
+                return [];
+            }
+
+            // Step 2: Fetch summaries for those IDs
+            const idList = ids.join(',');
+            const summaryUrl = `${baseUrl}esummary.fcgi?db=pubmed&id=${idList}&retmode=json`;
+            const summaryResponse = await fetch(summaryUrl);
+            if (!summaryResponse.ok) {
+                throw new Error(`NCBI esummary failed with status: ${summaryResponse.status}`);
+            }
+            const summaryData = await summaryResponse.json();
+            const results = summaryData.result;
+            
+            if (!results) {
+                return [];
+            }
+            
+            // Step 3: Format the results
+            const articles = Object.keys(results).filter(key => key !== 'uids').map(uid => {
+                const article = results[uid];
+                const pubDate = article.pubdate || 'Date not available';
+                const authors = (article.authors || []).map((a: {name: string}) => a.name).join(', ');
+                
+                return {
+                    title: article.title || 'Title not available',
+                    url: `https://pubmed.ncbi.nlm.nih.gov/${uid}/`,
+                    snippet: `Authors: ${authors}. Published: ${pubDate}.`,
+                };
+            });
+
+            return articles;
+        } catch (error) {
+            console.error('Error fetching from PubMed:', error);
+            // Return an empty array or handle the error as appropriate
+            return [];
+        }
     }
 );
 
