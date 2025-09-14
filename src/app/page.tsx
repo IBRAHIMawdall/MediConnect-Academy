@@ -2,7 +2,7 @@
 'use client';
 
 import { CourseProgressCard } from '@/components/courses/course-progress-card';
-import { PersonalizedLearningForm } from '@/components/ai/personalized-learning-form';
+import { RequestCourseForm } from '@/components/ai/request-course-form';
 import { courses } from '@/lib/data';
 import { PageHeader } from '@/components/layout/page-header';
 import { UserNav } from '@/components/layout/user-nav';
@@ -42,9 +42,9 @@ export default function DashboardPage() {
 
         <div>
           <h2 className="text-2xl font-bold tracking-tight mb-4">
-            Personalized Learning Path
+            Request a New Course
           </h2>
-          <PersonalizedLearningForm />
+          <RequestCourseForm />
         </div>
       </div>
     </div>
