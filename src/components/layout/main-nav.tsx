@@ -3,7 +3,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { BookOpen, LayoutDashboard, HeartPulse, BrainCircuit, Zap, FileSearch } from 'lucide-react';
+import { BookOpen, LayoutDashboard, HeartPulse, BrainCircuit, Zap, FileSearch, Library } from 'lucide-react';
 import {
   Sidebar,
   SidebarHeader,
@@ -22,6 +22,7 @@ export function MainNav() {
     { href: '/ai-in-medicine', label: 'AI in Medicine', icon: BrainCircuit },
     { href: '/explainer', label: 'AI Explainer', icon: Zap },
     { href: '/research', label: 'AI Research', icon: FileSearch },
+    { href: '/content-assistant', label: 'Content Assistant', icon: Library },
   ];
 
   return (
