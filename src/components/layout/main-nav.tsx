@@ -25,7 +25,7 @@ export function MainNav() {
   ];
 
   return (
-    <Sidebar variant="floating">
+    <Sidebar variant="floating" collapsible="icon">
       <SidebarHeader>
         <Link href="/" className="flex items-center gap-2.5">
           <HeartPulse className="w-8 h-8 text-primary" />

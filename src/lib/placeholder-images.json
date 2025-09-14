@@ -4,37 +4,37 @@
     {
       "id": "adv-cardiology",
       "description": "An image representing advanced cardiology concepts.",
-      "imageUrl": "https://picsum.photos/seed/cardiology/600/400",
+      "imageUrl": "https://picsum.photos/seed/advcardiology/600/400",
       "imageHint": "heart medical"
     },
     {
       "id": "pediatric-care",
       "description": "An image showing a child being cared for by a healthcare professional.",
-      "imageUrl": "https://picsum.photos/seed/pediatrics/600/400",
+      "imageUrl": "https://picsum.photos/seed/pediatricscare/600/400",
       "imageHint": "child doctor"
     },
     {
       "id": "surgical-tech",
       "description": "An image of a surgical technologist in an operating room.",
-      "imageUrl": "https://picsum.photos/seed/surgery/600/400",
+      "imageUrl": "https://picsum.photos/seed/surgicaltech/600/400",
       "imageHint": "surgery operating"
     },
     {
       "id": "pharma-innov",
       "description": "An image representing innovation in pharmacology.",
-      "imageUrl": "https://picsum.photos/seed/pharmacology/600/400",
+      "imageUrl": "https://picsum.photos/seed/pharmainnov/600/400",
       "imageHint": "lab science"
     },
     {
       "id": "medical-ethics",
       "description": "An abstract image representing medical ethics and law.",
-      "imageUrl": "https://picsum.photos/seed/ethics/600/400",
+      "imageUrl": "https://picsum.photos/seed/medicalethics/600/400",
       "imageHint": "law books"
     },
     {
       "id": "telehealth-practice",
       "description": "An image showing a telehealth consultation.",
-      "imageUrl": "https://picsum.photos/seed/telehealth/600/400",
+      "imageUrl": "https://picsum.photos/seed/telehealthpractice/600/400",
       "imageHint": "video call"
     },
     {
@@ -46,19 +46,19 @@
     {
       "id": "nutrition-health",
       "description": "An image of healthy food.",
-      "imageUrl": "https://picsum.photos/seed/nutrition/600/400",
+      "imageUrl": "https://picsum.photos/seed/nutritionhealth/600/400",
       "imageHint": "food vegetables"
     },
     {
       "id": "genomics-medicine",
       "description": "An image representing DNA and genomics.",
-      "imageUrl": "https://picsum.photos/seed/genomics/600/400",
+      "imageUrl": "https://picsum.photos/seed/genomicsmedicine/600/400",
       "imageHint": "dna science"
     },
     {
       "id": "data-science-healthcare",
       "description": "An image representing data and charts.",
-      "imageUrl": "https://picsum.photos/seed/datascience/600/400",
+      "imageUrl": "https://picsum.photos/seed/datasciencehealthcare/600/400",
       "imageHint": "data chart"
     },
     {
@@ -70,31 +70,31 @@
     {
       "id": "clinical-research",
       "description": "An image of a researcher in a lab.",
-      "imageUrl": "https://picsum.photos/seed/research/600/400",
+      "imageUrl": "https://picsum.photos/seed/clinicalresearch/600/400",
       "imageHint": "lab research"
     },
     {
       "id": "patient-safety",
       "description": "An image representing patient safety concepts.",
-      "imageUrl": "https://picsum.photos/seed/safety/600/400",
+      "imageUrl": "https://picsum.photos/seed/patientsafety/600/400",
       "imageHint": "safety shield"
     },
     {
       "id": "healthcare-management",
       "description": "An image representing management and leadership.",
-      "imageUrl": "https://picsum.photos/seed/management/600/400",
+      "imageUrl": "https://picsum.photos/seed/healthcaremanagement/600/400",
       "imageHint": "business meeting"
     },
     {
       "id": "diagnostic-imaging",
       "description": "An image of a brain scan.",
-      "imageUrl": "https://picsum.photos/seed/imaging/600/400",
+      "imageUrl": "https://picsum.photos/seed/diagnosticimaging/600/400",
       "imageHint": "mri brain"
     },
     {
       "id": "ai-healthcare",
       "description": "An image showing an abstract representation of AI in a medical context.",
-      "imageUrl": "https://picsum.photos/seed/ai/600/400",
+      "imageUrl": "https://picsum.photos/seed/aihealthcare/600/400",
       "imageHint": "ai medical"
     },
     {
@@ -106,103 +106,103 @@
     {
       "id": "medical-billing",
       "description": "An image of medical billing forms and a calculator.",
-      "imageUrl": "https://picsum.photos/seed/billing/600/400",
+      "imageUrl": "https://picsum.photos/seed/medicalbilling/600/400",
       "imageHint": "finance calculator"
     },
     {
       "id": "healthcare-leadership",
       "description": "An image of a person leading a team meeting in a healthcare setting.",
-      "imageUrl": "https://picsum.photos/seed/leadership/600/400",
+      "imageUrl": "https://picsum.photos/seed/healthcareleadership/600/400",
       "imageHint": "team leadership"
     },
     {
       "id": "sports-medicine",
       "description": "An image of an athlete receiving treatment for an injury.",
-      "imageUrl": "https://picsum.photos/seed/sports/600/400",
+      "imageUrl": "https://picsum.photos/seed/sportsmedicine/600/400",
       "imageHint": "athlete injury"
     },
     {
       "id": "dermatology-pc",
       "description": "An image showing a close-up of a skin examination.",
-      "imageUrl": "https://picsum.photos/seed/dermatology/600/400",
+      "imageUrl": "https://picsum.photos/seed/dermatologypc/600/400",
       "imageHint": "skin dermatology"
     },
     {
       "id": "geriatric-medicine",
       "description": "An image of a healthcare provider caring for an elderly patient.",
-      "imageUrl": "https://picsum.photos/seed/geriatrics/600/400",
+      "imageUrl": "https://picsum.photos/seed/geriatricmedicine/600/400",
       "imageHint": "elderly care"
     },
     {
       "id": "infectious-disease",
       "description": "An image of a scientist working with samples in a lab.",
-      "imageUrl": "https://picsum.photos/seed/infectious/600/400",
+      "imageUrl": "https://picsum.photos/seed/infectiousdisease/600/400",
       "imageHint": "lab microscope"
     },
     {
       "id": "palliative-care",
       "description": "An image of a healthcare provider offering comfort to a patient.",
-      "imageUrl": "https://picsum.photos/seed/palliative/600/400",
+      "imageUrl": "https://picsum.photos/seed/palliativecare/600/400",
       "imageHint": "comfort hand"
     },
     {
       "id": "wilderness-medicine",
       "description": "An image of a first aid kit in a wilderness setting.",
-      "imageUrl": "https://picsum.photos/seed/wilderness/600/400",
+      "imageUrl": "https://picsum.photos/seed/wildernessmedicine/600/400",
       "imageHint": "mountain firstaid"
     },
     {
       "id": "blood-biology",
       "description": "An abstract image representing blood cells.",
-      "imageUrl": "https://picsum.photos/seed/blood/600/400",
+      "imageUrl": "https://picsum.photos/seed/bloodbiology/600/400",
       "imageHint": "blood cells"
     },
     {
       "id": "surgery-simulation",
       "description": "An image of a virtual surgery simulation.",
-      "imageUrl": "https://picsum.photos/seed/simulation/600/400",
+      "imageUrl": "https://picsum.photos/seed/surgerysimulation/600/400",
       "imageHint": "virtual surgery"
     },
     {
       "id": "neuro-pathways",
       "description": "An abstract image of neural pathways.",
-      "imageUrl": "https://picsum.photos/seed/neuro/600/400",
+      "imageUrl": "https://picsum.photos/seed/neuropathways/600/400",
       "imageHint": "neural network"
     },
     {
       "id": "usmle-prep",
       "description": "An image of a student studying for an exam.",
-      "imageUrl": "https://picsum.photos/seed/usmle/600/400",
+      "imageUrl": "https://picsum.photos/seed/usmleprep/600/400",
       "imageHint": "study exam"
     },
     {
       "id": "mcat-prep",
       "description": "An image with MCAT branding.",
-      "imageUrl": "https://picsum.photos/seed/mcat/600/400",
+      "imageUrl": "https://picsum.photos/seed/mcatprep/600/400",
       "imageHint": "mcat study"
     },
     {
       "id": "llm-history",
       "description": "A timeline of medical large language models.",
-      "imageUrl": "https://picsum.photos/seed/llm-history/1200/900",
+      "imageUrl": "https://picsum.photos/seed/llmhistory/1200/900",
       "imageHint": "timeline chart"
     },
     {
       "id": "intro-hematology",
       "description": "An abstract image representing blood cells for hematology.",
-      "imageUrl": "https://picsum.photos/seed/hematology/600/400",
+      "imageUrl": "https://picsum.photos/seed/introhematology/600/400",
       "imageHint": "blood microscope"
     },
     {
       "id": "comm-healthcare",
       "description": "An image of two people in a collaborative discussion.",
-      "imageUrl": "https://picsum.photos/seed/communication/600/400",
+      "imageUrl": "https://picsum.photos/seed/commhealthcare/600/400",
       "imageHint": "team discussion"
     },
     {
       "id": "finance-101",
       "description": "An image representing financial concepts like charts and graphs.",
-      "imageUrl": "https://picsum.photos/seed/finance/600/400",
+      "imageUrl": "https://picsum.photos/seed/finance101/600/400",
       "imageHint": "finance chart"
     }
   ]
