@@ -2,16 +2,22 @@ import { CourseProgressCard } from '@/components/courses/course-progress-card';
 import { PersonalizedLearningForm } from '@/components/ai/personalized-learning-form';
 import { courses } from '@/lib/data';
 import { PageHeader } from '@/components/layout/page-header';
+import { UserNav } from '@/components/layout/user-nav';
 
 export default function DashboardPage() {
   const enrolledCourses = courses.slice(0, 2); // Simulate enrolled courses
 
   return (
     <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
-      <PageHeader
-        title="Dashboard"
-        description="Welcome back! Here's your learning overview."
-      />
+      <div className="flex items-center justify-between space-y-2">
+        <PageHeader
+          title="Dashboard"
+          description="Welcome back! Here's your learning overview."
+        />
+        <div className="flex items-center space-x-2">
+          <UserNav />
+        </div>
+      </div>
       <div className="grid gap-8">
         <div>
           <h2 className="text-2xl font-bold tracking-tight mb-4">My Courses</h2>

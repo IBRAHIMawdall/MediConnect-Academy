@@ -25,12 +25,12 @@ export function CourseProgressCard({ course, progress }: CourseProgressCardProps
       </CardHeader>
       <CardContent>
         <div className="flex items-center gap-4">
-          <Progress value={progress} className="w-full" />
           <span className="text-sm font-medium text-muted-foreground">{progress}%</span>
+          <Progress value={progress} className="w-full" />
         </div>
       </CardContent>
       <CardFooter>
-        <Button asChild variant="outline">
+        <Button asChild className='w-full'>
           <Link href={`/courses/${course.id}`}>Continue Learning</Link>
         </Button>
       </CardFooter>
