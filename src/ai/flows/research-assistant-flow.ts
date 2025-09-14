@@ -130,6 +130,8 @@ const researchAssistantPrompt = ai.definePrompt({
 
     Base your answer ONLY on the information returned by the tool. Synthesize the findings from the sources into a clear answer.
 
+    If the tool returns no relevant information, you should state that you could not find any information on the topic and that the user should try a different query. Do not invent an answer.
+
     At the end of your answer, you MUST list the sources you used.
 
     User Query: {{{query}}}
