@@ -111,8 +111,8 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Interventional Cardiology',
         lessons: [
-          { title: 'Complex Coronary Interventions', content: 'This lesson provides a detailed walkthrough of advanced techniques for percutaneous coronary intervention (PCI), including strategies for treating bifurcated lesions, chronic total occlusions (CTOs), and heavily calcified vessels. Includes case studies and procedural videos.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
-          { title: 'Structural Heart Disease', content: 'Explore the latest in transcatheter therapies for structural heart disease. This lesson focuses on the procedural steps for Transcatheter Aortic Valve Replacement (TAVR) and MitraClip implantation, patient selection criteria, and management of potential complications.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
+          { title: 'Complex Coronary Interventions', content: 'This lesson provides a detailed walkthrough of advanced techniques for percutaneous coronary intervention (PCI), including strategies for treating bifurcated lesions, chronic total occlusions (CTOs), and heavily calcified vessels. Includes case studies and procedural videos.', videoUrl: 'https://www.youtube.com/embed/f-ldPgEfAHI' },
+          { title: 'Structural Heart Disease', content: 'Explore the latest in transcatheter therapies for structural heart disease. This lesson focuses on the procedural steps for Transcatheter Aortic Valve Replacement (TAVR) and MitraClip implantation, patient selection criteria, and management of potential complications.', videoUrl: 'https://www.youtube.com/embed/f-ldPgEfAHI' },
         ],
       },
       {
@@ -136,7 +136,7 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Pediatric Assessment',
         lessons: [
-          { title: 'The Pediatric Assessment Triangle', content: 'Learn to use the Pediatric Assessment Triangle (PAT) for rapid, systematic initial assessment of a child\'s appearance, work of breathing, and circulation. This framework helps to quickly identify the type and severity of physiologic abnormality.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
+          { title: 'The Pediatric Assessment Triangle', content: 'Learn to use the Pediatric Assessment Triangle (PAT) for rapid, systematic initial assessment of a child\'s appearance, work of breathing, and circulation. This framework helps to quickly identify the type and severity of physiologic abnormality.', videoUrl: 'https://www.youtube.com/embed/f-ldPgEfAHI' },
           { title: 'Developmental Considerations', content: 'This lesson covers key age-specific differences in anatomy, physiology, and psychology that impact emergency care, from neonates to adolescents. Understand how to adapt your assessment and treatment for different developmental stages.' },
         ],
       },
@@ -161,7 +161,7 @@ export const courses: Course[] = [
       {
         title: 'Module 1: The Operating Room Environment',
         lessons: [
-          { title: 'Aseptic Technique', content: 'This lesson covers the core principles of maintaining a sterile field, including surgical scrubbing, gowning, and gloving. Understand the "why" behind the rules to ensure patient safety and prevent surgical site infections.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
+          { title: 'Aseptic Technique', content: 'This lesson covers the core principles of maintaining a sterile field, including surgical scrubbing, gowning, and gloving. Understand the "why" behind the rules to ensure patient safety and prevent surgical site infections.', videoUrl: 'https://www.youtube.com/embed/f-ldPgEfAHI' },
           { title: 'Surgical Instruments', content: 'Learn to identify and properly handle basic surgical instruments. This lesson includes a visual guide to common clamps, forceps, scalpels, and retractors, explaining their specific functions and appropriate use.' },
         ],
       },
@@ -311,8 +311,8 @@ export const courses: Course[] = [
       {
         title: 'Module 1: The Cellular Components',
         lessons: [
-          { title: 'Erythrocytes (Red Blood Cells)', content: 'This lesson visualizes the lifecycle of a red blood cell, from its creation in the bone marrow to its role in oxygen transport. It also covers common disorders like anemia and polycythemia.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
-          { title: 'Leukocytes (White Blood Cells)', content: 'Watch the immune system in action. This lesson provides an animated overview of the different types of white blood cells (neutrophils, lymphocytes, etc.) and their specific roles in fighting infection.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
+          { title: 'Erythrocytes (Red Blood Cells)', content: 'This lesson visualizes the lifecycle of a red blood cell, from its creation in the bone marrow to its role in oxygen transport. It also covers common disorders like anemia and polycythemia.', videoUrl: 'https://www.youtube.com/embed/f-ldPgEfAHI' },
+          { title: 'Leukocytes (White Blood Cells)', content: 'Watch the immune system in action. This lesson provides an animated overview of the different types of white blood cells (neutrophils, lymphocytes, etc.) and their specific roles in fighting infection.', videoUrl: 'https://www.youtube.com/embed/f-ldPgEfAHI' },
         ],
       },
     ],
@@ -329,8 +329,8 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Abdominal Surgeries',
         lessons: [
-          { title: 'Laparoscopic Appendectomy', content: 'A step-by-step 3D simulation of a minimally invasive appendectomy. This lesson covers patient positioning, port placement, identification of anatomy, and the technique for transecting the appendix.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
-          { title: 'Cholecystectomy (Gallbladder Removal)', content: 'This lesson provides a detailed animation of a laparoscopic cholecystectomy, including dissection of the critical view of safety, clipping of the cystic duct and artery, and removal of the gallbladder.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
+          { title: 'Laparoscopic Appendectomy', content: 'A step-by-step 3D simulation of a minimally invasive appendectomy. This lesson covers patient positioning, port placement, identification of anatomy, and the technique for transecting the appendix.', videoUrl: 'https://www.youtube.com/embed/f-ldPgEfAHI' },
+          { title: 'Cholecystectomy (Gallbladder Removal)', content: 'This lesson provides a detailed animation of a laparoscopic cholecystectomy, including dissection of the critical view of safety, clipping of the cystic duct and artery, and removal of the gallbladder.', videoUrl: 'https://www.youtube.com/embed/f-ldPgEfAHI' },
         ],
       },
     ],
@@ -347,8 +347,8 @@ export const courses: Course[] = [
       {
         title: 'Module 1: Key Neurotransmitters',
         lessons: [
-          { title: 'The Dopamine System', content: 'This animated lesson traces the major dopaminergic pathways in the brain. Explore dopamine\'s role in reward, motivation, motor control, and its dysfunction in conditions like Parkinson\'s disease and addiction.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
-          { title: 'The Serotonin System', content: 'Visualize the synthesis, release, and reuptake of serotonin. This lesson explains its wide-ranging effects on mood, sleep, appetite, and cognition, and illustrates the mechanism of action for SSRI antidepressants.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
+          { title: 'The Dopamine System', content: 'This animated lesson traces the major dopaminergic pathways in the brain. Explore dopamine\'s role in reward, motivation, motor control, and its dysfunction in conditions like Parkinson\'s disease and addiction.', videoUrl: 'https://www.youtube.com/embed/f-ldPgEfAHI' },
+          { title: 'The Serotonin System', content: 'Visualize the synthesis, release, and reuptake of serotonin. This lesson explains its wide-ranging effects on mood, sleep, appetite, and cognition, and illustrates the mechanism of action for SSRI antidepressants.', videoUrl: 'https://www.youtube.com/embed/f-ldPgEfAHI' },
         ],
       },
     ],
@@ -877,3 +877,4 @@ export const courses: Course[] = [
     
 
     
+
