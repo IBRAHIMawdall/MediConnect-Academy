@@ -15,6 +15,7 @@ const findRelevantContent = ai.defineTool(
         description: 'Searches PubMed for open-source articles and videos relevant to a medical topic. Use this to find content for courses or answer specific questions.',
         inputSchema: z.object({
             query: z.string().describe('The topic to search for.'),
+            apiKey: z.string().optional().describe('Optional NCBI API Key for higher rate limits.'),
         }),
         outputSchema: z.array(
             z.object({
@@ -24,17 +25,13 @@ const findRelevantContent = ai.defineTool(
             })
         ),
     },
-    async ({ query }) => {
-        const apiKey = process.env.NCBI_API_KEY;
-        if (!apiKey) {
+    async ({ query, apiKey }) => {
+        const key = apiKey || process.env.NCBI_API_KEY;
+        if (!key) {
             console.warn(
                 `\n[MediConnectAI] NCBI_API_KEY is not set. \n` +
                 `The application will work, but you may experience rate limiting from the PubMed API.\n` +
-                `To fix this: \n` +
-                `1. Get a free API key from the NCBI website. \n` +
-                `2. Create a file named '.env' in the project root. \n` +
-                `3. Add the following line to the .env file: \n` +
-                `   NCBI_API_KEY=your_api_key_here \n`
+                `To fix this, you can provide a key through the UI or set it in your .env file.\n`
             );
         }
         
@@ -43,8 +40,8 @@ const findRelevantContent = ai.defineTool(
         try {
             // Step 1: Search for article IDs
             let searchUrl = `${baseUrl}esearch.fcgi?db=pubmed&term=${encodeURIComponent(query)}&retmode=json&retmax=5`;
-            if (apiKey) {
-                searchUrl += `&api_key=${apiKey}`;
+            if (key) {
+                searchUrl += `&api_key=${key}`;
             }
             const searchResponse = await fetch(searchUrl);
             if (!searchResponse.ok) {
@@ -60,8 +57,8 @@ const findRelevantContent = ai.defineTool(
             // Step 2: Fetch summaries for those IDs
             const idList = ids.join(',');
             let summaryUrl = `${baseUrl}esummary.fcgi?db=pubmed&id=${idList}&retmode=json`;
-            if (apiKey) {
-                summaryUrl += `&api_key=${apiKey}`;
+            if (key) {
+                summaryUrl += `&api_key=${key}`;
             }
             const summaryResponse = await fetch(summaryUrl);
             if (!summaryResponse.ok) {
@@ -99,6 +96,7 @@ const findRelevantContent = ai.defineTool(
 
 const ResearchAssistantInputSchema = z.object({
   query: z.string().describe('The user\'s question or research topic.'),
+  apiKey: z.string().optional().describe('Optional NCBI API key to avoid rate limiting.'),
 });
 export type ResearchAssistantInput = z.infer<typeof ResearchAssistantInputSchema>;
 
