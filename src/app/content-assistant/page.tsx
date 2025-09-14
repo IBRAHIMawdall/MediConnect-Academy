@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -148,7 +147,11 @@ export default function ContentAssistantPage() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground whitespace-pre-line">{result.answer}</p>
+                {result.answer ? (
+                    <p className="text-muted-foreground whitespace-pre-line">{result.answer}</p>
+                 ) : (
+                    <p className="text-muted-foreground">The AI could not generate a summary for this topic.</p>
+                )}
             </CardContent>
           </Card>
           <Card>
