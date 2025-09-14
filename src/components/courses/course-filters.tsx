@@ -1,10 +1,10 @@
 
 'use client';
 
-import type { Filter } from '@/app/courses/page';
+import type { Filter, ViewMode } from '@/app/courses/page';
 import { Input } from '@/components/ui/input';
 import { categories, CourseCategory } from '@/lib/data';
-import { Search } from 'lucide-react';
+import { Search, ChevronDown, LayoutGrid, List } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,16 +13,23 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { ChevronDown } from 'lucide-react';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 interface CourseFiltersProps {
     activeFilter: Filter;
     setActiveFilter: (filter: Filter) => void;
     searchTerm: string;
     setSearchTerm: (term: string) => void;
+    viewMode: ViewMode;
+    setViewMode: (mode: ViewMode) => void;
 }
 
-export function CourseFilters({ activeFilter, setActiveFilter, searchTerm, setSearchTerm }: CourseFiltersProps) {
+export function CourseFilters({ activeFilter, setActiveFilter, searchTerm, setSearchTerm, viewMode, setViewMode }: CourseFiltersProps) {
     
     const getFilterDisplayName = () => {
         if (activeFilter.type === 'all') return 'All Courses';
@@ -73,6 +80,30 @@ export function CourseFilters({ activeFilter, setActiveFilter, searchTerm, setSe
                 onChange={(e) => setSearchTerm(e.target.value)}
                 value={searchTerm}
               />
+            </div>
+             <div className="flex items-center gap-2">
+                 <TooltipProvider>
+                    <Tooltip>
+                        <TooltipTrigger asChild>
+                            <Button variant={viewMode === 'grid' ? 'default' : 'outline'} size="icon" onClick={() => setViewMode('grid')}>
+                                <LayoutGrid className="h-5 w-5" />
+                            </Button>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                            <p>Grid View</p>
+                        </TooltipContent>
+                    </Tooltip>
+                    <Tooltip>
+                        <TooltipTrigger asChild>
+                             <Button variant={viewMode === 'list' ? 'default' : 'outline'} size="icon" onClick={() => setViewMode('list')}>
+                                <List className="h-5 w-5" />
+                            </Button>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                            <p>List View</p>
+                        </TooltipContent>
+                    </Tooltip>
+                </TooltipProvider>
             </div>
         </div>
     );

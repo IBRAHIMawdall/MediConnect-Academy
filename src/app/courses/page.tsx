@@ -6,12 +6,16 @@ import { courses, CourseCategory, SubCategory } from '@/lib/data';
 import { CourseCard } from '@/components/courses/course-card';
 import { PageHeader } from '@/components/layout/page-header';
 import { CourseFilters } from '@/components/courses/course-filters';
+import { CourseListItem } from '@/components/courses/course-list-item';
+import { cn } from '@/lib/utils';
 
 export type Filter = { type: 'main'; id: CourseCategory } | { type: 'sub'; id: SubCategory } | { type: 'all' };
+export type ViewMode = 'grid' | 'list';
 
 export default function CoursesPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeFilter, setActiveFilter] = useState<Filter>({ type: 'all' });
+  const [viewMode, setViewMode] = useState<ViewMode>('grid');
 
   const filteredCourses = useMemo(() => {
     return courses.filter((course) => {
@@ -43,12 +47,23 @@ export default function CoursesPage() {
             setActiveFilter={setActiveFilter}
             searchTerm={searchTerm}
             setSearchTerm={setSearchTerm}
+            viewMode={viewMode}
+            setViewMode={setViewMode}
         />
         
         {filteredCourses.length > 0 ? (
-            <div className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div className={cn(
+              "transition-all duration-300",
+              viewMode === 'grid' 
+                ? "grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+                : "flex flex-col gap-4"
+            )}>
               {filteredCourses.map((course) => (
-                <CourseCard key={course.id} course={course} />
+                viewMode === 'grid' ? (
+                  <CourseCard key={course.id} course={course} />
+                ) : (
+                  <CourseListItem key={course.id} course={course} />
+                )
               ))}
             </div>
           ) : (
