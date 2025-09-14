@@ -26,6 +26,21 @@ const formSchema = z.object({
   topic: z.string().min(3, { message: 'Please enter a topic.' }),
 });
 
+const MindMap = ({ markdown }: { markdown: string }) => {
+  return (
+    <div className="prose prose-sm dark:prose-invert max-w-full">
+      <ReactMarkdown
+        components={{
+          ul: ({ node, ...props }) => <ul className="list-disc pl-5 space-y-2" {...props} />,
+          li: ({ node, ...props }) => <li className="text-muted-foreground" {...props} />,
+        }}
+      >
+        {markdown}
+      </ReactMarkdown>
+    </div>
+  );
+};
+
 export default function ExplainerPage() {
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<ExplainTopicOutput | null>(null);
@@ -52,22 +67,6 @@ export default function ExplainerPage() {
       setLoading(false);
     }
   }
-  
-  const MindMap = ({ markdown }: { markdown: string }) => {
-    return (
-      <div className="prose prose-sm dark:prose-invert max-w-full">
-        <ReactMarkdown
-          components={{
-            ul: ({ node, ...props }) => <ul className="list-disc pl-5 space-y-2" {...props} />,
-            li: ({ node, ...props }) => <li className="text-muted-foreground" {...props} />,
-          }}
-        >
-          {markdown}
-        </ReactMarkdown>
-      </div>
-    );
-  };
-
 
   return (
     <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
