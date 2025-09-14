@@ -25,10 +25,19 @@ const findRelevantContent = ai.defineTool(
         ),
     },
     async ({ query }) => {
-        console.log(`Searching PubMed for: ${query}`);
-        
-        // In a production app, you'd want to get an NCBI API key for higher rate limits.
         const apiKey = process.env.NCBI_API_KEY;
+        if (!apiKey) {
+            console.warn(
+                `\n[MediConnectAI] NCBI_API_KEY is not set. \n` +
+                `The application will work, but you may experience rate limiting from the PubMed API.\n` +
+                `To fix this: \n` +
+                `1. Get a free API key from the NCBI website. \n` +
+                `2. Create a file named '.env' in the project root. \n` +
+                `3. Add the following line to the .env file: \n` +
+                `   NCBI_API_KEY=your_api_key_here \n`
+            );
+        }
+        
         const baseUrl = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/';
 
         try {
