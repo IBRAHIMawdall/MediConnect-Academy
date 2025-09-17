@@ -3,15 +3,17 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { BookOpen, LayoutDashboard, HeartPulse, BrainCircuit, Zap, FileSearch, Library, GraduationCap } from 'lucide-react';
+import { BookOpen, LayoutDashboard, HeartPulse, BrainCircuit, Zap, FileSearch, Library, GraduationCap, User, Settings } from 'lucide-react';
 import {
   Sidebar,
   SidebarHeader,
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
+  SidebarFooter,
+  SidebarSeparator,
 } from '@/components/ui/sidebar';
-import { cn } from '@/lib/utils';
+import { UserNav } from './user-nav';
 
 export function MainNav() {
   const pathname = usePathname();
@@ -20,11 +22,19 @@ export function MainNav() {
     { href: '/', label: 'Dashboard', icon: LayoutDashboard },
     { href: '/courses', label: 'Courses', icon: BookOpen },
     { href: '/personalized-path', label: 'Learning Path', icon: GraduationCap },
-    { href: '/ai-in-medicine', label: 'AI in Medicine', icon: BrainCircuit },
+  ];
+
+  const aiTools = [
+     { href: '/ai-in-medicine', label: 'AI in Medicine', icon: BrainCircuit },
     { href: '/explainer', label: 'AI Explainer', icon: Zap },
     { href: '/research', label: 'AI Research', icon: FileSearch },
     { href: '/content-assistant', label: 'Content Assistant', icon: Library },
-  ];
+  ]
+
+  const userMenuItems = [
+    { href: '/profile', label: 'Profile', icon: User },
+    { href: '/settings', label: 'Settings', icon: Settings },
+  ]
 
   return (
     <Sidebar collapsible="icon">
@@ -36,7 +46,8 @@ export function MainNav() {
           </h1>
         </Link>
       </SidebarHeader>
-      <SidebarMenu>
+      
+      <SidebarMenu className="flex-1">
         {menuItems.map((item) => (
           <SidebarMenuItem key={item.href}>
             <Link href={item.href}>
@@ -50,7 +61,41 @@ export function MainNav() {
             </Link>
           </SidebarMenuItem>
         ))}
+        <SidebarSeparator />
+         {aiTools.map((item) => (
+          <SidebarMenuItem key={item.href}>
+            <Link href={item.href}>
+              <SidebarMenuButton
+                isActive={pathname === item.href}
+                tooltip={item.label}
+              >
+                <item.icon className="h-5 w-5" />
+                <span>{item.label}</span>
+              </SidebarMenuButton>
+            </Link>
+          </SidebarMenuItem>
+        ))}
       </SidebarMenu>
+
+      <SidebarFooter>
+        <SidebarSeparator />
+         {userMenuItems.map((item) => (
+          <SidebarMenuItem key={item.href}>
+            <Link href={item.href}>
+              <SidebarMenuButton
+                isActive={pathname === item.href}
+                tooltip={item.label}
+              >
+                <item.icon className="h-5 w-5" />
+                <span>{item.label}</span>
+              </SidebarMenuButton>
+            </Link>
+          </SidebarMenuItem>
+        ))}
+        <div className="p-2 group-data-[collapsible=icon]:p-0 group-data-[collapsible=icon]:w-min group-data-[collapsible=icon]:mx-auto">
+            <UserNav />
+        </div>
+      </SidebarFooter>
     </Sidebar>
   );
 }
