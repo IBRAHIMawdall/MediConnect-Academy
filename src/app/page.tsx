@@ -8,6 +8,7 @@ import { PageHeader } from '@/components/layout/page-header';
 import { UserNav } from '@/components/layout/user-nav';
 import { useEffect, useState } from 'react';
 import { FeaturedCourses } from '@/components/courses/featured-courses';
+import { SidebarTrigger } from '@/components/ui/sidebar';
 
 export default function DashboardPage() {
   const enrolledCourses = courses.slice(0, 2); 
@@ -25,6 +26,7 @@ export default function DashboardPage() {
           description="Welcome back! Here's your learning overview."
         />
         <div className="flex items-center space-x-2">
+          <SidebarTrigger />
           <UserNav />
         </div>
       </div>
