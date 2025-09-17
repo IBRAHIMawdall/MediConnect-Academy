@@ -69,7 +69,7 @@ export default function ContentAssistantPage() {
         );
     }
 
-    if (!apiKey) {
+    if (!apiKey && !process.env.NEXT_PUBLIC_NCBI_API_KEY) {
         return <ApiKeyInput onKeySubmit={setApiKey} />;
     }
 
