@@ -9,7 +9,6 @@ import { Label } from '@/components/ui/label';
 import { useLocalStorage } from '@/hooks/use-local-storage';
 import { KeyRound, Bell, Palette } from 'lucide-react';
 import { Switch } from '@/components/ui/switch';
-import { Separator } from '@/components/ui/separator';
 import { useToast } from '@/hooks/use-toast';
 
 export default function SettingsPage() {
@@ -17,11 +16,9 @@ export default function SettingsPage() {
     const { toast } = useToast();
 
     const handleSaveKey = () => {
-        // The useLocalStorage hook already saves on change,
-        // but we can provide user feedback.
         toast({
             title: "API Key Saved",
-            description: "Your NCBI API key has been updated.",
+            description: "Your NCBI API key has been updated in your browser's local storage.",
         })
     }
 
@@ -40,12 +37,14 @@ export default function SettingsPage() {
                     <CardContent className="space-y-4">
                         <div className="space-y-2">
                             <Label htmlFor="ncbi-key">NCBI API Key</Label>
-                            <Input id="ncbi-key" type="password" value={apiKey} onChange={(e) => setApiKey(e.target.value)} placeholder="Enter your NCBI API key" />
+                            <div className="flex gap-2">
+                                <Input id="ncbi-key" type="password" value={apiKey} onChange={(e) => setApiKey(e.target.value)} placeholder="Enter your NCBI API key" />
+                                <Button onClick={handleSaveKey}>Save</Button>
+                            </div>
                             <p className="text-sm text-muted-foreground">
                                 Your NCBI API key is used for the AI Research and Content Assistant features to avoid rate limiting.
                             </p>
                         </div>
-                        <Button onClick={handleSaveKey}>Save API Key</Button>
                     </CardContent>
                 </Card>
 

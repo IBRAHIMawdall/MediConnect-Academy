@@ -41,7 +41,7 @@ const llmData: YearData[] = [
       { name: 'BenTsao', type: 'medical' },
       { name: 'Baize-healthcare', type: 'medical' },
       { name: 'ChatDoctor', type: 'medical' },
-      { name: 'DoctorGLM', type: 'medical' },
+      { name: 'DoctorGLM', type 'medical' },
       { name: 'Bloom', type: 'base' },
       { name: 'LLaMA', type: 'base' },
       { name: 'ChatGPT', type: 'base' },
