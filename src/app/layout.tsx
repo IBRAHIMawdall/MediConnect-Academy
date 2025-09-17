@@ -1,6 +1,5 @@
 
 import type { Metadata } from 'next';
-import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { SidebarProvider, SidebarInset } from '@/components/ui/sidebar';
 import { MainNav } from '@/components/layout/main-nav';
@@ -39,4 +38,3 @@ export default function RootLayout({
     </html>
   );
 }
-
