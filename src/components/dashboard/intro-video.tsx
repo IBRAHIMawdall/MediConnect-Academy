@@ -22,7 +22,7 @@ export function IntroVideo() {
 
         try {
             const result = await generateIntroVideo({
-                prompt: 'Generate a highly detailed and cinematic, inspiring short video for a medical education platform named MediConnect Academy. The video should open with a shot of a futuristic laboratory with scientists collaborating, followed by a close-up of a DNA double helix model rotating. Transition to abstract, glowing neural networks firing, symbolizing intelligence. Show a diverse group of healthcare professionals (doctors, nurses, researchers) looking thoughtfully at data on holographic screens. The video should have a professional, clean aesthetic with a blue and white color palette and end with the text "MediConnect Academy" subtly appearing on screen.',
+                prompt: 'Generate a highly detailed and cinematic, inspiring short video for a medical education platform. The video should open with a shot of a futuristic laboratory with scientists collaborating, followed by a close-up of a DNA double helix model rotating. Transition to abstract, glowing neural networks firing, symbolizing intelligence. Show a diverse group of healthcare professionals (doctors, nurses, researchers) looking thoughtfully at data on holographic screens. The video should have a professional, clean aesthetic with a blue and white color palette and end with the text "MediConnect Academy" appearing on screen, followed by the slogan "Tomorrow\'s Expertise. Delivered Today.".',
             });
             if (result.videoDataUri) {
                 setVideoDataUri(result.videoDataUri);
