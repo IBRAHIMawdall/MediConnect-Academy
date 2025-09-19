@@ -18,7 +18,7 @@ export function CourseListItem({ course }: CourseListItemProps) {
   const placeholder = PlaceHolderImages.find((p) => p.id === course.imageId);
 
   return (
-    <Card className="overflow-hidden transition-all duration-300 hover:shadow-[0_0_20px_4px_rgba(135,81,255,0.2)] hover:-translate-y-1 bg-card border">
+    <Card className="overflow-hidden transition-all duration-300 hover:shadow-[0_0_20px_4px_rgba(59,130,246,0.2)] hover:-translate-y-1 bg-card border">
       <Link href={`/courses/${course.id}`} className="block">
         <CardContent className="p-4">
             <div className="flex flex-col sm:flex-row gap-6">
