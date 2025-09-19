@@ -22,7 +22,7 @@ export function IntroVideo() {
 
         try {
             const result = await generateIntroVideo({
-                prompt: 'A cinematic, inspiring short video for a medical education platform named MediConnect Academy. Show abstract scenes of medical research, doctors collaborating, and glowing neural networks, all with a professional blue and white color palette.',
+                prompt: 'Generate a highly detailed and cinematic, inspiring short video for a medical education platform named MediConnect Academy. The video should open with a shot of a futuristic laboratory with scientists collaborating, followed by a close-up of a DNA double helix model rotating. Transition to abstract, glowing neural networks firing, symbolizing intelligence. Show a diverse group of healthcare professionals (doctors, nurses, researchers) looking thoughtfully at data on holographic screens. The video should have a professional, clean aesthetic with a blue and white color palette and end with the text "MediConnect Academy" subtly appearing on screen.',
             });
             if (result.videoDataUri) {
                 setVideoDataUri(result.videoDataUri);
@@ -69,12 +69,14 @@ export function IntroVideo() {
                 <video
                     src={videoDataUri}
                     controls
+                    autoPlay
+                    loop
                     className="w-full h-full"
                 />
             )}
              {!loading && !videoDataUri && (
-                <div className="flex flex-col items-center gap-4">
-                    <p className="text-muted-foreground">Click the button to generate an AI-powered welcome video.</p>
+                <div className="flex flex-col items-center gap-4 text-muted-foreground">
+                    <p className="text-center">Click the button to generate an AI-powered welcome video.<br />This demonstrates text-to-video generation and may take over a minute.</p>
                      <Button onClick={handleGenerateVideo} disabled={loading}>
                         <Video className="mr-2" />
                         Generate Intro Video
@@ -82,10 +84,12 @@ export function IntroVideo() {
                 </div>
             )}
         </div>
-         <Button onClick={handleGenerateVideo} disabled={loading} variant="outline" className="w-full">
-            {loading ? <Loader2 className="mr-2 animate-spin" /> : <Video className="mr-2" />}
-            {loading ? 'Generation in Progress...' : 'Regenerate Video'}
-        </Button>
+         {videoDataUri && !loading && (
+            <Button onClick={handleGenerateVideo} disabled={loading} variant="outline" className="w-full">
+                {loading ? <Loader2 className="mr-2 animate-spin" /> : <Video className="mr-2" />}
+                {loading ? 'Generation in Progress...' : 'Regenerate Video'}
+            </Button>
+         )}
       </CardContent>
     </Card>
   );
