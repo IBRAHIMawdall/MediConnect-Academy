@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, Dispatch, SetStateAction } from 'react';
 
 type User = {
   name: string;
@@ -9,12 +9,12 @@ type User = {
 };
 
 // This is a mock user hook. In a real app, you'd fetch this from your auth provider.
-export function useUser() {
-  const [user] = useState<User>({
+export function useUser(): { user: User; setUser: Dispatch<SetStateAction<User>> } {
+  const [user, setUser] = useState<User>({
     name: 'Dr. User',
     email: 'user@mediconnect.com',
     avatar: 'https://picsum.photos/seed/user/40/40',
   });
 
-  return { user };
+  return { user, setUser };
 }

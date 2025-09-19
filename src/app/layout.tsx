@@ -1,22 +1,23 @@
+'use client';
+
 import './globals.css';
-import type { Metadata } from 'next';
 import { Toaster } from '@/components/ui/toaster';
 import { SidebarProvider, SidebarInset } from '@/components/ui/sidebar';
 import { MainNav } from '@/components/layout/main-nav';
-
-export const metadata: Metadata = {
-  title: 'MediConnect Academy',
-  description: 'Enhance your healthcare skills with personalized learning paths.',
-};
+import { useTheme } from '@/hooks/use-theme';
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { theme } = useTheme();
+
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="en" className={theme} suppressHydrationWarning>
       <head>
+        <title>MediConnect Academy</title>
+        <meta name="description" content="Enhance your healthcare skills with personalized learning paths." />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

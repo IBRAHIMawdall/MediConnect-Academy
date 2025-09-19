@@ -10,10 +10,12 @@ import { useLocalStorage } from '@/hooks/use-local-storage';
 import { KeyRound, Bell, Palette } from 'lucide-react';
 import { Switch } from '@/components/ui/switch';
 import { useToast } from '@/hooks/use-toast';
+import { useTheme } from '@/hooks/use-theme';
 
 export default function SettingsPage() {
     const [apiKey, setApiKey] = useLocalStorage('ncbi-api-key', '');
     const { toast } = useToast();
+    const { theme, setTheme } = useTheme();
 
     const handleSaveKey = () => {
         toast({
@@ -21,6 +23,17 @@ export default function SettingsPage() {
             description: "Your NCBI API key has been updated in your browser's local storage.",
         })
     }
+
+    const handleNotificationToggle = (type: string, checked: boolean) => {
+        toast({
+            title: `${type} Notifications ${checked ? 'Enabled' : 'Disabled'}`,
+            description: `You will ${checked ? 'now' : 'no longer'} receive ${type.toLowerCase()} notifications.`,
+        });
+    }
+
+    const handleThemeToggle = (checked: boolean) => {
+        setTheme(checked ? 'dark' : 'light');
+    };
 
     return (
         <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
@@ -59,14 +72,14 @@ export default function SettingsPage() {
                              <p className="font-medium">Email Notifications</p>
                              <p className="text-sm text-muted-foreground">Receive updates about new courses and platform news.</p>
                            </div>
-                           <Switch />
+                           <Switch onCheckedChange={(checked) => handleNotificationToggle('Email', checked)} />
                         </div>
                          <div className="flex items-center justify-between p-4 rounded-lg border">
                             <div>
                                 <p className="font-medium">Push Notifications</p>
                                 <p className="text-sm text-muted-foreground">Get notified in-app about your learning progress.</p>
                             </div>
-                           <Switch defaultChecked />
+                           <Switch defaultChecked onCheckedChange={(checked) => handleNotificationToggle('Push', checked)} />
                         </div>
                     </CardContent>
                 </Card>
@@ -79,10 +92,13 @@ export default function SettingsPage() {
                     <CardContent className="space-y-4">
                         <div className="flex items-center justify-between p-4 rounded-lg border">
                            <div>
-                             <p className="font-medium">Theme</p>
-                             <p className="text-sm text-muted-foreground">Currently in dark mode. Light mode coming soon.</p>
+                             <p className="font-medium">Dark Mode</p>
+                             <p className="text-sm text-muted-foreground">Toggle between light and dark themes.</p>
                            </div>
-                           <Button variant="outline" disabled>Toggle Theme</Button>
+                           <Switch
+                                checked={theme === 'dark'}
+                                onCheckedChange={handleThemeToggle}
+                           />
                         </div>
                     </CardContent>
                 </Card>
