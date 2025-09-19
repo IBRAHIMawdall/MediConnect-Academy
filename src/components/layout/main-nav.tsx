@@ -1,9 +1,8 @@
-
 'use client';
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { BookOpen, LayoutDashboard, HeartPulse, BrainCircuit, Zap, FileSearch, Library, GraduationCap, User, Settings } from 'lucide-react';
+import { BookOpen, LayoutDashboard, HeartPulse, BrainCircuit, Zap, FileSearch, Library, GraduationCap, User, Settings, Sparkles } from 'lucide-react';
 import {
   Sidebar,
   SidebarHeader,
@@ -14,6 +13,8 @@ import {
   SidebarSeparator,
 } from '@/components/ui/sidebar';
 import { UserNav } from './user-nav';
+import { ProBadge } from '../pro-badge';
+import { Button } from '../ui/button';
 
 export function MainNav() {
   const pathname = usePathname();
@@ -21,14 +22,14 @@ export function MainNav() {
   const menuItems = [
     { href: '/', label: 'Dashboard', icon: LayoutDashboard },
     { href: '/courses', label: 'Courses', icon: BookOpen },
-    { href: '/personalized-path', label: 'Learning Path', icon: GraduationCap },
+    { href: '/personalized-path', label: 'Learning Path', icon: GraduationCap, isPro: true },
   ];
 
   const aiTools = [
      { href: '/ai-in-medicine', label: 'AI in Medicine', icon: BrainCircuit },
-    { href: '/explainer', label: 'AI Explainer', icon: Zap },
-    { href: '/research', label: 'AI Research', icon: FileSearch },
-    { href: '/content-assistant', label: 'Content Assistant', icon: Library },
+    { href: '/explainer', label: 'AI Explainer', icon: Zap, isPro: true },
+    { href: '/research', label: 'AI Research', icon: FileSearch, isPro: true },
+    { href: '/content-assistant', label: 'Content Assistant', icon: Library, isPro: true },
   ]
 
   const userMenuItems = [
@@ -48,6 +49,15 @@ export function MainNav() {
       </SidebarHeader>
       
       <SidebarMenu className="flex-1">
+        <div className="p-2 group-data-[collapsible=icon]:hidden">
+            <Button asChild className="w-full justify-start">
+                <Link href="/pro">
+                    <Sparkles className="mr-2 h-4 w-4" />
+                    Upgrade to Pro
+                </Link>
+            </Button>
+        </div>
+
         {menuItems.map((item) => (
           <SidebarMenuItem key={item.href}>
             <Link href={item.href}>
@@ -56,7 +66,8 @@ export function MainNav() {
                 tooltip={item.label}
               >
                 <item.icon className="h-5 w-5" />
-                <span>{item.label}</span>
+                <span className="flex-1">{item.label}</span>
+                {item.isPro && <ProBadge />}
               </SidebarMenuButton>
             </Link>
           </SidebarMenuItem>
@@ -70,7 +81,8 @@ export function MainNav() {
                 tooltip={item.label}
               >
                 <item.icon className="h-5 w-5" />
-                <span>{item.label}</span>
+                <span className="flex-1">{item.label}</span>
+                {item.isPro && <ProBadge />}
               </SidebarMenuButton>
             </Link>
           </SidebarMenuItem>
