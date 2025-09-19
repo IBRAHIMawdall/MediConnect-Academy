@@ -1,6 +1,7 @@
 
 'use client';
 
+import { useState, useEffect } from 'react';
 import { PageHeader } from '@/components/layout/page-header';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { useUser } from '@/hooks/use-user';
@@ -9,10 +10,16 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
+import { Loader2 } from 'lucide-react';
 
 export default function ProfilePage() {
     const { user, setUser } = useUser();
     const { toast } = useToast();
+    const [hasMounted, setHasMounted] = useState(false);
+
+    useEffect(() => {
+        setHasMounted(true);
+    }, []);
 
     const handleSaveChanges = () => {
         toast({
@@ -22,6 +29,7 @@ export default function ProfilePage() {
     };
 
     const handleChangeAvatar = () => {
+        // This now safely runs only on the client after mount
         const newSeed = Math.random().toString(36).substring(7);
         setUser(prevUser => ({
             ...prevUser,
@@ -32,6 +40,26 @@ export default function ProfilePage() {
             description: 'Your avatar has been updated.',
         });
     };
+
+    if (!hasMounted) {
+        return (
+            <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
+                <PageHeader
+                    title="Profile"
+                    description="View and manage your account details."
+                />
+                <Card>
+                    <CardHeader>
+                        <CardTitle>Your Information</CardTitle>
+                        <CardDescription>This is your public information. It can be seen by other users.</CardDescription>
+                    </CardHeader>
+                    <CardContent className="flex items-center justify-center p-8">
+                         <Loader2 className="animate-spin h-8 w-8 text-muted-foreground" />
+                    </CardContent>
+                </Card>
+            </div>
+        );
+    }
 
     return (
         <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
