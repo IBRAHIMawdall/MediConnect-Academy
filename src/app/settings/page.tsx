@@ -1,13 +1,14 @@
 
 'use client';
 
+import { useState, useEffect } from 'react';
 import { PageHeader } from '@/components/layout/page-header';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useLocalStorage } from '@/hooks/use-local-storage';
-import { KeyRound, Bell, Palette } from 'lucide-react';
+import { KeyRound, Bell, Palette, Loader2 } from 'lucide-react';
 import { Switch } from '@/components/ui/switch';
 import { useToast } from '@/hooks/use-toast';
 import { useTheme } from '@/hooks/use-theme';
@@ -16,6 +17,11 @@ export default function SettingsPage() {
     const [apiKey, setApiKey] = useLocalStorage('ncbi-api-key', '');
     const { toast } = useToast();
     const { theme, setTheme } = useTheme();
+    const [hasMounted, setHasMounted] = useState(false);
+
+    useEffect(() => {
+        setHasMounted(true);
+    }, []);
 
     const handleSaveKey = () => {
         toast({
@@ -34,6 +40,52 @@ export default function SettingsPage() {
     const handleThemeToggle = (checked: boolean) => {
         setTheme(checked ? 'dark' : 'light');
     };
+    
+    if (!hasMounted) {
+        return (
+             <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
+                <PageHeader
+                    title="Settings"
+                    description="Manage your application preferences and API keys."
+                />
+                <div className="space-y-8">
+                     <Card>
+                        <CardHeader>
+                            <CardTitle className="flex items-center"><KeyRound className="mr-2"/>API Keys</CardTitle>
+                            <CardDescription>Manage API keys for external services. This is stored securely in your browser.</CardDescription>
+                        </CardHeader>
+                        <CardContent className="space-y-4">
+                            <div className="flex items-center justify-center p-8">
+                                <Loader2 className="animate-spin h-8 w-8 text-muted-foreground" />
+                            </div>
+                        </CardContent>
+                    </Card>
+                     <Card>
+                        <CardHeader>
+                            <CardTitle className="flex items-center"><Bell className="mr-2"/>Notifications</CardTitle>
+                            <CardDescription>Choose how you want to be notified.</CardDescription>
+                        </CardHeader>
+                        <CardContent className="space-y-4">
+                             <div className="flex items-center justify-center p-8">
+                                <Loader2 className="animate-spin h-8 w-8 text-muted-foreground" />
+                            </div>
+                        </CardContent>
+                    </Card>
+                    <Card>
+                        <CardHeader>
+                            <CardTitle className="flex items-center"><Palette className="mr-2"/>Appearance</CardTitle>
+                            <CardDescription>Customize the look and feel of the application.</CardDescription>
+                        </CardHeader>
+                        <CardContent className="space-y-4">
+                             <div className="flex items-center justify-center p-8">
+                                <Loader2 className="animate-spin h-8 w-8 text-muted-foreground" />
+                            </div>
+                        </CardContent>
+                    </Card>
+                </div>
+            </div>
+        )
+    }
 
     return (
         <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
