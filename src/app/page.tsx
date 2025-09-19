@@ -34,8 +34,8 @@ export default function DashboardPage() {
         <div>
           <h2 className="text-2xl font-bold tracking-tight mb-4">My Courses</h2>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {isClient && enrolledCourses.map((course) => (
-              <CourseProgressCard key={course.id} course={course} progress={Math.floor(Math.random() * (75 - 25 + 1)) + 25} />
+            {isClient && enrolledCourses.map((course, index) => (
+              <CourseProgressCard key={course.id} course={course} progress={index === 0 ? 65 : 30} />
             ))}
           </div>
         </div>
