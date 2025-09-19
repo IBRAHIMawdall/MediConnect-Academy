@@ -9,9 +9,10 @@ import { UserNav } from '@/components/layout/user-nav';
 import { useEffect, useState } from 'react';
 import { FeaturedCourses } from '@/components/courses/featured-courses';
 import { SidebarTrigger } from '@/components/ui/sidebar';
+import { ProgressChart } from '@/components/dashboard/progress-chart';
 
 export default function DashboardPage() {
-  const enrolledCourses = courses.slice(0, 2); 
+  const enrolledCourses = courses.slice(0, 2);
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -31,6 +32,10 @@ export default function DashboardPage() {
         </div>
       </div>
       <div className="grid gap-8">
+        <div>
+            <h2 className="text-2xl font-bold tracking-tight mb-4">My Activity</h2>
+            <ProgressChart />
+        </div>
         <div>
           <h2 className="text-2xl font-bold tracking-tight mb-4">My Courses</h2>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
