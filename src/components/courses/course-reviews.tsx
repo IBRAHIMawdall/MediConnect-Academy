@@ -25,7 +25,7 @@ type Review = {
 const initialReviews: Review[] = [
     {
         id: '1',
-        user: { name: 'Dr. Evelyn Reed', avatar: 'https://picsum.photos/seed/user1/40/40' },
+        user: { name: 'mohamed riyas', avatar: 'https://picsum.photos/seed/user-mohamed/40/40' },
         rating: 5,
         text: 'This was an outstanding course. The content on interventional cardiology was incredibly detailed and up-to-date. Highly recommended for any practicing cardiologist.',
         date: '2 weeks ago',
