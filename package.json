@@ -9,7 +9,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "deploy": "gcloud builds submit --config cloudbuild.yaml --substitutions=_BACKEND_ID=your-backend-id,_REGION=us-central1"
   },
   "dependencies": {
     "@genkit-ai/googleai": "^1.14.1",
