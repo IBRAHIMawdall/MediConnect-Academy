@@ -16,8 +16,8 @@ steps:
       - 'apphosting'
       - 'backends'
       - 'update'
-      - 'app-hosting-backend-id' # <-- TODO: Replace with your Backend ID
-      - '--region=us-central1' # <-- TODO: Replace with your region if different
+      - '${_BACKEND_ID}'
+      - '--region=${_REGION}'
       - '--project=$PROJECT_ID'
       - '--source=.'
     # This timeout is for the gcloud command to complete.
