@@ -33,13 +33,21 @@ export function IntroVideo() {
             } else {
                  throw new Error('Video generation did not return a video.');
             }
-        } catch (error) {
+        } catch (error: any) {
             console.error('Video generation failed:', error);
-            toast({
-                variant: 'destructive',
-                title: 'Video Generation Failed',
-                description: 'Could not generate the video at this time. Please try again later.',
-            });
+            if (error.message && (error.message.includes('429') || error.message.toLowerCase().includes('quota'))) {
+                 toast({
+                    variant: 'destructive',
+                    title: 'API Quota Exceeded',
+                    description: 'You have exceeded your usage limit for the Gemini API. Please check your plan or try again later.',
+                });
+            } else {
+                toast({
+                    variant: 'destructive',
+                    title: 'Video Generation Failed',
+                    description: 'Could not generate the video at this time. Please try again later.',
+                });
+            }
         } finally {
             setLoading(false);
         }
