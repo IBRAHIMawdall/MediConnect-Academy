@@ -1,0 +1,31 @@
+steps:
+  # 1. Install dependencies
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['install']
+
+  # 2. Build the Next.js application
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['run', 'build']
+    env:
+      - 'GENKIT_ENV=production'
+
+  # 3. Deploy to Firebase App Hosting
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gcloud'
+    args:
+      - 'apphosting'
+      - 'backends'
+      - 'update'
+      - 'app-hosting-backend-id' # <-- TODO: Replace with your Backend ID
+      - '--region=us-central1' # <-- TODO: Replace with your region if different
+      - '--project=$PROJECT_ID'
+      - '--source=.'
+    # This timeout is for the gcloud command to complete.
+    # Video generation itself has a separate timeout on the server.
+    timeout: 1200s
+timeout: 1500s
+options:
+  logging: CLOUD_LOGGING_ONLY
+substitutions:
+  _BACKEND_ID: 'your-backend-id' # <-- TODO: Replace with your Backend ID
+  _REGION: 'us-central1' # <-- TODO: Replace with your region if different
