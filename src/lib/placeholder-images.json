@@ -1,10 +1,9 @@
-
 {
   "placeholderImages": [
     {
       "id": "adv-cardiology",
       "description": "A doctor reviewing a heart scan on a computer.",
-      "imageUrl": "https://images.unsplash.com/photo-1581091221493-c9b2f8c7f7b1?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop",
       "imageHint": "heart medical"
     },
     {
