@@ -10,7 +10,8 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "deploy": "gcloud builds submit --config cloudbuild.yaml --substitutions=_BACKEND_ID=mediconnect-backend,_REGION=us-east4"
+    "deploy": "gcloud builds submit --config cloudbuild.yaml --substitutions=_BACKEND_ID=mediconnect-backend,_REGION=us-east4",
+    "seed:firestore": "tsx src/lib/seed.ts"
   },
   "dependencies": {
     "@genkit-ai/googleai": "^1.14.1",
