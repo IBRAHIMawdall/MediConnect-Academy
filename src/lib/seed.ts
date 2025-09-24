@@ -2,7 +2,7 @@
 
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, writeBatch, doc } from 'firebase/firestore';
-import { courses } from './data';
+import { courses, instructors } from './data';
 import { firebaseConfig } from './firebase-config';
 
 
@@ -23,11 +23,19 @@ async function seedDatabase() {
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
 
-  const coursesCollection = collection(db, 'courses');
   const batch = writeBatch(db);
 
-  console.log(`Preparing to seed ${courses.length} courses...`);
+  // Seed instructors
+  const instructorsCollection = collection(db, 'instructors');
+  console.log(`Preparing to seed ${instructors.length} instructors...`);
+  instructors.forEach((instructor) => {
+    const instructorDocRef = doc(db, 'instructors', instructor.id);
+    batch.set(instructorDocRef, instructor);
+  });
 
+  // Seed courses
+  const coursesCollection = collection(db, 'courses');
+  console.log(`Preparing to seed ${courses.length} courses...`);
   courses.forEach((course) => {
     // We use the existing course.id as the document ID in Firestore
     const courseDocRef = doc(db, 'courses', course.id);
@@ -38,7 +46,7 @@ async function seedDatabase() {
 
   try {
     await batch.commit();
-    console.log('Database seeded successfully!');
+    console.log('Database seeded successfully with courses and instructors!');
   } catch (error) {
     console.error('Error seeding database:', error);
   }

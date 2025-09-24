@@ -1,5 +1,6 @@
 
 
+
 import { PlaceHolderImages } from './placeholder-images';
 
 export type Lesson = {
@@ -89,6 +90,12 @@ export const categories: Record<CourseCategory, SubCategory[]> = {
   ],
 };
 
+export type Instructor = {
+  id: string;
+  name: string;
+  credentials: string;
+  avatarUrl: string;
+}
 
 export type Course = {
   id: string;
@@ -100,7 +107,37 @@ export type Course = {
   category: CourseCategory;
   subCategory: SubCategory;
   tags?: string[];
+  instructorId: string;
+  schedule: string; // e.g., "Self-paced", "Starts June 1st", "M/W/F 10am-12pm"
+  prerequisites: string[];
 };
+
+export const instructors: Instructor[] = [
+    {
+        id: 'dr-emily-carter',
+        name: 'Dr. Emily Carter',
+        credentials: 'MD, PhD, FACC',
+        avatarUrl: 'https://picsum.photos/seed/drcarter/200/200'
+    },
+    {
+        id: 'dr-benjamin-lee',
+        name: 'Dr. Benjamin Lee',
+        credentials: 'MD, FAAP',
+        avatarUrl: 'https://picsum.photos/seed/drlee/200/200'
+    },
+    {
+        id: 'dr-sophia-rodriguez',
+        name: 'Dr. Sophia Rodriguez',
+        credentials: 'MD, FACS',
+        avatarUrl: 'https://picsum.photos/seed/drrodriguez/200/200'
+    },
+    {
+        id: 'dr-david-chen',
+        name: 'Dr. David Chen',
+        credentials: 'PharmD, PhD',
+        avatarUrl: 'https://picsum.photos/seed/drchen/200/200'
+    }
+];
 
 export const courses: Course[] = [
   {
@@ -110,6 +147,9 @@ export const courses: Course[] = [
     longDescription: 'This course offers a comprehensive review of advanced topics in cardiology, including invasive procedures, electrophysiology, and cutting-edge treatments for heart failure. Designed for experienced cardiologists and fellows.',
     imageId: 'adv-cardiology',
     tags: ['Featured'],
+    instructorId: 'dr-emily-carter',
+    schedule: 'Self-paced',
+    prerequisites: ['Board certification in Internal Medicine', 'Cardiology Fellowship (Year 1+)'],
     modules: [
       {
         title: 'Module 1: Interventional Cardiology',
@@ -135,6 +175,9 @@ export const courses: Course[] = [
     description: 'Master the skills to handle critical situations in pediatric patients.',
     longDescription: 'Gain confidence and competence in managing pediatric emergencies. This course covers everything from initial assessment to advanced life support, tailored specifically for the pediatric population.',
     imageId: 'pediatric-care',
+    instructorId: 'dr-benjamin-lee',
+    schedule: 'Starts July 15th, 2024',
+    prerequisites: ['MD, DO, or RN degree', 'Basic Life Support (BLS) certification'],
     modules: [
       {
         title: 'Module 1: Pediatric Assessment',
@@ -160,6 +203,9 @@ export const courses: Course[] = [
     description: 'Fundamental principles and hands-on techniques for aspiring surgeons.',
     longDescription: 'An essential course for medical students and junior residents interested in surgery. It covers sterile technique, suturing, knot tying, and basic surgical procedures in a simulated environment.',
     imageId: 'surgical-tech',
+    instructorId: 'dr-sophia-rodriguez',
+    schedule: 'Self-paced',
+    prerequisites: ['Enrolled in an accredited medical school'],
     modules: [
       {
         title: 'Module 1: The Operating Room Environment',
@@ -185,6 +231,9 @@ export const courses: Course[] = [
     description: 'Explore the future of medicine with breakthroughs in drug development.',
     longDescription: 'Stay at the forefront of pharmacology with this course on the latest innovations. Topics include gene therapy, personalized medicine, and new drug delivery systems. Ideal for pharmacists, physicians, and researchers.',
     imageId: 'pharma-innov',
+    instructorId: 'dr-david-chen',
+    schedule: 'Self-paced',
+    prerequisites: ['Basic knowledge of biology and chemistry'],
     modules: [
       {
         title: 'Module 1: Gene and Cell Therapies',
@@ -210,6 +259,9 @@ export const courses: Course[] = [
     description: 'Navigate complex ethical dilemmas and legal responsibilities in healthcare.',
     longDescription: 'This course provides a framework for understanding and addressing the ethical and legal issues that arise in modern medical practice. Case studies and expert discussions will guide you through complex topics like end-of-life care, patient confidentiality, and resource allocation.',
     imageId: 'medical-ethics',
+    instructorId: 'dr-sophia-rodriguez',
+    schedule: 'Self-paced',
+    prerequisites: [],
     modules: [
       {
         title: 'Module 1: Foundations of Medical Ethics',
@@ -235,6 +287,9 @@ export const courses: Course[] = [
     description: 'Deliver high-quality care remotely with effective telehealth strategies.',
     longDescription: 'The future of healthcare is digital. This course equips you with the tools and techniques for effective telehealth practice, from virtual examination skills to "webside manner," ensuring patient safety and satisfaction.',
     imageId: 'telehealth-practice',
+    instructorId: 'dr-benjamin-lee',
+    schedule: 'Tuesdays & Thursdays, 4pm-5pm EST',
+    prerequisites: [],
     modules: [
       {
         title: 'Module 1: Setting Up Your Virtual Practice',
@@ -260,6 +315,9 @@ export const courses: Course[] = [
     description: 'Learn to identify, understand, and respond to signs of mental illnesses.',
     longDescription: 'This course teaches you how to assist someone experiencing a mental health or substance use-related crisis. You will learn risk factors and warning signs for mental health and addiction concerns, strategies for how to help someone in both crisis and non-crisis situations, and where to turn for help.',
     imageId: 'mental-health',
+    instructorId: 'dr-emily-carter',
+    schedule: 'Self-paced',
+    prerequisites: [],
     modules: [
       {
         title: 'Module 1: Understanding Mental Health',
@@ -285,6 +343,9 @@ export const courses: Course[] = [
     description: 'Explore the link between diet and health with evidence-based nutrition science.',
     longDescription: 'This course provides a comprehensive overview of nutrition science, covering macronutrients, micronutrients, dietary guidelines, and the role of nutrition in preventing chronic diseases. It is designed for healthcare professionals and anyone interested in improving their health through diet.',
     imageId: 'nutrition-health',
+    instructorId: 'dr-david-chen',
+    schedule: 'Self-paced',
+    prerequisites: [],
     modules: [
       {
         title: 'Module 1: Macronutrients',
@@ -310,6 +371,9 @@ export const courses: Course[] = [
     description: 'An immersive visual guide to hematology.',
     longDescription: 'Explore the components of blood and their functions through high-quality animations and visualizations. This course covers everything from blood cell formation to complex hematological disorders.',
     imageId: 'blood-biology',
+    instructorId: 'dr-david-chen',
+    schedule: 'Self-paced',
+    prerequisites: ['Basic understanding of biology'],
     modules: [
       {
         title: 'Module 1: The Cellular Components',
@@ -328,6 +392,9 @@ export const courses: Course[] = [
     description: 'Experience common surgical procedures through realistic simulations.',
     longDescription: 'This course provides a virtual operating room experience. Watch and learn from detailed 3D animations of common surgical procedures, from appendectomies to coronary artery bypass grafts.',
     imageId: 'surgery-simulation',
+    instructorId: 'dr-sophia-rodriguez',
+    schedule: 'Self-paced',
+    prerequisites: ['Surgical Techniques 101'],
     modules: [
       {
         title: 'Module 1: Abdominal Surgeries',
@@ -346,6 +413,9 @@ export const courses: Course[] = [
     description: 'Visualize the complex world of brain chemistry.',
     longDescription: 'Journey through the brain\'s intricate signaling pathways. This course uses advanced visualizations to explain the roles of neurotransmitters like dopamine, serotonin, and acetylcholine in behavior and disease.',
     imageId: 'neuro-pathways',
+    instructorId: 'dr-david-chen',
+    schedule: 'Self-paced',
+    prerequisites: ['Basic understanding of neuroscience'],
     modules: [
       {
         title: 'Module 1: Key Neurotransmitters',
@@ -364,6 +434,9 @@ export const courses: Course[] = [
     description: 'A comprehensive review for the USMLE Step 1 exam.',
     longDescription: 'Maximize your score with this intensive review course. Covering all the high-yield topics in basic sciences, this course includes video lectures, practice questions, and simulated exams.',
     imageId: 'usmle-prep',
+    instructorId: 'dr-benjamin-lee',
+    schedule: 'Rolling enrollment',
+    prerequisites: ['Currently enrolled in medical school'],
     modules: [
         {
         title: 'Module 1: Biochemistry and Genetics',
@@ -382,6 +455,9 @@ export const courses: Course[] = [
     description: 'Master the Biology and Biochemistry sections of the MCAT.',
     longDescription: 'This course focuses on the foundational concepts in biology and biochemistry essential for the MCAT. Includes detailed video explanations and hundreds of practice problems.',
     imageId: 'mcat-prep',
+    instructorId: 'dr-emily-carter',
+    schedule: 'Self-paced',
+    prerequisites: ['High school biology and chemistry'],
     modules: [
         {
         title: 'Module 1: The Cell',
@@ -400,6 +476,9 @@ export const courses: Course[] = [
     description: 'Understand the role of genetics in health and disease.',
     longDescription: 'This course introduces the principles of genomics and its applications in clinical practice. You will learn about genetic testing, pharmacogenomics, and the ethical, legal, and social implications of genomic medicine.',
     imageId: 'genomics-medicine',
+    instructorId: 'dr-david-chen',
+    schedule: 'Self-paced',
+    prerequisites: [],
     modules: [
       {
         title: 'Module 1: Fundamentals of Genomics',
@@ -425,6 +504,9 @@ export const courses: Course[] = [
     description: 'Leverage data to improve patient outcomes and healthcare delivery.',
     longDescription: 'This course provides an introduction to data science and its applications in healthcare. You will learn about data analysis, machine learning, and how to use data to drive improvements in clinical care, research, and operations.',
     imageId: 'data-science-healthcare',
+    instructorId: 'dr-emily-carter',
+    schedule: 'Self-paced',
+    prerequisites: ['Basic Python programming knowledge'],
     modules: [
       {
         title: 'Module 1: Healthcare Data',
@@ -450,6 +532,9 @@ export const courses: Course[] = [
     description: 'Examine the major health issues facing the world today.',
     longDescription: 'This course provides an overview of the most pressing global health challenges, including infectious diseases, maternal and child health, and the impact of climate change on health. You will learn about the social, economic, and political determinants of health and explore strategies for improving health equity worldwide.',
     imageId: 'global-health',
+    instructorId: 'dr-benjamin-lee',
+    schedule: 'Fall 2024 Semester',
+    prerequisites: [],
     modules: [
       {
         title: 'Module 1: Infectious Diseases',
@@ -475,6 +560,9 @@ export const courses: Course[] = [
     description: 'Learn how to design and conduct high-quality clinical research.',
     longDescription: 'This course covers the principles of clinical research design, including randomized controlled trials, observational studies, and systematic reviews. You will learn how to develop a research question, select a study design, and write a research protocol.',
     imageId: 'clinical-research',
+    instructorId: 'dr-emily-carter',
+    schedule: 'Self-paced',
+    prerequisites: ['Basic statistics knowledge'],
     modules: [
       {
         title: 'Module 1: Study Design',
@@ -500,6 +588,9 @@ export const courses: Course[] = [
     description: 'Learn to lead initiatives that improve patient safety and healthcare quality.',
     longDescription: 'This course provides a framework for understanding and improving patient safety and healthcare quality. You will learn about quality improvement methodologies, root cause analysis, and how to create a culture of safety in your organization.',
     imageId: 'patient-safety',
+    instructorId: 'dr-benjamin-lee',
+    schedule: 'Self-paced',
+    prerequisites: [],
     modules: [
       {
         title: 'Module 1: Principles of Patient Safety',
@@ -525,6 +616,9 @@ export const courses: Course[] = [
     description: 'Develop the skills to lead and manage in the complex healthcare environment.',
     longDescription: 'This course provides an overview of healthcare management, including healthcare finance, operations, and strategic planning. You will learn about the challenges and opportunities facing healthcare leaders today and develop the skills to lead your organization to success.',
     imageId: 'healthcare-management',
+    instructorId: 'dr-sophia-rodriguez',
+    schedule: 'Self-paced',
+    prerequisites: [],
     modules: [
       {
         title: 'Module 1: Healthcare Finance',
@@ -550,6 +644,9 @@ export const courses: Course[] = [
     description: 'An introduction to the principles and applications of diagnostic imaging.',
     longDescription: 'This course provides a comprehensive introduction to the field of diagnostic imaging, including X-ray, CT, MRI, and ultrasound. You will learn about the physical principles of each modality, their clinical applications, and how to interpret common imaging studies.',
     imageId: 'diagnostic-imaging',
+    instructorId: 'dr-benjamin-lee',
+    schedule: 'Self-paced',
+    prerequisites: [],
     modules: [
       {
         title: 'Module 1: X-ray and CT',
@@ -576,6 +673,9 @@ export const courses: Course[] = [
     longDescription: 'This course explores the transformative impact of artificial intelligence in healthcare. Learn about machine learning models for medical imaging, natural language processing for clinical notes, and the ethical considerations of using AI in medicine.',
     imageId: 'ai-healthcare',
     tags: ['Featured'],
+    instructorId: 'dr-emily-carter',
+    schedule: 'Self-paced',
+    prerequisites: ['Basic statistics knowledge'],
     modules: [
       {
         title: 'Module 1: Machine Learning for Medical Imaging',
@@ -601,6 +701,9 @@ export const courses: Course[] = [
     description: 'Understand the core concepts of public health and epidemiology.',
     longDescription: 'This course provides a foundational understanding of public health principles, including epidemiology, biostatistics, and health policy. Explore how public health initiatives protect and improve the health of entire populations.',
     imageId: 'public-health',
+    instructorId: 'dr-benjamin-lee',
+    schedule: 'Self-paced',
+    prerequisites: [],
     modules: [
       {
         title: 'Module 1: Introduction to Epidemiology',
@@ -626,6 +729,9 @@ export const courses: Course[] = [
     description: 'Master the coding systems used for medical billing and insurance claims.',
     longDescription: 'Learn the essential skills of medical billing and coding. This course covers ICD-10, CPT, and HCPCS coding systems, ensuring you can accurately document medical services and navigate the complexities of healthcare reimbursement.',
     imageId: 'medical-billing',
+    instructorId: 'dr-sophia-rodriguez',
+    schedule: 'Self-paced',
+    prerequisites: [],
     modules: [
       {
         title: 'Module 1: ICD-10-CM Coding',
@@ -651,6 +757,9 @@ export const courses: Course[] = [
     description: 'Develop essential leadership skills to manage and inspire healthcare teams.',
     longDescription: 'This course is designed for aspiring and current healthcare leaders. Topics include strategic planning, financial management, quality improvement, and leading teams in a dynamic healthcare environment. Enhance your ability to drive positive change.',
     imageId: 'healthcare-leadership',
+    instructorId: 'dr-sophia-rodriguez',
+    schedule: 'Self-paced',
+    prerequisites: ['Experience in a healthcare setting'],
     modules: [
       {
         title: 'Module 1: Strategic Leadership',
@@ -676,6 +785,9 @@ export const courses: Course[] = [
     description: 'Learn to diagnose, treat, and prevent common sports-related injuries.',
     longDescription: 'This course provides a comprehensive overview of sports medicine, from sideline assessment to rehabilitation. Ideal for physicians, physical therapists, and athletic trainers, it covers the most common injuries and evidence-based treatment strategies.',
     imageId: 'sports-medicine',
+    instructorId: 'dr-benjamin-lee',
+    schedule: 'Self-paced',
+    prerequisites: [],
     modules: [
       {
         title: 'Module 1: Injury Assessment and Diagnosis',
@@ -701,6 +813,9 @@ export const courses: Course[] = [
     description: 'Confidently diagnose and manage common skin conditions in a primary care setting.',
     longDescription: 'This course is designed to equip primary care providers with the knowledge to recognize and treat a wide range of common dermatological conditions. Learn to differentiate benign lesions from malignancies and know when to refer.',
     imageId: 'dermatology-pc',
+    instructorId: 'dr-sophia-rodriguez',
+    schedule: 'Self-paced',
+    prerequisites: [],
     modules: [
       {
         title: 'Module 1: Common Rashes and Lesions',
@@ -726,6 +841,9 @@ export const courses: Course[] = [
     description: 'Master the complexities of providing medical care to older adults.',
     longDescription: 'This course focuses on the unique aspects of caring for the elderly, including managing multiple chronic conditions, polypharmacy, and common geriatric syndromes like falls and delirium. Learn to promote healthy aging and improve quality of life.',
     imageId: 'geriatric-medicine',
+    instructorId: 'dr-benjamin-lee',
+    schedule: 'Self-paced',
+    prerequisites: [],
     modules: [
       {
         title: 'Module 1: The Aging Process',
@@ -751,6 +869,9 @@ export const courses: Course[] = [
     description: 'Learn the principles of infection prevention and antimicrobial stewardship.',
     longDescription: 'This course covers the essentials of infection control in healthcare settings. Topics include standard and transmission-based precautions, outbreak investigation, and the critical importance of antimicrobial stewardship to combat resistance.',
     imageId: 'infectious-disease',
+    instructorId: 'dr-emily-carter',
+    schedule: 'Self-paced',
+    prerequisites: [],
     modules: [
       {
         title: 'Module 1: Infection Prevention',
@@ -776,6 +897,9 @@ export const courses: Course[] = [
     description: 'Improve quality of life for patients with serious illnesses through palliative care.',
     longDescription: 'Learn the principles of palliative care, focusing on symptom management, communication, and support for patients and families facing serious illness. This course is for all healthcare professionals who wish to improve the patient experience.',
     imageId: 'palliative-care',
+    instructorId: 'dr-sophia-rodriguez',
+    schedule: 'Self-paced',
+    prerequisites: [],
     modules: [
       {
         title: 'Module 1: Principles of Palliative Care',
@@ -801,6 +925,9 @@ export const courses: Course[] = [
     description: 'Learn to provide medical care in remote and resource-limited environments.',
     longDescription: 'This course prepares you to handle medical emergencies in the backcountry. From treating fractures with improvised splints to managing altitude sickness, you will gain the skills and confidence to provide care when help is far away.',
     imageId: 'wilderness-medicine',
+    instructorId: 'dr-david-chen',
+    schedule: 'Self-paced',
+    prerequisites: [],
     modules: [
       {
         title: 'Module 1: Environmental Emergencies',
@@ -826,6 +953,9 @@ export const courses: Course[] = [
     description: 'Understand the essentials of blood disorders and their treatment.',
     longDescription: 'This course provides a foundational understanding of hematology, covering common disorders of red cells, white cells, and platelets. It is ideal for students and professionals new to the field.',
     imageId: 'intro-hematology',
+    instructorId: 'dr-david-chen',
+    schedule: 'Self-paced',
+    prerequisites: [],
     modules: [
       {
         title: 'Module 1: Red Blood Cell Disorders',
@@ -844,6 +974,9 @@ export const courses: Course[] = [
     description: 'Master the art of patient-centered communication.',
     longDescription: 'This course focuses on the soft skills crucial for healthcare professionals. Learn techniques for empathetic listening, breaking bad news, and collaborative decision-making to improve patient relationships and outcomes.',
     imageId: 'comm-healthcare',
+    instructorId: 'dr-sophia-rodriguez',
+    schedule: 'Self-paced',
+    prerequisites: [],
     modules: [
       {
         title: 'Module 1: Patient-Centered Communication',
@@ -862,6 +995,9 @@ export const courses: Course[] = [
     description: 'An introduction to the business side of medicine.',
     longDescription: 'Understand the fundamentals of healthcare finance, including budgeting, revenue cycles, and financial analysis. This course is designed for clinicians and administrators who want to make better financial decisions for their practice or department.',
     imageId: 'finance-101',
+    instructorId: 'dr-david-chen',
+    schedule: 'Self-paced',
+    prerequisites: [],
     modules: [
       {
         title: 'Module 1: The Healthcare Revenue Cycle',
@@ -881,3 +1017,4 @@ export const courses: Course[] = [
     
 
     
+

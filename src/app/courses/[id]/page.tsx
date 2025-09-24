@@ -4,27 +4,38 @@
 import { useState, useEffect } from 'react';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import { Course } from '@/lib/data';
+import { Course, Instructor } from '@/lib/data';
 import { getCourses } from '@/lib/get-courses';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { PageHeader } from '@/components/layout/page-header';
 import { CourseModules } from '@/components/courses/course-modules';
 import { Badge } from '@/components/ui/badge';
 import { CourseReviews } from '@/components/courses/course-reviews';
-import { Loader2 } from 'lucide-react';
+import { Loader2, UserCircle, Calendar, CheckSquare } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { getInstructors } from '@/lib/get-instructors';
 
 export default function CourseDetailPage({ params }: { params: { id: string } }) {
   const [course, setCourse] = useState<Course | null>(null);
+  const [instructor, setInstructor] = useState<Instructor | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function fetchCourse() {
+    async function fetchCourseData() {
       const allCourses = await getCourses();
       const foundCourse = allCourses.find((c) => c.id === params.id) || null;
       setCourse(foundCourse);
+
+      if (foundCourse) {
+        const allInstructors = await getInstructors();
+        const foundInstructor = allInstructors.find(i => i.id === foundCourse.instructorId) || null;
+        setInstructor(foundInstructor);
+      }
+
       setLoading(false);
     }
-    fetchCourse();
+    fetchCourseData();
   }, [params.id]);
 
   if (loading) {
@@ -46,7 +57,7 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
     <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
       <PageHeader
         title={course.title}
-        description="Dive into your learning module by module."
+        description={course.description}
       />
       <div className="flex flex-wrap gap-2">
           <Badge variant="default">{course.category}</Badge>
@@ -58,21 +69,68 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
             <CourseReviews courseId={course.id} />
         </div>
         <div className="md:col-span-1 space-y-6">
-          <div className="relative w-full h-64 rounded-lg overflow-hidden shadow-lg">
-            {placeholder && (
-              <Image
-                src={placeholder.imageUrl}
-                alt={placeholder.description}
-                fill
-                className="object-cover"
-                data-ai-hint={placeholder.imageHint}
-              />
+          <Card>
+            <CardContent className="p-0">
+              <div className="relative w-full h-64 rounded-t-lg overflow-hidden">
+                {placeholder && (
+                  <Image
+                    src={placeholder.imageUrl}
+                    alt={placeholder.description}
+                    fill
+                    className="object-cover"
+                    data-ai-hint={placeholder.imageHint}
+                  />
+                )}
+              </div>
+               <div className="p-6 space-y-4">
+                  <h3 className="text-xl font-bold">About this course</h3>
+                  <p className="text-muted-foreground">{course.longDescription}</p>
+              </div>
+            </CardContent>
+          </Card>
+          
+          {instructor && (
+            <Card>
+                <CardHeader>
+                    <CardTitle className="text-lg flex items-center gap-2"><UserCircle /> Instructor</CardTitle>
+                </CardHeader>
+                <CardContent className="flex items-center gap-4">
+                    <Avatar className="h-16 w-16">
+                        <AvatarImage src={instructor.avatarUrl} alt={instructor.name} />
+                        <AvatarFallback>{instructor.name.charAt(0)}</AvatarFallback>
+                    </Avatar>
+                    <div>
+                        <p className="font-bold text-lg">{instructor.name}</p>
+                        <p className="text-muted-foreground">{instructor.credentials}</p>
+                    </div>
+                </CardContent>
+            </Card>
+          )}
+
+           <Card>
+                <CardHeader>
+                    <CardTitle className="text-lg flex items-center gap-2"><Calendar /> Schedule</CardTitle>
+                </CardHeader>
+                <CardContent>
+                     <p className="font-semibold text-lg">{course.schedule}</p>
+                </CardContent>
+            </Card>
+
+            {course.prerequisites && course.prerequisites.length > 0 && (
+                 <Card>
+                    <CardHeader>
+                        <CardTitle className="text-lg flex items-center gap-2"><CheckSquare /> Prerequisites</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
+                            {course.prerequisites.map((prereq, index) => (
+                                <li key={index}>{prereq}</li>
+                            ))}
+                        </ul>
+                    </CardContent>
+                </Card>
             )}
-          </div>
-          <div>
-            <h3 className="text-xl font-bold mb-2">About this course</h3>
-            <p className="text-muted-foreground">{course.longDescription}</p>
-          </div>
+
         </div>
       </div>
     </div>
