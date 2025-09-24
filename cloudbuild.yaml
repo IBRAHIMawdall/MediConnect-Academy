@@ -27,5 +27,5 @@ timeout: 1500s
 options:
   logging: CLOUD_LOGGING_ONLY
 substitutions:
-  _BACKEND_ID: 'your-backend-id' # <-- TODO: Replace with your Backend ID
-  _REGION: 'us-central1' # <-- TODO: Replace with your region if different
+  _BACKEND_ID: 'mediconnect-backend' # <-- TODO: Replace with your Backend ID
+  _REGION: 'us-east4' # <-- TODO: Replace with your region if different
