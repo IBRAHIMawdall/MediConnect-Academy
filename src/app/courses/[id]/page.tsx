@@ -1,16 +1,41 @@
 
+'use client';
+
+import { useState, useEffect } from 'react';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import { courses } from '@/lib/data';
+import { Course } from '@/lib/data';
+import { getCourses } from '@/lib/get-courses';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { PageHeader } from '@/components/layout/page-header';
 import { CourseModules } from '@/components/courses/course-modules';
 import { Badge } from '@/components/ui/badge';
 import { CourseReviews } from '@/components/courses/course-reviews';
+import { Loader2 } from 'lucide-react';
 
 export default function CourseDetailPage({ params }: { params: { id: string } }) {
-  const course = courses.find((c) => c.id === params.id);
+  const [course, setCourse] = useState<Course | null>(null);
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    async function fetchCourse() {
+      const allCourses = await getCourses();
+      const foundCourse = allCourses.find((c) => c.id === params.id) || null;
+      setCourse(foundCourse);
+      setLoading(false);
+    }
+    fetchCourse();
+  }, [params.id]);
+
+  if (loading) {
+    return (
+        <div className="flex-1 flex items-center justify-center p-8">
+             <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+             <p className="ml-4 text-muted-foreground">Loading course details...</p>
+        </div>
+    );
+  }
+  
   if (!course) {
     notFound();
   }

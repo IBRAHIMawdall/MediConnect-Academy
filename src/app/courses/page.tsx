@@ -1,12 +1,14 @@
 
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { CourseCard } from '@/components/courses/course-card';
 import { CourseListItem } from '@/components/courses/course-list-item';
 import { CourseFilters } from '@/components/courses/course-filters';
-import { courses, CourseCategory } from '@/lib/data';
+import { Course, CourseCategory } from '@/lib/data';
 import { PageHeader } from '@/components/layout/page-header';
+import { getCourses } from '@/lib/get-courses';
+import { Loader2 } from 'lucide-react';
 
 export type Filter = 
   | { type: 'all' }
@@ -16,9 +18,21 @@ export type Filter =
 export type ViewMode = 'grid' | 'list';
 
 const CourseDashboard: React.FC = () => {
+  const [courses, setCourses] = useState<Course[]>([]);
+  const [loading, setLoading] = useState(true);
   const [activeFilter, setActiveFilter] = useState<Filter>({ type: 'all' });
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<ViewMode>('grid');
+
+  useEffect(() => {
+    async function fetchCourses() {
+      setLoading(true);
+      const fetchedCourses = await getCourses();
+      setCourses(fetchedCourses);
+      setLoading(false);
+    }
+    fetchCourses();
+  }, []);
 
   const filteredCourses = useMemo(() => {
     return courses.filter(course => {
@@ -34,7 +48,22 @@ const CourseDashboard: React.FC = () => {
 
       return matchesFilter && matchesSearch;
     });
-  }, [activeFilter, searchTerm]);
+  }, [activeFilter, searchTerm, courses]);
+
+  if (loading) {
+    return (
+        <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
+            <PageHeader
+                title="Course Catalog"
+                description="Browse, filter, and search our comprehensive list of medical courses."
+            />
+            <div className="flex items-center justify-center py-12">
+                <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+                <p className="ml-4 text-muted-foreground">Loading courses...</p>
+            </div>
+        </div>
+    )
+  }
 
   return (
     <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
@@ -63,7 +92,7 @@ const CourseDashboard: React.FC = () => {
         ))}
       </div>
 
-       {filteredCourses.length === 0 && (
+       {filteredCourses.length === 0 && !loading && (
         <div className="text-center py-12 text-muted-foreground">
           <h3 className="text-lg font-semibold">No courses found</h3>
           <p>Try adjusting your search or filter criteria.</p>
