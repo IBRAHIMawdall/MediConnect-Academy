@@ -12,28 +12,21 @@ export default function DashboardPage() {
   const enrolledCourses = courses.slice(0, 2);
 
   return (
-    <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
-      <div className="flex items-center justify-between space-y-2">
-        <PageHeader
-          title="Dashboard"
-          description="Welcome back! Here's your learning overview."
-        />
-        <div className="flex items-center space-x-2">
-          <SidebarTrigger />
-          <UserNav />
+    <div className="flex-1">
+      <IntroVideo />
+      
+      <div className="p-4 md:p-8 space-y-8">
+        <div className="flex items-center justify-between space-y-2">
+            <h2 className="text-2xl font-bold tracking-tight">My Courses</h2>
+            <div className="flex items-center space-x-2">
+                <SidebarTrigger />
+                <UserNav />
+            </div>
         </div>
-      </div>
-      <div className="grid gap-8">
-        
-        <IntroVideo />
-
-        <div>
-          <h2 className="text-2xl font-bold tracking-tight mb-4">My Courses</h2>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {enrolledCourses.map((course, index) => (
-              <CourseProgressCard key={course.id} course={course} progress={index === 0 ? 65 : 30} />
-            ))}
-          </div>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {enrolledCourses.map((course, index) => (
+            <CourseProgressCard key={course.id} course={course} progress={index === 0 ? 65 : 30} />
+          ))}
         </div>
 
         <FeaturedCourses />
