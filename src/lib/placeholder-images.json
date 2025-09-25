@@ -3,205 +3,205 @@
     {
       "id": "adv-cardiology",
       "description": "A doctor reviewing a heart scan on a computer.",
-      "imageUrl": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1618939304347-e91b1f33d2ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxoZWFydCUyMG1lZGljYWx8ZW58MHx8fHwxNzU4NjYyNTc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "heart medical"
     },
     {
       "id": "pediatric-care",
       "description": "A pediatrician gently examining a young child with a stethoscope.",
-      "imageUrl": "https://images.unsplash.com/photo-1599045118108-bf11d4359d9d?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1758691463331-2ac00e6f676f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjaGlsZCUyMGRvY3RvcnxlbnwwfHx8fDE3NTg3MzE2ODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "child doctor"
     },
     {
       "id": "surgical-tech",
       "description": "A focused view of a surgeon's hands in gloves during a procedure.",
-      "imageUrl": "https://images.unsplash.com/photo-1551076805-e1869033e561?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzdXJnZXJ5JTIwb3BlcmF0aW5nfGVufDB8fHx8MTc1ODY0Nzg0OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "surgery operating"
     },
     {
       "id": "pharma-innov",
       "description": "A scientist looking at a test tube in a modern laboratory.",
-      "imageUrl": "https://images.unsplash.com/photo-1532187644165-ba3483b1e326?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1733119889719-779e934699b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsYWIlMjBzY2llbmNlfGVufDB8fHx8MTc1ODc2MzQ0MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "lab science"
     },
     {
       "id": "medical-ethics",
       "description": "A set of scales of justice in front of a library of law books.",
-      "imageUrl": "https://images.unsplash.com/photo-1505664194779-8be36b23997c?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsYXclMjBib29rc3xlbnwwfHx8fDE3NTg3NDQwMTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "law books"
     },
     {
       "id": "telehealth-practice",
       "description": "A doctor consulting with a patient via a video call on a laptop.",
-      "imageUrl": "https://images.unsplash.com/photo-1593361684346-397c0c16b15e?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1628645339131-0c39c7527856?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dmlkZW8lMjBjYWxsfGVufDB8fHx8MTc1ODczMTY4OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "video call"
     },
     {
       "id": "mental-health",
       "description": "A silhouette of a head with abstract, colorful thoughts.",
-      "imageUrl": "https://images.unsplash.com/photo-1516534775-7162985b8398?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1745017079623-a57f8c5e99d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxicmFpbiUyMGFic3RyYWN0fGVufDB8fHx8MTc1ODcwNjcwMHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "brain abstract"
     },
     {
       "id": "nutrition-health",
       "description": "A colorful array of fresh fruits and vegetables.",
-      "imageUrl": "https://images.unsplash.com/photo-1490645935967-10de6ba1a506?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1572974689461-bae140aef61d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmb29kJTIwdmVnZXRhYmxlc3xlbnwwfHx8fDE3NTg3NDI2NTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "food vegetables"
     },
     {
       "id": "genomics-medicine",
       "description": "A stylized 3D rendering of a DNA double helix.",
-      "imageUrl": "https://images.unsplash.com/photo-1533750349088-249c3131338a?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1738944910335-0f2ab36e20cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkbmElMjBzY2llbmNlfGVufDB8fHx8MTc1ODcxODIyOHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "dna science"
     },
     {
       "id": "data-science-healthcare",
       "description": "An abstract visualization of data points and network connections.",
-      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1745847768367-893e989d3a98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGF0YSUyMGNoYXJ0fGVufDB8fHx8MTc1ODY5MjQwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "data chart"
     },
     {
       "id": "global-health",
       "description": "A view of the earth from space with glowing points of light.",
-      "imageUrl": "https://images.unsplash.com/photo-1504333638930-c8787321633e?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1645975181219-45af8a276338?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b3JsZCUyMGhlYWx0aHxlbnwwfHx8fDE3NTg3NjM0NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "world health"
     },
     {
       "id": "clinical-research",
       "description": "A researcher using a pipette to place samples in a tray.",
-      "imageUrl": "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1486825586573-7131f7991bdd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsYWIlMjByZXNlYXJjaHxlbnwwfHx8fDE3NTg3NjM0NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "lab research"
     },
     {
       "id": "patient-safety",
       "description": "A doctor washing their hands thoroughly in a hospital.",
-      "imageUrl": "https://images.unsplash.com/photo-1584467735810-0a253106f2e8?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1755925193287-275aa7fe64f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzYWZldHklMjBzaGllbGR8ZW58MHx8fHwxNzU4NzYzNDQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "safety shield"
     },
     {
       "id": "healthcare-management",
       "description": "A diverse group of professionals in a modern office having a meeting.",
-      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzU4NjkwNzQ2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "business meeting"
     },
     {
       "id": "diagnostic-imaging",
       "description": "A detailed MRI scan of a human brain.",
-      "imageUrl": "https://images.unsplash.com/photo-1622923482343-a6a2a433152d?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1694006757902-c3a13ee6c4ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtcmklMjBicmFpbnxlbnwwfHx8fDE3NTg3NjM0NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mri brain"
     },
     {
       "id": "ai-healthcare",
       "description": "An abstract image showing a brain made of circuits and data.",
-      "imageUrl": "https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1642975967602-653d378f3b5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhaSUyMG1lZGljYWx8ZW58MHx8fHwxNzU4NzYzNDQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ai medical"
     },
     {
       "id": "public-health",
       "description": "A diverse group of people at a community health fair.",
-      "imageUrl": "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1576765607924-3f7b8410a787?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb21tdW5pdHklMjBoZWFsdGh8ZW58MHx8fHwxNzU4NzUwNTE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "community health"
     },
     {
       "id": "medical-billing",
       "description": "A desk with billing documents, a calculator, and a pen.",
-      "imageUrl": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1670329949691-f056ce6bb079?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmaW5hbmNlJTIwY2FsY3VsYXRvcnxlbnwwfHx8fDE3NTg3MDY0ODB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "finance calculator"
     },
     {
       "id": "healthcare-leadership",
       "description": "A healthcare professional leading a team meeting in a hospital corridor.",
-      "imageUrl": "https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1660854088062-c178a98550cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0ZWFtJTIwbGVhZGVyc2hpcHxlbnwwfHx8fDE3NTg3NDAwMjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "team leadership"
     },
     {
       "id": "sports-medicine",
       "description": "A physical therapist helping an athlete with a knee injury.",
-      "imageUrl": "https://images.unsplash.com/photo-1517402094254-f5a0438a274c?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1508355588587-46f3cdb5da07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YXRobGV0ZSUyMGluanVyeXxlbnwwfHx8fDE3NTg3NjM0NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "athlete injury"
     },
     {
       "id": "dermatology-pc",
       "description": "A dermatologist examining a patient's skin with a magnifying tool.",
-      "imageUrl": "https://images.unsplash.com/photo-1600522132474-5c9142835970?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1606501176727-e24f1e183fd6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxza2luJTIwZGVybWF0b2xvZ3l8ZW58MHx8fHwxNzU4NzYzNDQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "skin dermatology"
     },
     {
       "id": "geriatric-medicine",
       "description": "A healthcare provider kindly holding an elderly patient's hand.",
-      "imageUrl": "https://images.unsplash.com/photo-1543168256-412b92e74288?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1580869318757-a6c605b061ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxlbGRlcmx5JTIwY2FyZXxlbnwwfHx8fDE3NTg3MzY4NzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "elderly care"
     },
     {
       "id": "infectious-disease",
       "description": "A scientist in a biohazard suit working in a high-security lab.",
-      "imageUrl": "https://images.unsplash.com/photo-1579165466949-5536a1334545?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1707944745911-64b7d6d1c31d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxsYWIlMjBtaWNyb3Njb3BlfGVufDB8fHx8MTc1ODY5MTUyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "lab microscope"
     },
     {
       "id": "palliative-care",
       "description": "A caregiver sitting by a patient's bedside, offering comfort.",
-      "imageUrl": "https://images.unsplash.com/photo-1498603911539-01ce6c618118?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1604450653758-68243edd75ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb21mb3J0JTIwaGFuZHxlbnwwfHx8fDE3NTg3NjM0NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "comfort hand"
     },
     {
       "id": "wilderness-medicine",
       "description": "A hiker treating a minor injury with a first aid kit on a mountain trail.",
-      "imageUrl": "https://images.unsplash.com/photo-1596766224342-95765798a7c1?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1686074403725-78f2e110ae38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bW91bnRhaW4lMjBmaXJzdGFpZHxlbnwwfHx8fDE3NTg3NjM0NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mountain firstaid"
     },
     {
       "id": "blood-biology",
       "description": "A microscopic view of red blood cells.",
-      "imageUrl": "https://images.unsplash.com/photo-1558203779-95977939c09a?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1670192117184-d07467e203b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxibG9vZCUyMGNlbGxzfGVufDB8fHx8MTc1ODcwNzA5Mnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "blood cells"
     },
     {
       "id": "surgery-simulation",
       "description": "A medical student using a VR headset for surgical training.",
-      "imageUrl": "https://images.unsplash.com/photo-1581093458791-99a3c3b0f5b9?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1551601651-2a8555f1a136?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx2aXJ0dWFsJTIwc3VyZ2VyeXxlbnwwfHx8fDE3NTg3NjM0NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "virtual surgery"
     },
     {
       "id": "neuro-pathways",
       "description": "An abstract digital illustration of interconnected neurons.",
-      "imageUrl": "https://images.unsplash.com/photo-1530510217034-27515a653ac2?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxuZXVyYWwlMjBuZXR3b3JrfGVufDB8fHx8MTc1ODcxNjkxMHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "neural network"
     },
     {
       "id": "usmle-prep",
       "description": "A student studying intensely with medical textbooks and notes.",
-      "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1669172973375-b85a97a91fce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzdHVkeSUyMGV4YW18ZW58MHx8fHwxNzU4NzYzNDQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "study exam"
     },
     {
       "id": "mcat-prep",
       "description": "A stack of science textbooks next to a stethoscope.",
-      "imageUrl": "https://images.unsplash.com/photo-1507919909716-c8262e49548f?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1717505694141-ada870f2bb95?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtY2F0JTIwc3R1ZHl8ZW58MHx8fHwxNzU4NzYzNDQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mcat study"
     },
     {
       "id": "llm-history",
       "description": "An artistic representation of a timeline with glowing nodes.",
-      "imageUrl": "https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=1200&h=900&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1630756539201-f435ba29f1fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0aW1lbGluZSUyMGNoYXJ0fGVufDB8fHx8MTc1ODc2MzQ0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "timeline chart"
     },
     {
       "id": "intro-hematology",
       "description": "A lab technician preparing a blood smear on a microscope slide.",
-      "imageUrl": "https://images.unsplash.com/photo-1578496459858-a1ac51261397?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1636386689060-37d233b5d345?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxibG9vZCUyMG1pY3Jvc2NvcGV8ZW58MHx8fHwxNzU4NzYzNDQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "blood microscope"
     },
     {
       "id": "comm-healthcare",
       "description": "A doctor having a compassionate conversation with a patient.",
-      "imageUrl": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1603202662747-00e33e7d1468?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx0ZWFtJTIwZGlzY3Vzc2lvbnxlbnwwfHx8fDE3NTg2ODkzMDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "team discussion"
     },
     {
       "id": "finance-101",
       "description": "A business chart showing financial growth with an upward trend.",
-      "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1744473755637-e09f0c2fab41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZmluYW5jZSUyMGNoYXJ0fGVufDB8fHx8MTc1ODcwODYxOXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "finance chart"
     }
   ]
