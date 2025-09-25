@@ -8,6 +8,7 @@ steps:
     args: ['run', 'build']
     env:
       - 'GENKIT_ENV=production'
+      - 'NODE_OPTIONS=--experimental-memory-less-invalidation'
 
   # 3. Deploy to Firebase App Hosting
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
