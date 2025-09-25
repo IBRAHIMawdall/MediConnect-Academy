@@ -1,20 +1,12 @@
-
 rules_version = '2';
 
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Allow public read/write access to courses and instructors for seeding
-    match /courses/{courseId} {
-      allow read, write: if true;
-    }
-
-    match /instructors/{instructorId} {
-      allow read, write: if true;
-    }
-
-    // Default deny for all other collections
+    // This rule allows anyone to read and write to any document in your database.
+    // It is insecure and should be replaced with more restrictive rules
+    // once you have user authentication implemented.
     match /{document=**} {
-      allow read, write: if false;
+      allow read, write: if true;
     }
   }
 }
