@@ -1,14 +1,14 @@
 
 import { CourseProgressCard } from '@/components/courses/course-progress-card';
 import { RequestCourseForm } from '@/components/ai/request-course-form';
-import { courses } from '@/lib/data';
-import { PageHeader } from '@/components/layout/page-header';
+import { getCourses } from '@/lib/get-courses';
 import { UserNav } from '@/components/layout/user-nav';
 import { FeaturedCourses } from '@/components/courses/featured-courses';
 import { SidebarTrigger } from '@/components/ui/sidebar';
 import { IntroVideo } from '@/components/dashboard/intro-video';
 
-export default function DashboardPage() {
+export default async function DashboardPage() {
+  const courses = await getCourses();
   const enrolledCourses = courses.slice(0, 2);
 
   return (

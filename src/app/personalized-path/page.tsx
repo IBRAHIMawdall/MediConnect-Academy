@@ -17,13 +17,14 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { PageHeader } from '@/components/layout/page-header';
+import { PageHero } from '@/components/layout/page-hero';
 import {
   personalizedCourseRecommendations,
   type PersonalizedCourseRecommendationsOutput,
 } from '@/ai/flows/personalized-course-recommendations';
 import { Loader2, Sparkles, BookCheck } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const formSchema = z.object({
   userRole: z.string().min(2, { message: 'Please enter a valid role.' }),
@@ -43,6 +44,9 @@ export default function PersonalizedPathPage() {
     },
   });
 
+  const pageHeroImage = PlaceHolderImages.find(p => p.id === 'page-learning-path');
+
+
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setLoading(true);
     setError(null);
@@ -59,98 +63,101 @@ export default function PersonalizedPathPage() {
   }
 
   return (
-    <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
-      <PageHeader
+    <div className="flex-1">
+      <PageHero
         title="Personalized Learning Path"
         description="Let our AI craft a course list tailored to your career goals and interests."
+        image={pageHeroImage}
       />
-      <Card>
-        <CardHeader>
-          <CardTitle>Your Profile</CardTitle>
-          <CardDescription>
-            Tell us about your role and what you want to learn.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-              <FormField
-                control={form.control}
-                name="userRole"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Your Professional Role</FormLabel>
-                    <FormControl>
-                      <Input placeholder="e.g., 'Cardiologist', 'Medical Student'" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="learningHistory"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Learning History & Interests</FormLabel>
-                    <FormControl>
-                      <Textarea
-                        placeholder="e.g., 'Completed courses in basic surgery. Interested in advanced surgical techniques and robotics.'"
-                        className="resize-none"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <Button type="submit" disabled={loading}>
-                {loading ? (
-                  <Loader2 className="animate-spin" />
-                ) : (
-                  <Sparkles className="mr-2 h-4 w-4" />
-                )}
-                Generate Recommendations
-              </Button>
-            </form>
-          </Form>
-        </CardContent>
-      </Card>
+      <div className="p-4 md:p-8 space-y-4">
+        <Card>
+          <CardHeader>
+            <CardTitle>Your Profile</CardTitle>
+            <CardDescription>
+              Tell us about your role and what you want to learn.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                <FormField
+                  control={form.control}
+                  name="userRole"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Your Professional Role</FormLabel>
+                      <FormControl>
+                        <Input placeholder="e.g., 'Cardiologist', 'Medical Student'" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="learningHistory"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Learning History & Interests</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder="e.g., 'Completed courses in basic surgery. Interested in advanced surgical techniques and robotics.'"
+                          className="resize-none"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <Button type="submit" disabled={loading}>
+                  {loading ? (
+                    <Loader2 className="animate-spin" />
+                  ) : (
+                    <Sparkles className="mr-2 h-4 w-4" />
+                  )}
+                  Generate Recommendations
+                </Button>
+              </form>
+            </Form>
+          </CardContent>
+        </Card>
 
-      {loading && (
-        <div className="mt-8 text-center text-muted-foreground">
-          <Loader2 className="mx-auto animate-spin h-8 w-8" />
-          <p>AI is generating your learning path...</p>
-        </div>
-      )}
+        {loading && (
+          <div className="mt-8 text-center text-muted-foreground">
+            <Loader2 className="mx-auto animate-spin h-8 w-8" />
+            <p>AI is generating your learning path...</p>
+          </div>
+        )}
 
-      {error && <p className="mt-8 text-destructive">{error}</p>}
+        {error && <p className="mt-8 text-destructive">{error}</p>}
 
-      {result && (
-        <div className="mt-8 space-y-8">
-          <Separator />
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <BookCheck className="mr-2 text-primary" />
-                Your Recommended Courses
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <p className="text-muted-foreground font-semibold">Reasoning:</p>
-                <p className="text-muted-foreground italic">"{result.reasoning}"</p>
-                <Separator />
-                <ul className="list-disc pl-5 space-y-2">
-                  {result.recommendedCourses.map((course, index) => (
-                    <li key={index} className="font-semibold text-md">{course}</li>
-                  ))}
-                </ul>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      )}
+        {result && (
+          <div className="mt-8 space-y-8">
+            <Separator />
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <BookCheck className="mr-2 text-primary" />
+                  Your Recommended Courses
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <p className="text-muted-foreground font-semibold">Reasoning:</p>
+                  <p className="text-muted-foreground italic">"{result.reasoning}"</p>
+                  <Separator />
+                  <ul className="list-disc pl-5 space-y-2">
+                    {result.recommendedCourses.map((course, index) => (
+                      <li key={index} className="font-semibold text-md">{course}</li>
+                    ))}
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

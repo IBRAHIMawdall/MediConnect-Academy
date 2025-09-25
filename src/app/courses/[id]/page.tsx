@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { Course, Instructor } from '@/lib/data';
 import { getCourses } from '@/lib/get-courses';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { PageHeader } from '@/components/layout/page-header';
+import { PageHero } from '@/components/layout/page-hero';
 import { CourseModules } from '@/components/courses/course-modules';
 import { Badge } from '@/components/ui/badge';
 import { CourseReviews } from '@/components/courses/course-reviews';
@@ -54,83 +54,76 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
   const placeholder = PlaceHolderImages.find((p) => p.id === course.imageId);
 
   return (
-    <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
-      <PageHeader
+    <div className="flex-1">
+      <PageHero
         title={course.title}
         description={course.description}
-      />
-      <div className="flex flex-wrap gap-2">
-          <Badge variant="default">{course.category}</Badge>
-          <Badge variant="secondary">{course.subCategory}</Badge>
-      </div>
-      <div className="grid gap-8 md:grid-cols-3">
-        <div className="md:col-span-2 space-y-8">
-            <CourseModules course={course} />
-            <CourseReviews courseId={course.id} />
+        image={placeholder}
+      >
+        <div className="flex flex-wrap gap-2 pt-4">
+            <Badge variant="default">{course.category}</Badge>
+            <Badge variant="secondary">{course.subCategory}</Badge>
         </div>
-        <div className="md:col-span-1 space-y-6">
-          <Card>
-            <CardContent className="p-0">
-              <div className="relative w-full h-64 rounded-t-lg overflow-hidden">
-                {placeholder && (
-                  <Image
-                    src={placeholder.imageUrl}
-                    alt={placeholder.description}
-                    fill
-                    className="object-cover"
-                    data-ai-hint={placeholder.imageHint}
-                  />
-                )}
-              </div>
-               <div className="p-6 space-y-4">
-                  <h3 className="text-xl font-bold">About this course</h3>
-                  <p className="text-muted-foreground">{course.longDescription}</p>
-              </div>
-            </CardContent>
-          </Card>
-          
-          {instructor && (
+      </PageHero>
+
+      <div className="p-4 md:p-8">
+        <div className="grid gap-8 md:grid-cols-3">
+          <div className="md:col-span-2 space-y-8">
+              <CourseModules course={course} />
+              <CourseReviews courseId={course.id} />
+          </div>
+          <div className="md:col-span-1 space-y-6">
             <Card>
                 <CardHeader>
-                    <CardTitle className="text-lg flex items-center gap-2"><UserCircle /> Instructor</CardTitle>
-                </CardHeader>
-                <CardContent className="flex items-center gap-4">
-                    <Avatar className="h-16 w-16">
-                        <AvatarImage src={instructor.avatarUrl} alt={instructor.name} />
-                        <AvatarFallback>{instructor.name.charAt(0)}</AvatarFallback>
-                    </Avatar>
-                    <div>
-                        <p className="font-bold text-lg">{instructor.name}</p>
-                        <p className="text-muted-foreground">{instructor.credentials}</p>
-                    </div>
-                </CardContent>
-            </Card>
-          )}
-
-           <Card>
-                <CardHeader>
-                    <CardTitle className="text-lg flex items-center gap-2"><Calendar /> Schedule</CardTitle>
+                    <CardTitle>About this course</CardTitle>
                 </CardHeader>
                 <CardContent>
-                     <p className="font-semibold text-lg">{course.schedule}</p>
+                    <p className="text-muted-foreground">{course.longDescription}</p>
                 </CardContent>
             </Card>
-
-            {course.prerequisites && course.prerequisites.length > 0 && (
-                 <Card>
-                    <CardHeader>
-                        <CardTitle className="text-lg flex items-center gap-2"><CheckSquare /> Prerequisites</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
-                            {course.prerequisites.map((prereq, index) => (
-                                <li key={index}>{prereq}</li>
-                            ))}
-                        </ul>
-                    </CardContent>
-                </Card>
+            
+            {instructor && (
+              <Card>
+                  <CardHeader>
+                      <CardTitle className="text-lg flex items-center gap-2"><UserCircle /> Instructor</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex items-center gap-4">
+                      <Avatar className="h-16 w-16">
+                          <AvatarImage src={instructor.avatarUrl} alt={instructor.name} />
+                          <AvatarFallback>{instructor.name.charAt(0)}</AvatarFallback>
+                      </Avatar>
+                      <div>
+                          <p className="font-bold text-lg">{instructor.name}</p>
+                          <p className="text-muted-foreground">{instructor.credentials}</p>
+                      </div>
+                  </CardContent>
+              </Card>
             )}
 
+            <Card>
+                  <CardHeader>
+                      <CardTitle className="text-lg flex items-center gap-2"><Calendar /> Schedule</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                      <p className="font-semibold text-lg">{course.schedule}</p>
+                  </CardContent>
+              </Card>
+
+              {course.prerequisites && course.prerequisites.length > 0 && (
+                  <Card>
+                      <CardHeader>
+                          <CardTitle className="text-lg flex items-center gap-2"><CheckSquare /> Prerequisites</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                          <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
+                              {course.prerequisites.map((prereq, index) => (
+                                  <li key={index}>{prereq}</li>
+                              ))}
+                          </ul>
+                      </CardContent>
+                  </Card>
+              )}
+          </div>
         </div>
       </div>
     </div>

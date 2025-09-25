@@ -16,13 +16,14 @@ import {
 } from '@/components/ui/form';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { PageHeader } from '@/components/layout/page-header';
+import { PageHero } from '@/components/layout/page-hero';
 import { researchAssistant, type ResearchAssistantOutput } from '@/ai/flows/research-assistant-flow';
 import { Loader2, Sparkles, FileText, Link as LinkIcon } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
 import { ApiKeyInput } from './api-key-input';
 import { useLocalStorage } from '@/hooks/use-local-storage';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const formSchema = z.object({
   query: z.string().min(10, { message: 'Please enter a clear question or topic for research.' }),
@@ -45,6 +46,9 @@ export default function ResearchPage() {
       query: '',
     },
   });
+  
+  const pageHeroImage = PlaceHolderImages.find(p => p.id === 'page-research');
+
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setLoading(true);
@@ -119,61 +123,64 @@ export default function ResearchPage() {
 
 
   return (
-    <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
-      <PageHeader
+    <div className="flex-1">
+      <PageHero
         title="AI Research Assistant"
         description="Ask a question and let the AI find and summarize relevant information for you."
+        image={pageHeroImage}
       />
       
-      {renderContent()}
+      <div className="p-4 md:p-8 space-y-4">
+        {renderContent()}
 
-      {loading && (
-        <div className="mt-8 text-center text-muted-foreground">
-          <Loader2 className="mx-auto animate-spin h-8 w-8" />
-          <p>AI is researching...</p>
-        </div>
-      )}
+        {loading && (
+          <div className="mt-8 text-center text-muted-foreground">
+            <Loader2 className="mx-auto animate-spin h-8 w-8" />
+            <p>AI is researching...</p>
+          </div>
+        )}
 
-      {error && <p className="mt-8 text-destructive">{error}</p>}
+        {error && <p className="mt-8 text-destructive">{error}</p>}
 
-      {result && (
-        <div className="mt-8 space-y-8">
-          <Separator />
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <FileText className="mr-2 text-primary" />
-                Research Summary
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-                {result.answer ? (
-                    <p className="text-muted-foreground whitespace-pre-line">{result.answer}</p>
-                 ) : (
-                    <p className="text-muted-foreground">The AI could not generate a summary for this topic.</p>
-                )}
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <LinkIcon className="mr-2 text-primary" />
-                Sources
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              {result.sources.map((source, index) => (
-                <div key={index} className="p-4 border rounded-lg hover:bg-muted/50">
-                  <Link href={source.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-primary hover:underline">
-                    {source.title}
-                  </Link>
-                  <p className="text-sm text-muted-foreground mt-1">{source.snippet}</p>
-                </div>
-              ))}
-            </CardContent>
-          </Card>
-        </div>
-      )}
+        {result && (
+          <div className="mt-8 space-y-8">
+            <Separator />
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <FileText className="mr-2 text-primary" />
+                  Research Summary
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                  {result.answer ? (
+                      <p className="text-muted-foreground whitespace-pre-line">{result.answer}</p>
+                  ) : (
+                      <p className="text-muted-foreground">The AI could not generate a summary for this topic.</p>
+                  )}
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <LinkIcon className="mr-2 text-primary" />
+                  Sources
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                {result.sources.map((source, index) => (
+                  <div key={index} className="p-4 border rounded-lg hover:bg-muted/50">
+                    <Link href={source.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-primary hover:underline">
+                      {source.title}
+                    </Link>
+                    <p className="text-sm text-muted-foreground mt-1">{source.snippet}</p>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

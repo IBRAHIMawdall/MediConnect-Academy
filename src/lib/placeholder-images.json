@@ -75,7 +75,7 @@
     {
       "id": "patient-safety",
       "description": "A doctor washing their hands thoroughly in a hospital.",
-      "imageUrl": "https://images.unsplash.com/photo-1755925193287-275aa7fe64f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzYWZldHklMjBzaGllbGR8ZW58MHx8fHwxNzU4NzYzNDQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1647333974531-67137f954777?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzYWZldHklMjBzaGllbGR8ZW58MHx8fHwxNzU4NzYzNDQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "safety shield"
     },
     {
@@ -117,19 +117,19 @@
     {
       "id": "sports-medicine",
       "description": "A physical therapist helping an athlete with a knee injury.",
-      "imageUrl": "https://images.unsplash.com/photo-1508355588587-46f3cdb5da07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YXRobGV0ZSUyMGluanVyeXxlbnwwfHx8fDE3NTg3NjM0NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1758684051090-bc83bb0af184?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhdGhsZXRlJTIwaW5qdXJ5fGVufDB8fHx8MTc1ODc2MzQ0MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "athlete injury"
     },
     {
       "id": "dermatology-pc",
       "description": "A dermatologist examining a patient's skin with a magnifying tool.",
-      "imageUrl": "https://images.unsplash.com/photo-1606501176727-e24f1e183fd6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxza2luJTIwZGVybWF0b2xvZ3l8ZW58MHx8fHwxNzU4NzYzNDQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1579801874037-f28c38c7edbf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c2tpbiUyMGRlcm1hdG9sb2d5fGVufDB8fHx8MTc1ODc2MzQ0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "skin dermatology"
     },
     {
       "id": "geriatric-medicine",
       "description": "A healthcare provider kindly holding an elderly patient's hand.",
-      "imageUrl": "https://images.unsplash.com/photo-1580869318757-a6c605b061ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxlbGRlcmx5JTIwY2FyZXxlbnwwfHx8fDE3NTg3MzY4NzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1559234938-b60fff04894d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxlbGRlcmx5JTIwY2FyZXxlbnwwfHx8fDE3NTg3MzY4NzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "elderly care"
     },
     {
@@ -141,13 +141,13 @@
     {
       "id": "palliative-care",
       "description": "A caregiver sitting by a patient's bedside, offering comfort.",
-      "imageUrl": "https://images.unsplash.com/photo-1604450653758-68243edd75ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb21mb3J0JTIwaGFuZHxlbnwwfHx8fDE3NTg3NjM0NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1608556034819-8ef15ed3cde0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb21mb3J0JTIwaGFuZHxlbnwwfHx8fDE3NTg3NjM0NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "comfort hand"
     },
     {
       "id": "wilderness-medicine",
       "description": "A hiker treating a minor injury with a first aid kit on a mountain trail.",
-      "imageUrl": "https://images.unsplash.com/photo-1686074403725-78f2e110ae38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bW91bnRhaW4lMjBmaXJzdGFpZHxlbnwwfHx8fDE3NTg3NjM0NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1669311284897-86233c84d047?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb3VudGFpbiUyMGZpcnN0YWlkfGVufDB8fHx8MTc1ODc2MzQ0MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mountain firstaid"
     },
     {
@@ -159,7 +159,7 @@
     {
       "id": "surgery-simulation",
       "description": "A medical student using a VR headset for surgical training.",
-      "imageUrl": "https://images.unsplash.com/photo-1551601651-2a8555f1a136?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx2aXJ0dWFsJTIwc3VyZ2VyeXxlbnwwfHx8fDE3NTg3NjM0NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1579684288452-b334934f845f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx2aXJ0dWFsJTIwc3VyZ2VyeXxlbnwwfHx8fDE3NTg3NjM0NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "virtual surgery"
     },
     {
@@ -171,13 +171,13 @@
     {
       "id": "usmle-prep",
       "description": "A student studying intensely with medical textbooks and notes.",
-      "imageUrl": "https://images.unsplash.com/photo-1669172973375-b85a97a91fce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzdHVkeSUyMGV4YW18ZW58MHx8fHwxNzU4NzYzNDQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1719954327260-7ac241a53aae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3R1ZHklMjBleGFtfGVufDB8fHx8MTc1ODc2MzQ0MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "study exam"
     },
     {
       "id": "mcat-prep",
       "description": "A stack of science textbooks next to a stethoscope.",
-      "imageUrl": "https://images.unsplash.com/photo-1717505694141-ada870f2bb95?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtY2F0JTIwc3R1ZHl8ZW58MHx8fHwxNzU4NzYzNDQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1669296143585-5dadeb07805e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWNhdCUyMHN0dWR5fGVufDB8fHx8MTc1ODc2MzQ0MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mcat study"
     },
     {
@@ -189,20 +189,50 @@
     {
       "id": "intro-hematology",
       "description": "A lab technician preparing a blood smear on a microscope slide.",
-      "imageUrl": "https://images.unsplash.com/photo-1636386689060-37d233b5d345?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxibG9vZCUyMG1pY3Jvc2NvcGV8ZW58MHx8fHwxNzU4NzYzNDQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1597177356957-d87dd0dac623?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Ymxvb2QlMjBtaWNyb3Njb3BlfGVufDB8fHx8MTc1ODc2MzQ0MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "blood microscope"
     },
     {
       "id": "comm-healthcare",
       "description": "A doctor having a compassionate conversation with a patient.",
-      "imageUrl": "https://images.unsplash.com/photo-1603202662747-00e33e7d1468?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx0ZWFtJTIwZGlzY3Vzc2lvbnxlbnwwfHx8fDE3NTg2ODkzMDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1716703435453-a7733d600d68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dGVhbSUyMGRpc2N1c3Npb258ZW58MHx8fHwxNzU4Njg5MzA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "team discussion"
     },
     {
       "id": "finance-101",
       "description": "A business chart showing financial growth with an upward trend.",
-      "imageUrl": "https://images.unsplash.com/photo-1744473755637-e09f0c2fab41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZmluYW5jZSUyMGNoYXJ0fGVufDB8fHx8MTc1ODcwODYxOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1744473119469-905016183836?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmaW5hbmNlJTIwY2hhcnR8ZW58MHx8fHwxNzU4NzA4NjE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "finance chart"
+    },
+    {
+      "id": "page-courses",
+      "description": "A modern, bright library with shelves of books.",
+      "imageUrl": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsYXclMjBib29rc3xlbnwwfHx8fDE3NTg3NDQwMTV8MA&ixlib=rb-4.1.0&q=80&w=1200",
+      "imageHint": "library learning"
+    },
+    {
+      "id": "page-learning-path",
+      "description": "A winding path or road disappearing into a beautiful landscape.",
+      "imageUrl": "https://images.unsplash.com/photo-1498603911539-01ce6c618118?w=1200&h=400&fit=crop",
+      "imageHint": "path journey"
+    },
+    {
+      "id": "page-explainer",
+      "description": "An abstract image with interconnected shapes and ideas.",
+      "imageUrl": "https://images.unsplash.com/photo-1644088379091-d574269d422f?w=1200&h=400&fit=crop",
+      "imageHint": "abstract concepts"
+    },
+    {
+      "id": "page-research",
+      "description": "A clean, modern laboratory with scientific equipment.",
+      "imageUrl": "https://images.unsplash.com/photo-1486825586573-7131f7991bdd?w=1200&h=400&fit=crop",
+      "imageHint": "science lab"
+    },
+    {
+      "id": "page-content-assistant",
+      "description": "A desk with open books, notes, and a laptop.",
+      "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1200&h=400&fit=crop",
+      "imageHint": "writing study"
     }
   ]
 }

@@ -6,9 +6,10 @@ import { CourseCard } from '@/components/courses/course-card';
 import { CourseListItem } from '@/components/courses/course-list-item';
 import { CourseFilters } from '@/components/courses/course-filters';
 import { Course, CourseCategory } from '@/lib/data';
-import { PageHeader } from '@/components/layout/page-header';
+import { PageHero } from '@/components/layout/page-hero';
 import { getCourses } from '@/lib/get-courses';
 import { Loader2 } from 'lucide-react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export type Filter = 
   | { type: 'all' }
@@ -50,54 +51,53 @@ const CourseDashboard: React.FC = () => {
     });
   }, [activeFilter, searchTerm, courses]);
 
-  if (loading) {
-    return (
-        <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
-            <PageHeader
-                title="Course Catalog"
-                description="Browse, filter, and search our comprehensive list of medical courses."
-            />
+  const pageHeroImage = PlaceHolderImages.find(p => p.id === 'page-courses');
+
+
+  return (
+    <div className="flex-1">
+      <PageHero
+        title="Course Catalog"
+        description="Browse, filter, and search our comprehensive list of medical courses."
+        image={pageHeroImage}
+      />
+      <div className="p-4 md:p-8 space-y-4">
+        <CourseFilters 
+          activeFilter={activeFilter}
+          setActiveFilter={setActiveFilter}
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+          viewMode={viewMode}
+          setViewMode={setViewMode}
+        />
+        
+        {loading ? (
             <div className="flex items-center justify-center py-12">
                 <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
                 <p className="ml-4 text-muted-foreground">Loading courses...</p>
             </div>
-        </div>
-    )
-  }
+        ) : (
+            <>
+                <div className={viewMode === 'grid' 
+                    ? "grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+                    : "space-y-4"
+                }>
+                    {filteredCourses.map(course => (
+                    viewMode === 'grid' 
+                        ? <CourseCard key={course.id} course={course} language={'en'} />
+                        : <CourseListItem key={course.id} course={course} />
+                    ))}
+                </div>
 
-  return (
-    <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
-      <PageHeader
-        title="Course Catalog"
-        description="Browse, filter, and search our comprehensive list of medical courses."
-      />
-
-      <CourseFilters 
-        activeFilter={activeFilter}
-        setActiveFilter={setActiveFilter}
-        searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
-        viewMode={viewMode}
-        setViewMode={setViewMode}
-      />
-      
-       <div className={viewMode === 'grid' 
-         ? "grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-         : "space-y-4"
-       }>
-        {filteredCourses.map(course => (
-          viewMode === 'grid' 
-            ? <CourseCard key={course.id} course={course} language={'en'} />
-            : <CourseListItem key={course.id} course={course} />
-        ))}
+                {filteredCourses.length === 0 && (
+                    <div className="text-center py-12 text-muted-foreground">
+                    <h3 className="text-lg font-semibold">No courses found</h3>
+                    <p>Try adjusting your search or filter criteria.</p>
+                    </div>
+                )}
+            </>
+        )}
       </div>
-
-       {filteredCourses.length === 0 && !loading && (
-        <div className="text-center py-12 text-muted-foreground">
-          <h3 className="text-lg font-semibold">No courses found</h3>
-          <p>Try adjusting your search or filter criteria.</p>
-        </div>
-      )}
     </div>
   );
 };
