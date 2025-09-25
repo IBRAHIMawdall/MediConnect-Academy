@@ -7,3 +7,4 @@ import '@/ai/flows/explain-topic-flow.ts';
 import '@/ai/flows/research-assistant-flow.ts';
 import '@/ai/flows/suggest-course-topic-flow.ts';
 import '@/ai/flows/generate-intro-video-flow.ts';
+import '@/ai/flows/generate-promo-video-flow.ts';

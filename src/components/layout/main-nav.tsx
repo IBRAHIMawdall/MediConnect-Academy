@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { BookOpen, LayoutDashboard, HeartPulse, BrainCircuit, Zap, FileSearch, Library, GraduationCap, User, Settings, Sparkles } from 'lucide-react';
+import { BookOpen, LayoutDashboard, HeartPulse, BrainCircuit, Zap, FileSearch, Library, GraduationCap, User, Settings, Sparkles, Clapperboard } from 'lucide-react';
 import {
   Sidebar,
   SidebarHeader,
@@ -30,6 +30,7 @@ export function MainNav() {
     { href: '/explainer', label: 'AI Explainer', icon: Zap, isPro: true },
     { href: '/research', label: 'AI Research', icon: FileSearch, isPro: true },
     { href: '/content-assistant', label: 'Content Assistant', icon: Library, isPro: true },
+    { href: '/promo-video', label: 'Promo Video', icon: Clapperboard, isPro: true },
   ]
 
   const userMenuItems = [
