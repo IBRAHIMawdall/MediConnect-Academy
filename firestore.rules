@@ -2,19 +2,19 @@ rules_version = '2';
 
 service cloud.firestore {
   match /databases/{database}/documents {
-  
-    // Default rule: Deny all reads and writes to all collections by default.
+    
+    // Default deny all reads and writes
     match /{document=**} {
       allow read, write: if false;
     }
 
-    // Allow public read-only access to the 'courses' collection
+    // Allow public read access to courses
     match /courses/{courseId} {
       allow get, list: if true;
       allow write: if false;
     }
-    
-    // Allow public read-only access to the 'instructors' collection
+
+    // Allow public read access to instructors
     match /instructors/{instructorId} {
       allow get, list: if true;
       allow write: if false;
