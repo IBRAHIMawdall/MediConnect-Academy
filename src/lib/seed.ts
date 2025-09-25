@@ -1,5 +1,8 @@
 'use server';
 
+import { config } from 'dotenv';
+config(); // Load environment variables from .env file
+
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, writeBatch, doc } from 'firebase/firestore';
 import { courses, instructors } from './data';
@@ -53,5 +56,6 @@ async function seedDatabase() {
 }
 
 seedDatabase().then(() => {
-    process.exit(0);
+    // Force exit after a short delay to ensure process terminates
+    setTimeout(() => process.exit(0), 1000);
 });
