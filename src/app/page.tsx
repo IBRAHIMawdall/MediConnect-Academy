@@ -6,6 +6,7 @@ import { UserNav } from '@/components/layout/user-nav';
 import { FeaturedCourses } from '@/components/courses/featured-courses';
 import { SidebarTrigger } from '@/components/ui/sidebar';
 import { IntroVideo } from '@/components/dashboard/intro-video';
+import { PageHeader } from '@/components/layout/page-header';
 
 export default async function DashboardPage() {
   const courses = await getCourses();
@@ -17,7 +18,7 @@ export default async function DashboardPage() {
       
       <div className="p-4 md:p-8 space-y-8">
         <div className="flex items-center justify-between space-y-2">
-            <h2 className="text-2xl font-bold tracking-tight">My Courses</h2>
+            <PageHeader title="My Courses" description="Continue your learning journey." />
             <div className="flex items-center space-x-2">
                 <SidebarTrigger />
                 <UserNav />

@@ -38,9 +38,10 @@ const generateIntroVideoFlow = ai.defineFlow(
     outputSchema: GenerateIntroVideoOutputSchema,
   },
   async ({ prompt }) => {
+    // The user-provided prompt is now the script itself.
     let { operation } = await ai.generate({
       model: googleAI.model('veo-2.0-generate-001'),
-      prompt,
+      prompt: prompt,
       config: {
         durationSeconds: 8,
         aspectRatio: '16:9',
