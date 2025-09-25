@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -5,7 +6,8 @@ import { Youtube, Video } from 'lucide-react';
 
 export function IntroVideo() {
     // In a real application, you would replace this with a URL to your hosted video file.
-    const videoSrc = ''; // Example: "/videos/mediconnect-intro.mp4"
+    // This is a placeholder stock video that fits the theme.
+    const videoSrc = 'https://videos.pexels.com/video-files/3209828/3209828-hd.mp4'; 
 
     return (
         <Card>
