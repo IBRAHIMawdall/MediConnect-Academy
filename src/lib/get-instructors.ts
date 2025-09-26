@@ -1,3 +1,4 @@
+
 'use server';
 
 import { initializeApp, getApps, getApp } from 'firebase/app';
@@ -30,12 +31,13 @@ Have you run the seed script? You can do so by running: npm run seed:firestore
         `);
         return localInstructors;
     }
-
+    
+    console.log("[MediConnect] Successfully fetched instructors from Firestore.");
     const instructorsList = instructorSnapshot.docs.map(doc => doc.data() as Instructor);
     return instructorsList;
   } catch (error) {
     console.error("Error fetching instructors from Firestore:", error);
-    console.warn("[MediConnect] Falling back to local mock data due to Firestore fetch error for instructors.");
+    console.warn("[MediConnect] Falling back to local mock data for instructors due to Firestore fetch error.");
     return localInstructors;
   }
 }

@@ -1,3 +1,4 @@
+
 'use server';
 
 import { config } from 'dotenv';
@@ -15,12 +16,12 @@ async function seedDatabase() {
   // Do not run this in a production environment where you already have data.
   if (process.env.GENKIT_ENV === 'production') {
     console.log('Seed script is disabled in production environment.');
-    return;
+    process.exit(0);
   }
   
   if (!firebaseConfig.projectId) {
     console.error("Firebase project ID is not configured. Please add your Firebase config to seed the database.");
-    return;
+    process.exit(1);
   }
 
   const app = initializeApp(firebaseConfig);
@@ -49,13 +50,15 @@ async function seedDatabase() {
 
   try {
     await batch.commit();
-    console.log('Database seeded successfully with courses and instructors!');
+    console.log('✅ Database seeded successfully with courses and instructors!');
   } catch (error) {
     console.error('Error seeding database:', error);
+    process.exit(1);
   }
 }
 
 seedDatabase().then(() => {
     // Force exit after a short delay to ensure process terminates
+    console.log('Seeding process finished.');
     setTimeout(() => process.exit(0), 1000);
 });

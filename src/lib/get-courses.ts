@@ -1,3 +1,4 @@
+
 'use server';
 
 import { initializeApp, getApps, getApp } from 'firebase/app';
@@ -14,7 +15,7 @@ export async function getCourses(): Promise<Course[]> {
   if (!firebaseConfig.projectId || !firebaseConfig.apiKey) {
     console.warn(`
 [MediConnect] Firebase is not fully configured. 
-Project ID or API Key is missing. Falling back to local mock data.
+Project ID or API Key is missing. Falling back to local mock data for courses.
 To use Firestore, please ensure all NEXT_PUBLIC_FIREBASE_* variables are set in your environment.
     `);
     return localCourses;
@@ -33,11 +34,12 @@ Have you run the seed script? You can do so by running: npm run seed:firestore
         return localCourses;
     }
 
+    console.log("[MediConnect] Successfully fetched courses from Firestore.");
     const coursesList = courseSnapshot.docs.map(doc => doc.data() as Course);
     return coursesList;
   } catch (error) {
     console.error("Error fetching courses from Firestore:", error);
-    console.warn("[MediConnect] Falling back to local mock data due to Firestore fetch error.");
+    console.warn("[MediConnect] Falling back to local mock data for courses due to Firestore fetch error.");
     return localCourses;
   }
 }
