@@ -23,7 +23,7 @@ export function CourseCard({ course, language }: Props) {
   const description = language === 'ar' ? `📝 ${course.description}` : course.description;
 
   return (
-    <Card className="flex flex-col h-full overflow-hidden transition-all duration-300 hover:shadow-[0_0_20px_4px_rgba(59,130,246,0.2)] hover:-translate-y-1 bg-card border">
+    <Card dir={language === 'ar' ? 'rtl' : 'ltr'} className="flex flex-col h-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 bg-card border">
       <CardHeader className="p-0">
         <div className="relative w-full h-40">
           {placeholder && (

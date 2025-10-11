@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { BookOpen, LayoutDashboard, HeartPulse, BrainCircuit, Zap, FileSearch, Library, GraduationCap, User, Settings, Sparkles, Clapperboard } from 'lucide-react';
+import { BookOpen, LayoutDashboard, HeartPulse, BrainCircuit, Zap, FileSearch, Library, GraduationCap, User, Settings, Clapperboard } from 'lucide-react';
 import {
   Sidebar,
   SidebarHeader,
@@ -13,8 +13,7 @@ import {
   SidebarSeparator,
 } from '@/components/ui/sidebar';
 import { UserNav } from './user-nav';
-import { ProBadge } from '../pro-badge';
-import { Button } from '../ui/button';
+
 
 export function MainNav() {
   const pathname = usePathname();
@@ -50,15 +49,6 @@ export function MainNav() {
       </SidebarHeader>
       
       <SidebarMenu className="flex-1">
-        <div className="p-2 group-data-[collapsible=icon]:hidden">
-            <Button asChild className="w-full justify-start" variant="outline">
-                <Link href="/pro">
-                    <Sparkles className="mr-2 h-4 w-4" />
-                    All Features Unlocked
-                </Link>
-            </Button>
-        </div>
-
         {menuItems.map((item) => (
           <SidebarMenuItem key={item.href}>
             <Link href={item.href}>
@@ -68,7 +58,6 @@ export function MainNav() {
               >
                 <item.icon className="h-5 w-5" />
                 <span className="flex-1">{item.label}</span>
-                <ProBadge />
               </SidebarMenuButton>
             </Link>
           </SidebarMenuItem>
@@ -83,7 +72,6 @@ export function MainNav() {
               >
                 <item.icon className="h-5 w-5" />
                 <span className="flex-1">{item.label}</span>
-                <ProBadge />
               </SidebarMenuButton>
             </Link>
           </SidebarMenuItem>
