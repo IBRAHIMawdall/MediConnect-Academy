@@ -22,15 +22,15 @@ export function MainNav() {
   const menuItems = [
     { href: '/', label: 'Dashboard', icon: LayoutDashboard },
     { href: '/courses', label: 'Courses', icon: BookOpen },
-    { href: '/personalized-path', label: 'Learning Path', icon: GraduationCap, isPro: true },
+    { href: '/personalized-path', label: 'Learning Path', icon: GraduationCap },
   ];
 
   const aiTools = [
      { href: '/ai-in-medicine', label: 'AI in Medicine', icon: BrainCircuit },
-    { href: '/explainer', label: 'AI Explainer', icon: Zap, isPro: true },
-    { href: '/research', label: 'AI Research', icon: FileSearch, isPro: true },
-    { href: '/content-assistant', label: 'Content Assistant', icon: Library, isPro: true },
-    { href: '/promo-video', label: 'Promo Video', icon: Clapperboard, isPro: true },
+    { href: '/explainer', label: 'AI Explainer', icon: Zap },
+    { href: '/research', label: 'AI Research', icon: FileSearch },
+    { href: '/content-assistant', label: 'Content Assistant', icon: Library },
+    { href: '/promo-video', label: 'Promo Video', icon: Clapperboard },
   ]
 
   const userMenuItems = [
@@ -51,10 +51,10 @@ export function MainNav() {
       
       <SidebarMenu className="flex-1">
         <div className="p-2 group-data-[collapsible=icon]:hidden">
-            <Button asChild className="w-full justify-start">
+            <Button asChild className="w-full justify-start" variant="outline">
                 <Link href="/pro">
                     <Sparkles className="mr-2 h-4 w-4" />
-                    Upgrade to Pro
+                    All Features Unlocked
                 </Link>
             </Button>
         </div>
@@ -68,7 +68,7 @@ export function MainNav() {
               >
                 <item.icon className="h-5 w-5" />
                 <span className="flex-1">{item.label}</span>
-                {item.isPro && <ProBadge />}
+                <ProBadge />
               </SidebarMenuButton>
             </Link>
           </SidebarMenuItem>
@@ -83,7 +83,7 @@ export function MainNav() {
               >
                 <item.icon className="h-5 w-5" />
                 <span className="flex-1">{item.label}</span>
-                {item.isPro && <ProBadge />}
+                <ProBadge />
               </SidebarMenuButton>
             </Link>
           </SidebarMenuItem>
