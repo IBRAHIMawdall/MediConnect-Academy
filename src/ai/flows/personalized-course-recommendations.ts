@@ -30,6 +30,7 @@ const PersonalizedCourseRecommendationsOutputSchema = z.object({
     .describe('A list of course titles recommended for the user.'),
   reasoning: z
     .string()
+
     .describe('The AI\'s reasoning for recommending these specific courses.'),
 });
 export type PersonalizedCourseRecommendationsOutput = z.infer<
@@ -50,7 +51,7 @@ const prompt = ai.definePrompt({
   output: {
     schema: PersonalizedCourseRecommendationsOutputSchema,
   },
-  prompt: `You are an expert medical education advisor for MediConnect Academy. Your goal is to provide highly relevant and personalized course recommendations for healthcare professionals.
+  prompt: `You are an expert medical education advisor for Med TechAI Academy. Your goal is to provide highly relevant and personalized course recommendations for healthcare professionals.
 
   Analyze the user's role and learning history to suggest courses that align with their career path, fill knowledge gaps, and cater to their interests.
 

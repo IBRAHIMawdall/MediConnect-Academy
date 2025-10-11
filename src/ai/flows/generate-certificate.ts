@@ -50,7 +50,7 @@ const generateCertificateFlow = ai.defineFlow(
         // Add header
         doc.setFontSize(36);
         doc.setFont('helvetica', 'bold');
-        doc.text('MediConnect Academy', 5.5, 1.5, { align: 'center' });
+        doc.text('Med TechAI Academy', 5.5, 1.5, { align: 'center' });
 
         doc.setFontSize(24);
         doc.setFont('helvetica', 'normal');

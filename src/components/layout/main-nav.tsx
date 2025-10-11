@@ -44,7 +44,7 @@ export function MainNav() {
         <Link href="/" className="flex items-center gap-2.5">
           <HeartPulse className="w-8 h-8 text-primary" />
           <h1 className="text-xl font-bold tracking-tighter text-foreground group-data-[collapsible=icon]:hidden">
-            MediConnect
+            Med TechAI
           </h1>
         </Link>
       </SidebarHeader>

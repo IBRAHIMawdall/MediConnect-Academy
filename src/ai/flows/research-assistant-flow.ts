@@ -124,7 +124,7 @@ const researchAssistantPrompt = ai.definePrompt({
     tools: [findRelevantContent],
     input: { schema: ResearchAssistantInputSchema },
     output: { schema: ResearchAssistantOutputSchema },
-    prompt: `You are an AI Research Assistant for MediConnect Academy. Your role is to answer user questions about medical topics accurately and concisely.
+    prompt: `You are an AI Research Assistant for Med TechAI Academy. Your role is to answer user questions about medical topics accurately and concisely.
 
     When a user asks a question, you MUST use the 'findRelevantContent' tool to search for relevant articles and information.
 

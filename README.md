@@ -1,12 +1,12 @@
-# MediConnect Academy
+# Med TechAI Academy
 
-Welcome to **MediConnect Academy**, an AI-enhanced e-learning platform designed for healthcare professionals. This Next.js application provides a modern, interactive, and personalized learning experience, leveraging generative AI to deliver intelligent features that support medical education.
+Welcome to **Med TechAI Academy**, an AI-enhanced e-learning platform designed for healthcare professionals. This Next.js application provides a modern, interactive, and personalized learning experience, leveraging generative AI to deliver intelligent features that support medical education.
 
 ---
 
 ## ✨ Key Features
 
-MediConnect Academy is more than just a course catalog. It's an intelligent learning partner with several AI-driven features:
+Med TechAI Academy is more than just a course catalog. It's an intelligent learning partner with several AI-driven features:
 
 - **Course Catalog**: Browse a rich and diverse catalog of medical courses, filterable by category and subcategory.
 - **Personalized Learning Paths**: Receive AI-driven course recommendations based on your professional role and learning history.

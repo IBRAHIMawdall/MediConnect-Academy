@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={theme} suppressHydrationWarning>
       <head>
-        <title>MediConnect Academy</title>
+        <title>Med TechAI Academy</title>
         <meta name="description" content="Enhance your healthcare skills with personalized learning paths." />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

@@ -17,7 +17,7 @@ export default function ProPage() {
     <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
       <PageHeader
         title="All Features Unlocked"
-        description="Good news! All MediConnect Academy features are available to you for free."
+        description="Good news! All Med TechAI Academy features are available to you for free."
       />
       <div className="flex justify-center py-8">
         <Card className="max-w-md w-full shadow-2xl transition-all hover:shadow-[0_0_40px_8px_rgba(59,130,246,0.3)]">
