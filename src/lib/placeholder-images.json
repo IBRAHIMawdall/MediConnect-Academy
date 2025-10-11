@@ -233,6 +233,12 @@
       "description": "A desk with open books, notes, and a laptop.",
       "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1200&h=400&fit=crop",
       "imageHint": "writing study"
+    },
+    {
+      "id": "page-hero-animated",
+      "description": "Abstract background with blue and purple gradients and network lines.",
+      "imageUrl": "https://images.unsplash.com/photo-1533134486753-c833f0ed4866?w=1200&h=400&fit=crop",
+      "imageHint": "abstract network"
     }
   ]
 }

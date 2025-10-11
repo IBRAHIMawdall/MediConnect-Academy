@@ -1,3 +1,4 @@
+
 import type {Config} from 'tailwindcss';
 
 const config = {
@@ -84,10 +85,22 @@ const config = {
           from: {height: 'var(--radix-accordion-content-height)'},
           to: {height: '0'},
         },
+        'float-up': {
+          '0%': { transform: 'translateY(0px)', opacity: '0.8' },
+          '50%': { transform: 'translateY(-20px)', opacity: '1' },
+          '100%': { transform: 'translateY(0px)', opacity: '0.8' },
+        },
+        'float-down': {
+          '0%': { transform: 'translateY(0px)', opacity: '0.8' },
+          '50%': { transform: 'translateY(20px)', opacity: '1' },
+          '100%': { transform: 'translateY(0px)', opacity: '0.8' },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'float-up': 'float-up 4s ease-in-out infinite',
+        'float-down': 'float-down 5s ease-in-out infinite',
       },
     },
   },

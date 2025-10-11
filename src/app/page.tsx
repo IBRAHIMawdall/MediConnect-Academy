@@ -5,7 +5,7 @@ import { getCourses } from '@/lib/get-courses';
 import { UserNav } from '@/components/layout/user-nav';
 import { FeaturedCourses } from '@/components/courses/featured-courses';
 import { SidebarTrigger } from '@/components/ui/sidebar';
-import { IntroVideo } from '@/components/dashboard/intro-video';
+import { AnimatedHero } from '@/components/dashboard/animated-hero';
 import { PageHeader } from '@/components/layout/page-header';
 
 export default async function DashboardPage() {
@@ -14,7 +14,7 @@ export default async function DashboardPage() {
 
   return (
     <div className="flex-1">
-      <IntroVideo />
+      <AnimatedHero />
       
       <div className="p-4 md:p-8 space-y-8">
         <div className="flex items-center justify-between space-y-2">
