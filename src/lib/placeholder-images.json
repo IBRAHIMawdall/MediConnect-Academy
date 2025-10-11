@@ -21,7 +21,7 @@
     {
       "id": "pharma-innov",
       "description": "A scientist looking at a test tube in a modern laboratory.",
-      "imageUrl": "https://images.unsplash.com/photo-1733119889719-779e934699b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsYWIlMjBzY2llbmNlfGVufDB8fHx8MTc1ODc2MzQ0MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1733119889719-779e934699b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsYWIlMjBzY2llbmNlfGVufDB8fHx8MTc1ODc2MzQ0MXww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "lab science"
     },
     {
@@ -39,169 +39,169 @@
     {
       "id": "mental-health",
       "description": "A silhouette of a head with abstract, colorful thoughts.",
-      "imageUrl": "https://images.unsplash.com/photo-1745017079623-a57f8c5e99d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxicmFpbiUyMGFic3RyYWN0fGVufDB8fHx8MTc1ODcwNjcwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1745017079623-a57f8c5e99d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxicmFpbiUyMGFic3RyYWN0fGVufDB8fHx8MTc1ODcwNjcwMHww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "brain abstract"
     },
     {
       "id": "nutrition-health",
       "description": "A colorful array of fresh fruits and vegetables.",
-      "imageUrl": "https://images.unsplash.com/photo-1572974689461-bae140aef61d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmb29kJTIwdmVnZXRhYmxlc3xlbnwwfHx8fDE3NTg3NDI2NTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1572974689461-bae140aef61d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmb29kJTIwdmVnZXRhYmxlc3xlbnwwfHx8fDE3NTg3NDI2NTN8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "food vegetables"
     },
     {
       "id": "genomics-medicine",
       "description": "A stylized 3D rendering of a DNA double helix.",
-      "imageUrl": "https://images.unsplash.com/photo-1738944910335-0f2ab36e20cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkbmElMjBzY2llbmNlfGVufDB8fHx8MTc1ODcxODIyOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1738944910335-0f2ab36e20cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkbmElMjBzY2llbmNlfGVufDB8fHx8MTc1ODcxODIyOHww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "dna science"
     },
     {
       "id": "data-science-healthcare",
       "description": "An abstract visualization of data points and network connections.",
-      "imageUrl": "https://images.unsplash.com/photo-1745847768367-893e989d3a98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGF0YSUyMGNoYXJ0fGVufDB8fHx8MTc1ODY5MjQwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1745847768367-893e989d3a98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGF0YSUyMGNoYXJ0fGVufDB8fHx8MTc1ODY5MjQwN3ww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "data chart"
     },
     {
       "id": "global-health",
       "description": "A view of the earth from space with glowing points of light.",
-      "imageUrl": "https://images.unsplash.com/photo-1645975181219-45af8a276338?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b3JsZCUyMGhlYWx0aHxlbnwwfHx8fDE3NTg3NjM0NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1645975181219-45af8a276338?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b3JsZCUyMGhlYWx0aHxlbnwwfHx8fDE3NTg3NjM0NDF8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "world health"
     },
     {
       "id": "clinical-research",
       "description": "A researcher using a pipette to place samples in a tray.",
-      "imageUrl": "https://images.unsplash.com/photo-1486825586573-7131f7991bdd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsYWIlMjByZXNlYXJjaHxlbnwwfHx8fDE3NTg3NjM0NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1486825586573-7131f7991bdd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsYWIlMjByZXNlYXJjaHxlbnwwfHx8fDE3NTg3NjM0NDF8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "lab research"
     },
     {
       "id": "patient-safety",
       "description": "A doctor washing their hands thoroughly in a hospital.",
-      "imageUrl": "https://images.unsplash.com/photo-1647333974531-67137f954777?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzYWZldHklMjBzaGllbGR8ZW58MHx8fHwxNzU4NzYzNDQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1647333974531-67137f954777?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzYWZldHklMjBzaGllbGR8ZW58MHx8fHwxNzU4NzYzNDQyfDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "safety shield"
     },
     {
       "id": "healthcare-management",
       "description": "A diverse group of professionals in a modern office having a meeting.",
-      "imageUrl": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzU4NjkwNzQ2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzU4NjkwNzQ2fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "business meeting"
     },
     {
       "id": "diagnostic-imaging",
       "description": "A detailed MRI scan of a human brain.",
-      "imageUrl": "https://images.unsplash.com/photo-1694006757902-c3a13ee6c4ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtcmklMjBicmFpbnxlbnwwfHx8fDE3NTg3NjM0NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1694006757902-c3a13ee6c4ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtcmklMjBicmFpbnxlbnwwfHx8fDE3NTg3NjM0NDF8MA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "mri brain"
     },
     {
       "id": "ai-healthcare",
       "description": "An abstract image showing a brain made of circuits and data.",
-      "imageUrl": "https://images.unsplash.com/photo-1642975967602-653d378f3b5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhaSUyMG1lZGljYWx8ZW58MHx8fHwxNzU4NzYzNDQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1642975967602-653d378f3b5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhaSUyMG1lZGljYWx8ZW58MHx8fHwxNzU4NzYzNDQxfDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "ai medical"
     },
     {
       "id": "public-health",
       "description": "A diverse group of people at a community health fair.",
-      "imageUrl": "https://images.unsplash.com/photo-1576765607924-3f7b8410a787?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb21tdW5pdHklMjBoZWFsdGh8ZW58MHx8fHwxNzU4NzUwNTE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1576765607924-3f7b8410a787?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb21tdW5pdHklMjBoZWFsdGh8ZW58MHx8fHwxNzU4NzUwNTE4fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "community health"
     },
     {
       "id": "medical-billing",
       "description": "A desk with billing documents, a calculator, and a pen.",
-      "imageUrl": "https://images.unsplash.com/photo-1670329949691-f056ce6bb079?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmaW5hbmNlJTIwY2FsY3VsYXRvcnxlbnwwfHx8fDE3NTg3MDY0ODB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1670329949691-f056ce6bb079?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmaW5hbmNlJTIwY2FsY3VsYXRvcnxlbnwwfHx8fDE3NTg3MDY0ODB8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "finance calculator"
     },
     {
       "id": "healthcare-leadership",
       "description": "A healthcare professional leading a team meeting in a hospital corridor.",
-      "imageUrl": "https://images.unsplash.com/photo-1660854088062-c178a98550cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0ZWFtJTIwbGVhZGVyc2hpcHxlbnwwfHx8fDE3NTg3NDAwMjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1660854088062-c178a98550cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0ZWFtJTIwbGVhZGVyc2hpcHxlbnwwfHx8fDE3NTg3NDAwMjl8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "team leadership"
     },
     {
       "id": "sports-medicine",
       "description": "A physical therapist helping an athlete with a knee injury.",
-      "imageUrl": "https://images.unsplash.com/photo-1758684051090-bc83bb0af184?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhdGhsZXRlJTIwaW5qdXJ5fGVufDB8fHx8MTc1ODc2MzQ0MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1758684051090-bc83bb0af184?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhdGhsZXRlJTIwaW5qdXJ5fGVufDB8fHx8MTc1ODc2MzQ0MXww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "athlete injury"
     },
     {
       "id": "dermatology-pc",
       "description": "A dermatologist examining a patient's skin with a magnifying tool.",
-      "imageUrl": "https://images.unsplash.com/photo-1579801874037-f28c38c7edbf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c2tpbiUyMGRlcm1hdG9sb2d5fGVufDB8fHx8MTc1ODc2MzQ0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1579801874037-f28c38c7edbf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c2tpbiUyMGRlcm1hdG9sb2d5fGVufDB8fHx8MTc1ODc2MzQ0Mnww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "skin dermatology"
     },
     {
       "id": "geriatric-medicine",
       "description": "A healthcare provider kindly holding an elderly patient's hand.",
-      "imageUrl": "https://images.unsplash.com/photo-1559234938-b60fff04894d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxlbGRlcmx5JTIwY2FyZXxlbnwwfHx8fDE3NTg3MzY4NzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1559234938-b60fff04894d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxlbGRlcmx5JTIwY2FyZXxlbnwwfHx8fDE3NTg3MzY4NzV8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "elderly care"
     },
     {
       "id": "infectious-disease",
       "description": "A scientist in a biohazard suit working in a high-security lab.",
-      "imageUrl": "https://images.unsplash.com/photo-1707944745911-64b7d6d1c31d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxsYWIlMjBtaWNyb3Njb3BlfGVufDB8fHx8MTc1ODY5MTUyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1707944745911-64b7d6d1c31d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxsYWIlMjBtaWNyb3Njb3BlfGVufDB8fHx8MTc1ODY5MTUyM3ww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "lab microscope"
     },
     {
       "id": "palliative-care",
       "description": "A caregiver sitting by a patient's bedside, offering comfort.",
-      "imageUrl": "https://images.unsplash.com/photo-1608556034819-8ef15ed3cde0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb21mb3J0JTIwaGFuZHxlbnwwfHx8fDE3NTg3NjM0NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1608556034819-8ef15ed3cde0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb21mb3J0JTIwaGFuZHxlbnwwfHx8fDE3NTg3NjM0NDF8MA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "comfort hand"
     },
     {
       "id": "wilderness-medicine",
       "description": "A hiker treating a minor injury with a first aid kit on a mountain trail.",
-      "imageUrl": "https://images.unsplash.com/photo-1669311284897-86233c84d047?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb3VudGFpbiUyMGZpcnN0YWlkfGVufDB8fHx8MTc1ODc2MzQ0MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1669311284897-86233c84d047?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb3VudGFpbiUyMGZpcnN0YWlkfGVufDB8fHx8MTc1ODc2MzQ0MXww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "mountain firstaid"
     },
     {
       "id": "blood-biology",
       "description": "A microscopic view of red blood cells.",
-      "imageUrl": "https://images.unsplash.com/photo-1670192117184-d07467e203b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxibG9vZCUyMGNlbGxzfGVufDB8fHx8MTc1ODcwNzA5Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1670192117184-d07467e203b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxibG9vZCUyMGNlbGxzfGVufDB8fHx8MTc1ODcwNzA5Mnww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "blood cells"
     },
     {
       "id": "surgery-simulation",
       "description": "A medical student using a VR headset for surgical training.",
-      "imageUrl": "https://images.unsplash.com/photo-1579684288452-b334934f845f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx2aXJ0dWFsJTIwc3VyZ2VyeXxlbnwwfHx8fDE3NTg3NjM0NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1579684288452-b334934f845f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx2aXJ0dWFsJTIwc3VyZ2VyeXxlbnwwfHx8fDE3NTg3NjM0NDF8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "virtual surgery"
     },
     {
       "id": "neuro-pathways",
       "description": "An abstract digital illustration of interconnected neurons.",
-      "imageUrl": "https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxuZXVyYWwlMjBuZXR3b3JrfGVufDB8fHx8MTc1ODcxNjkxMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxuZXVyYWwlMjBuZXR3b3JrfGVufDB8fHx8MTc1ODcxNjkxMHww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "neural network"
     },
     {
       "id": "usmle-prep",
       "description": "A student studying intensely with medical textbooks and notes.",
-      "imageUrl": "https://images.unsplash.com/photo-1719954327260-7ac241a53aae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3R1ZHklMjBleGFtfGVufDB8fHx8MTc1ODc2MzQ0MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1719954327260-7ac241a53aae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3R1ZHklMjBleGFtfGVufDB8fHx8MTc1ODc2MzQ0MXww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "study exam"
     },
     {
       "id": "mcat-prep",
       "description": "A stack of science textbooks next to a stethoscope.",
-      "imageUrl": "https://images.unsplash.com/photo-1669296143585-5dadeb07805e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWNhdCUyMHN0dWR5fGVufDB8fHx8MTc1ODc2MzQ0MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1669296143585-5dadeb07805e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWNhdCUyMHN0dWR5fGVufDB8fHx8MTc1ODc2MzQ0MXww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "mcat study"
     },
     {
       "id": "llm-history",
       "description": "An artistic representation of a timeline with glowing nodes.",
-      "imageUrl": "https://images.unsplash.com/photo-1630756539201-f435ba29f1fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0aW1lbGluZSUyMGNoYXJ0fGVufDB8fHx8MTc1ODc2MzQ0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1630756539201-f435ba29f1fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0aW1lbGluZSUyMGNoYXJ0fGVufDB8fHx8MTc1ODc2MzQ0Mnww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "timeline chart"
     },
     {
       "id": "intro-hematology",
       "description": "A lab technician preparing a blood smear on a microscope slide.",
-      "imageUrl": "https://images.unsplash.com/photo-1597177356957-d87dd0dac623?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Ymxvb2QlMjBtaWNyb3Njb3BlfGVufDB8fHx8MTc1ODc2MzQ0MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1597177356957-d87dd0dac623?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Ymxvb2QlMjBtaWNyb3Njb3BlfGVufDB8fHx8MTc1ODc2MzQ0MXww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "blood microscope"
     },
     {
       "id": "comm-healthcare",
       "description": "A doctor having a compassionate conversation with a patient.",
-      "imageUrl": "https://images.unsplash.com/photo-1716703435453-a7733d600d68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dGVhbSUyMGRpc2N1c3Npb258ZW58MHx8fHwxNzU4Njg5MzA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1716703435453-a7733d600d68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dGVhbSUyMGRpc2N1c3Npb258ZW58MHx8fHwxNzU4Njg5MzA5fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "team discussion"
     },
     {
       "id": "finance-101",
       "description": "A business chart showing financial growth with an upward trend.",
-      "imageUrl": "https://images.unsplash.com/photo-1744473119469-905016183836?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmaW5hbmNlJTIwY2hhcnR8ZW58MHx8fHwxNzU4NzA4NjE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1744473119469-905016183836?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmaW5hbmNlJTIwY2hhcnR8ZW58MHx8fHwxNzU4NzA4NjE5fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "finance chart"
     },
     {
@@ -242,9 +242,9 @@
     },
     {
       "id": "page-hero-animated",
-      "description": "Abstract background with blue and purple gradients and network lines.",
-      "imageUrl": "https://images.unsplash.com/photo-1533134486753-c833f0ed4866?w=1200&h=400&fit=crop",
-      "imageHint": "abstract network"
+      "description": "A bright, modern library setting, evoking a sense of learning and knowledge.",
+      "imageUrl": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1200&h=400&fit=crop",
+      "imageHint": "library knowledge"
     }
   ]
 }
