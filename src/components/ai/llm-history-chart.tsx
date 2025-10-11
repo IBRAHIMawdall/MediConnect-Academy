@@ -62,19 +62,19 @@ const llmData: YearData[] = [
     year: 2021,
     models: [
         { name: 'PubmedBERT', type: 'medical' },
-        { name: 'GPT3', type: 'base' }
     ],
   },
   {
     year: 2020,
     models: [
-        { name: 'BioBERT', type: 'medical' },
+        { name: 'GPT3', type: 'base' },
         { name: 'BlueBERT', type: 'medical' }
     ],
   },
     {
     year: 2019,
     models: [
+        { name: 'BioBERT', type: 'medical' },
         { name: 'SciBERT', type: 'medical' },
         { name: 'ClinicalBERT', type: 'medical' },
         { name: 'GPT2', type: 'base' },
