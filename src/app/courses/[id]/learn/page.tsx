@@ -8,8 +8,9 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { ArrowLeft, BookOpen, User } from 'lucide-react';
+import { ProtectedRoute } from '@/components/auth/protected-route';
 
-export default async function CourseLearnPage({ params }: { params: Promise<{ id: string }> }) {
+async function CourseLearnPageContent({ params }: { params: Promise<{ id: string }> }) {
   try {
     const { id } = await params;
     
@@ -107,4 +108,12 @@ export default async function CourseLearnPage({ params }: { params: Promise<{ id
     console.error('Error loading course learn page:', error);
     notFound();
   }
+}
+
+export default function CourseLearnPage({ params }: { params: Promise<{ id: string }> }) {
+  return (
+    <ProtectedRoute>
+      <CourseLearnPageContent params={params} />
+    </ProtectedRoute>
+  )
 }

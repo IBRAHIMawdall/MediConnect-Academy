@@ -20,6 +20,7 @@ import {
 import { PageHeader } from '@/components/layout/page-header';
 import { Clock, CheckCircle, XCircle, RefreshCw, Plus, Send, BookOpen } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
+import { ProtectedRoute } from '@/components/auth/protected-route';
 
 const courseRequestSchema = z.object({
   topic: z.string().min(3, { message: 'Please enter a course topic (minimum 3 characters).' }),
@@ -36,7 +37,7 @@ interface CourseRequest {
   status: 'pending' | 'approved' | 'rejected';
 }
 
-export default function CourseRequestsPage() {
+function CourseRequestsPageContent() {
   const [requests, setRequests] = useState<CourseRequest[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -343,4 +344,12 @@ export default function CourseRequestsPage() {
       )}
     </div>
   );
+}
+
+export default function CourseRequestsPage() {
+  return (
+    <ProtectedRoute>
+      <CourseRequestsPageContent />
+    </ProtectedRoute>
+  )
 }
