@@ -142,23 +142,7 @@ export function CourseModules({ course }: CourseModulesProps) {
         </div>
       </CardHeader>
       <CardContent>
-        <div className="space-y-4">
-          <p className="text-lg font-semibold">Course Modules ({course.modules.length})</p>
-          {course.modules.map((module, moduleIndex) => (
-            <div key={moduleIndex} className="border rounded-lg p-4 bg-white shadow-sm">
-              <h3 className="text-lg font-bold mb-3">{module.title}</h3>
-              <div className="space-y-2">
-                {module.lessons.map((lesson, lessonIndex) => (
-                  <div key={lessonIndex} className="border-l-4 border-blue-200 pl-4 py-2">
-                    <h4 className="font-medium">{lesson.title}</h4>
-                    <p className="text-sm text-gray-600 mt-1">{lesson.content.substring(0, 100)}...</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-        <Accordion type="single" collapsible className="w-full" style={{display: 'none'}}>
+        <Accordion type="single" collapsible className="w-full">
           {course.modules.map((module, moduleIndex) => (
             <AccordionItem value={`item-${moduleIndex}`} key={moduleIndex}>
               <AccordionTrigger className="font-bold text-md">{module.title}</AccordionTrigger>
@@ -168,9 +152,9 @@ export function CourseModules({ course }: CourseModulesProps) {
                     const lessonKey = `${moduleIndex}-${lessonIndex}`;
                     const isExpanded = expandedLessons.has(lessonKey);
                     return (
-                      <div key={lessonIndex} className="border rounded-md">
+                      <div key={lessonIndex} className="border rounded-md bg-card">
                         <div 
-                          className="px-3 py-2 cursor-pointer hover:bg-gray-50 transition-colors"
+                          className="px-3 py-2 cursor-pointer hover:bg-muted/50 transition-colors"
                           onClick={() => toggleLessonExpansion(lessonKey)}
                         >
                           <div className="flex items-center gap-3 w-full">
@@ -191,7 +175,7 @@ export function CourseModules({ course }: CourseModulesProps) {
                               <Button
                                 size="sm"
                                 variant="ghost"
-                                className="h-8 w-8 p-0 hover:bg-blue-100 hover:text-blue-600"
+                                className="h-8 w-8 p-0 hover:bg-primary/10 hover:text-primary"
                                 onClick={(e) => {
                                   e.stopPropagation();
                                   handleStartLesson(lesson, moduleIndex, lessonIndex);
@@ -207,7 +191,7 @@ export function CourseModules({ course }: CourseModulesProps) {
                           </div>
                         </div>
                         {isExpanded && (
-                          <div className="px-3 pb-3 border-t bg-gray-50/50">
+                          <div className="px-3 pb-3 border-t bg-muted/30">
                             <div className="space-y-3 pt-3">
                               <div className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
                                 {lesson.content}
