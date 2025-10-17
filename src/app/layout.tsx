@@ -7,6 +7,7 @@ import { MainNav } from '@/components/layout/main-nav';
 import { useTheme } from '@/hooks/use-theme';
 import { Inter } from 'next/font/google';
 import { cn } from '@/lib/utils';
+import { AuthProvider } from '@/components/auth/auth-provider';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -24,15 +25,17 @@ export default function RootLayout({
         <meta name="description" content="Enhance your healthcare skills with personalized learning paths." />
       </head>
       <body className={cn("font-sans antialiased", inter.variable)}>
-        <SidebarProvider>
-          <div className="flex min-h-screen">
-            <MainNav />
-            <SidebarInset>
-                <main className="flex-1 bg-muted/30">{children}</main>
-            </SidebarInset>
-          </div>
-        </SidebarProvider>
-        <Toaster />
+        <AuthProvider>
+          <SidebarProvider>
+            <div className="flex min-h-screen">
+              <MainNav />
+              <SidebarInset>
+                  <main className="flex-1 bg-muted/30">{children}</main>
+              </SidebarInset>
+            </div>
+          </SidebarProvider>
+          <Toaster />
+        </AuthProvider>
       </body>
     </html>
   );

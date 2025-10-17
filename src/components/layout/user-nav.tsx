@@ -12,12 +12,13 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { LogOut, Settings, User } from 'lucide-react';
-import { useUser } from '@/hooks/use-user';
+import { useSession, signOut } from 'next-auth/react';
 import Link from 'next/link';
 import { useToast } from '@/hooks/use-toast';
 
 export function UserNav() {
-    const { user } = useUser();
+    const { data: session } = useSession();
+  const user = session?.user;
     const { toast } = useToast();
 
     const handleLogout = () => {
