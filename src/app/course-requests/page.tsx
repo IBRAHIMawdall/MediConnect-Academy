@@ -229,7 +229,7 @@ export default function CourseRequestsPage() {
                     <FormItem>
                       <FormLabel>Difficulty Level</FormLabel>
                       <FormControl>
-                        <select {...field} className="w-full p-3 border rounded-md">
+                        <select {...field} className="w-full p-3 border rounded-md bg-background text-foreground">
                           <option value="beginner">Beginner</option>
                           <option value="intermediate">Intermediate</option>
                           <option value="advanced">Advanced</option>
@@ -246,7 +246,7 @@ export default function CourseRequestsPage() {
                     <FormItem>
                       <FormLabel>Priority</FormLabel>
                       <FormControl>
-                        <select {...field} className="w-full p-3 border rounded-md">
+                        <select {...field} className="w-full p-3 border rounded-md bg-background text-foreground">
                           <option value="low">Low Priority</option>
                           <option value="medium">Medium Priority</option>
                           <option value="high">High Priority</option>
