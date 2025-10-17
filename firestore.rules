@@ -1,0 +1,21 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Public read-only collections
+    match /courses/{doc} {
+      allow read: if true; // Publicly readable
+      allow write: if request.auth != null && request.auth.token.admin == true; // Only admins can write
+    }
+
+    match /instructors/{doc} {
+      allow read: if true; // Publicly readable
+      allow write: if request.auth != null && request.auth.token.admin == true; // Only admins can write
+    }
+
+    // Deny all other access by default
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
