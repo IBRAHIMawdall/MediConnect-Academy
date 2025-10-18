@@ -13,6 +13,7 @@ import {
   SidebarSeparator,
 } from '@/components/ui/sidebar';
 import { UserNav } from './user-nav';
+import { AuthStatus } from '@/components/auth/auth-status';
 
 
 export function MainNav() {
@@ -94,7 +95,7 @@ export function MainNav() {
           </SidebarMenuItem>
         ))}
         <div className="p-2 group-data-[collapsible=icon]:p-0 group-data-[collapsible=icon]:w-min group-data-[collapsible=icon]:mx-auto">
-            <UserNav />
+            <AuthStatus />
         </div>
       </SidebarFooter>
     </Sidebar>
